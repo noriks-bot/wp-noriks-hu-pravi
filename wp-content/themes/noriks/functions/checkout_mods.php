@@ -540,7 +540,7 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 
     $chosen_gateway = WC()->session->get( 'chosen_payment_method' );
     if ( $chosen_gateway === 'cod' ) {
-        $cart->add_fee( 'Utánvét', 1.99, false );
+        $cart->add_fee( 'Utánvét', 799, false );
     }
 });
 
