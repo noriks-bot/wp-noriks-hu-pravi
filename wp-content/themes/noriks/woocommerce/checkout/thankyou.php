@@ -42,7 +42,7 @@ $upsell_is_majice = $has_only_bokserice;
 if ( $upsell_is_majice ) {
     $upsell_product_id = 250; // Crna majica (variable)
     $upsell_name       = 'Fekete pólók';
-    $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
+    $upsell_qty_prices = array( 1 => 5190, 3 => 11990, 6 => 15990 );
     $upsell_qty_names  = array( 1 => '1x Fekete póló', 3 => '3x Fekete póló', 6 => '6x Fekete póló' );
     $upsell_qty_images = array(
         1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',
@@ -53,7 +53,7 @@ if ( $upsell_is_majice ) {
 } else {
     $upsell_product_id = 2781; // Fekete boxeralsó
     $upsell_name       = 'Fekete boxeralsó';
-    $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
+    $upsell_qty_prices = array( 1 => 3190, 3 => 7990, 5 => 11990 );
     $upsell_qty_names  = array( 1 => '1x Fekete boxeralsó', 3 => '3x Fekete boxeralsó', 5 => '5x Fekete boxeralsó' );
     $upsell_qty_images = array(
         1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
