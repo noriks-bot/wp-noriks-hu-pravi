@@ -103,7 +103,7 @@ if ( WC()->cart->is_empty() ) return;
     <label class="checkbox">
       <input type="checkbox" class="input-checkbox" name="agree_to_checkout_terms" id="agree_to_terms_checkbox" value="1">
     </label>
-    Elolvastam és elfogadom <a href="#" id="terms_conditions_link">az Általános Értékesítési Feltételeket</a> i <a href="#" id="withdrawal_policy_link">az elállási jogot</a>.
+    Elolvastam és elfogadom <a href="#" id="terms_conditions_link">az Általános Értékesítési Feltételeket</a> és <a href="#" id="withdrawal_policy_link">az elállási jogot</a>.
   </div>
 </div>
 
