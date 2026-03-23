@@ -535,8 +535,8 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <p class="ql-align-justify">U našoj internetskoj trgovini možete upotrebljavati sljedeće načine plaćanja:</p>
 <ul>
 <li class="ql-align-justify">Utánvétes fizetés – kupac plaća račun gotovinom ili kreditnom karticom dostavnom kuriru koji robu isporučuje na adresu kupca;</li>
-<li class="ql-align-justify">Plaćanje kreditnom karticom;</li>
-<li class="ql-align-justify">Plaćanje preko PayPala.</li>
+<li class="ql-align-justify">Hitelkártyás fizetés;</li>
+<li class="ql-align-justify">Fizetés PayPal-lal.</li>
 </ul>
 <p class="ql-align-justify">Tvrtka zadržava pravo provjere odabranog načina plaćanja s pomoću provjere autentičnosti. Nadalje, zadržavamo pravo daljnje provjere odabranog načina plaćanja tražeći da nam pošaljete dokaz o uplati.&nbsp;</p>
 <p class="ql-align-justify">Upoznati ste s činjenicom da morate platiti cjelokupan iznos narudžbe (uključujući sve troškove povezane s transakcijom i isporukom) u skladu s odabranim načinom plaćanja. Jamčite da imate sposobnost i pravo izvršavati transakcije s pomoću kreditne kartice ili bilo kojeg drugog odabranog načina plaćanja.</p>
@@ -796,8 +796,8 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <p class="ql-align-justify">U našoj internetskoj trgovini možete upotrebljavati sljedeće načine plaćanja:</p>
 <ul>
 <li class="ql-align-justify">Utánvétes fizetés – kupac plaća račun gotovinom ili kreditnom karticom dostavnom kuriru koji robu isporučuje na adresu kupca;</li>
-<li class="ql-align-justify">Plaćanje kreditnom karticom;</li>
-<li class="ql-align-justify">Plaćanje preko PayPala.</li>
+<li class="ql-align-justify">Hitelkártyás fizetés;</li>
+<li class="ql-align-justify">Fizetés PayPal-lal.</li>
 </ul>
 <p class="ql-align-justify">Tvrtka zadržava pravo provjere odabranog načina plaćanja s pomoću provjere autentičnosti. Nadalje, zadržavamo pravo daljnje provjere odabranog načina plaćanja tražeći da nam pošaljete dokaz o uplati.&nbsp;</p>
 <p class="ql-align-justify">Upoznati ste s činjenicom da morate platiti cjelokupan iznos narudžbe (uključujući sve troškove povezane s transakcijom i isporukom) u skladu s odabranim načinom plaćanja. Jamčite da imate sposobnost i pravo izvršavati transakcije s pomoću kreditne kartice ili bilo kojeg drugog odabranog načina plaćanja.</p>
