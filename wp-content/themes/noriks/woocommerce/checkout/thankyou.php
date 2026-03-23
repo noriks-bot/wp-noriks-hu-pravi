@@ -703,7 +703,7 @@ body.woocommerce-order-received .woocommerce {
             </div>
             <div class="ty-section-body open">
                 <div class="ty-section-body-inner">
-                    <div class="ty-row"><span class="ty-row-label">Keresztnév</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span></div>
+                    <div class="ty-row"><span class="ty-row-label">Név</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span></div>
                     <div class="ty-row"><span class="ty-row-label">Cím</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_address_1() . ' ' . $order->get_billing_address_2() ); ?></span></div>
                     <div class="ty-row"><span class="ty-row-label">Város</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_postcode() . ' ' . $order->get_billing_city() ); ?></span></div>
                     <?php if ( $order->get_billing_phone() ) : ?>
