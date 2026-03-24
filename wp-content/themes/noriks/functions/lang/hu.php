@@ -182,7 +182,7 @@ function noriks_hu_weekdays() {
 add_filter( 'wc_price_args', 'noriks_hu_price_format' );
 function noriks_hu_price_format( $args ) {
     $args['decimal_separator'] = ',';
-    $args['thousand_separator'] = ' ';
+    $args['thousand_separator'] = '.';
     $args['decimals'] = 0;
     return $args;
 }
