@@ -465,7 +465,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_postcode']['label'] = 'Irányítószám';
     $fields['billing']['billing_postcode']['placeholder'] = 'Irányítószám';
     $fields['billing']['billing_city']['label'] = 'Város';
-    $fields['billing']['billing_city']['placeholder'] = 'Válasszon várost';
+    $fields['billing']['billing_city']['placeholder'] = 'Város';
     $fields['billing']['billing_phone']['label'] = 'Telefon';
     $fields['billing']['billing_phone']['placeholder'] = 'Mobiltelefonszám';
     $fields['billing']['billing_phone']['required'] = true;
