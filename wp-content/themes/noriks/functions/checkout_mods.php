@@ -321,8 +321,21 @@ add_action( 'wp_footer', function() {
       var submitted = false; /* only validate after first submit attempt */
       /* Set submitted=true when WC native button is clicked */
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
-      $(document).on('click', '#place_order', function(){
+      $(document).on('click', '#place_order', function(e){
         submitted = true;
+        /* Pre-validate all required fields instantly */
+        var hasError = false;
+        $('.woocommerce-checkout .form-row.validate-required').each(function(){
+          var input = $(this).find('input, select, textarea').first();
+          if (input.length && !validateField(input[0], true)) hasError = true;
+        });
+        if (hasError) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          var first = $('.noriks-invalid:first');
+          if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
+          return false;
+        }
         $(this).css('opacity','0.6').text('Feldolgozás...');
         $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
       });
