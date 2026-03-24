@@ -218,7 +218,7 @@ body.woocommerce-checkout #payment .wc_payment_method > label::after {
   white-space: nowrap !important;
 }
 body.woocommerce-checkout #payment .payment_method_cod > label::after {
-  content: '799 Ft' !important;
+  content: '1 000 Ft' !important;
   background: #e3e6e8 !important;
   color: #5f6061 !important;
 }
@@ -252,7 +252,7 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   position: relative !important;
 }
 #billing_phone_field::after {
-  content: 'Példa: 06301234567' !important;
+  content: 'Példa: 201234567' !important;
   position: absolute !important;
   left: 0 !important;
   bottom: -20px !important;

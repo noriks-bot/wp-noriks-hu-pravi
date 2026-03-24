@@ -502,7 +502,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  */
 add_filter( 'woocommerce_form_field_text', function( $field, $key ) {
     if ( $key === 'billing_last_name' ) {
-        $field .= '<div class="form-row form-row-wide col-xs-12">Adja meg a címet, ahol tartózkodik <b>8:00 és 16:00 között</b>.</div>';
+        $field .= '<div class="form-row form-row-wide col-xs-12">Kérjük, adjon meg egy olyan címet, ahol <b>8:00 és 15:00 között</b> tartózkodik.</div>';
     }
     return $field;
 }, 10, 2 );
@@ -540,7 +540,7 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 
     $chosen_gateway = WC()->session->get( 'chosen_payment_method' );
     if ( $chosen_gateway === 'cod' ) {
-        $cart->add_fee( 'Utánvét', 799, false );
+        $cart->add_fee( 'Utánvét', 1000, false );
     }
 });
 

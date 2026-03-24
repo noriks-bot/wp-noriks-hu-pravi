@@ -131,3 +131,32 @@ function noriks_hu_weekdays() {
         'Szombat'      // Saturday
     );
 }
+
+// Additional WC checkout translations
+add_filter( 'gettext', 'translate_checkout_strings_hu', 20, 3 );
+function translate_checkout_strings_hu( $translated_text, $text, $domain ) {
+    $t = array(
+        'Street address' => 'Utca',
+        'House number and street name' => 'Utca és házszám',
+        'Apartment, suite, unit, etc.' => 'Házszám',
+        'Apartment, suite, unit, etc. (optional)' => 'Házszám',
+        'Town / City' => 'Város',
+        'State / County' => 'Megye',
+        'Postcode / ZIP' => 'Irányítószám',
+        'Phone' => 'Telefon',
+        'Email address' => 'E-mail cím',
+        'Order notes' => 'Megjegyzés',
+        'Notes about your order' => 'Megjegyzések a rendeléshez',
+        'Place order' => 'Megrendelés',
+        'Your order' => 'Az Ön rendelése',
+        'Product' => 'Termék',
+        'Subtotal' => 'Részösszeg',
+        'Shipping' => 'Szállítás',
+        'Total' => 'Összesen',
+        'First name' => 'Keresztnév',
+        'Last name' => 'Vezetéknév',
+        'Country / Region' => 'Ország',
+    );
+    if ( isset( $t[$text] ) ) return $t[$text];
+    return $translated_text;
+}
