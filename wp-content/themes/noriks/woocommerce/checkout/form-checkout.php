@@ -47,7 +47,7 @@ if ( WC()->cart->is_empty() ) return;
                     <span class="shipping_method_delivery_price tag tag--red">
                       <span class="woocommerce-Price-amount amount"><bdi>1 199<span class="woocommerce-Price-currencySymbol"> Ft</span></bdi></span>
                     </span>
-                    <span class="delivery_img"><img decoding="async" class="magyar_posta standard" src="https://images.vigo-shop.com/general/curriers/home_small_paket24@2x.png"/></span>
+                    <span class="delivery_img"><img decoding="async" class="magyar_posta standard" src="https://images.vigo-shop.com/general/curriers/home_small_gls@2x.png"/></span>
                   </div>
                 </div>
               </label>
