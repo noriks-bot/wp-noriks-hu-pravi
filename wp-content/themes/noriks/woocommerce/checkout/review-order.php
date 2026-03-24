@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
       <?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
       <div class="c--darkgray review-section-container review-addons">
         <div class="review-addons-title"><div><?php echo esc_html($fee->name); ?></div></div>
-        <div class="review-addons-price review-sale-price"><span class="woocommerce-Price-amount amount"><?php echo number_format(abs($fee->total), 0, ",", " ") . " Ft"; ?></span></div>
+        <div class="review-addons-price review-sale-price"><span class="woocommerce-Price-amount amount"><?php echo number_format(abs($fee->total), 0, ",", ".") . " Ft"; ?></span></div>
       </div>
       <?php endforeach; ?>
     </div>

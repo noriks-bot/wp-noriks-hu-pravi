@@ -218,7 +218,7 @@ body.woocommerce-checkout #payment .wc_payment_method > label::after {
   white-space: nowrap !important;
 }
 body.woocommerce-checkout #payment .payment_method_cod > label::after {
-  content: '1 000 Ft' !important;
+  content: '1.000 Ft' !important;
   background: #e3e6e8 !important;
   color: #5f6061 !important;
 }
