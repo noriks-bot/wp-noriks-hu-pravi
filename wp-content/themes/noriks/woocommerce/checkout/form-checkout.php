@@ -55,7 +55,7 @@ if ( WC()->cart->is_empty() ) return;
           </ul>
           <div class="delivery-from-eu-warehouse">
             <img decoding="async" class="delivery-from-eu-warehouse__icon" src="https://images.vigo-shop.com/general/flags/eu-warehouse.svg">
-            <span class="delivery-from-eu-warehouse__text">EU-s raktár</span>
+            <span class="delivery-from-eu-warehouse__text">EU-ban levő raktár</span>
           </div>
         </div>
 
