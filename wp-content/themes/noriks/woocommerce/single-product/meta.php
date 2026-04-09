@@ -198,11 +198,11 @@ global $product;
 
 $is_singles_boxers = has_term( 'boxerek', 'product_cat', $current_product_id );
 
-$is_boxers = has_term( array( 'boxerek','boxeralsok-1-db','orto-boxeralsok','boxeralsok-3-db-csomag','boxeralsok-5-db-csomag','boxeralsok-7-db-csomag','boxeralsok-10-db-csomag','boxeralsok-15-db-csomag' ), 'product_cat', $current_product_id ) && ! has_term( array( 'black-friday' ), 'product_cat', $current_product_id );
+$is_boxers = has_term( array( 'boxerek','orto-boxeralsok', 'bokserice-sastavi-paket', 'bokserice', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', $current_product_id ) && ! has_term( array( 'black-friday', 'majice-i-bokserice-paketi' ), 'product_cat', $current_product_id );
 
-$is_carape = has_term( array( 'zoknik','zoknik-feher','zoknik-fekete' ), 'product_cat', $current_product_id );
+$is_carape = has_term( array( 'zoknik', 'zimske-carape', 'kaltses', 'socks' ), 'product_cat', $current_product_id );
 
-$is_mixed_bundle = has_term( array( 'szettek','orto-kezdocsomag','orto-polo-boxeralso' ), 'product_cat', $current_product_id );
+$is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter', 'orto-majica-bokserica', 'set', 'seta', 'bundles', 'paketo-ekkinisis' ), 'product_cat', $current_product_id );
 
 ?>
 
@@ -488,14 +488,14 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="https://noriks.com/hu/wp-content/uploads/2026/02/majice-tabela-velikost-hu.png">
+     <img src="https://noriks.com/hu/wp-content/uploads/2026/04/hu_majice.jpeg">
         
          <img src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
           
           <?php else: ?>
       
       
-     <img src="https://noriks.com/hu/wp-content/uploads/2026/02/majice-tabela-velikost-hu.png">
+     <img src="https://noriks.com/hu/wp-content/uploads/2026/04/hu_majice.jpeg">
         
         
             

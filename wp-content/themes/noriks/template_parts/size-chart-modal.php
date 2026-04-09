@@ -152,7 +152,7 @@
     
     style="margin-top: 70px;margin-bottom: 70px;"
     
-      src="https://noriks.com/hu/wp-content/uploads/2026/02/majice-tabela-velikost-hu.png"
+      src="https://noriks.com/hu/wp-content/uploads/2026/04/hu_majice.jpeg"
       alt="Size Guide">
       
       <?php endif; ?>
