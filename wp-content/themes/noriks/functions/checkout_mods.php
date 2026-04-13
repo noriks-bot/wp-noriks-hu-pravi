@@ -408,8 +408,19 @@ add_action( 'wp_footer', function() {
 
       /* NOTE: do NOT block WC's validate_field — it's needed for submit to proceed */
 
+      /* Force billing_address_2 to always have validate-required class (WC strips it on AJAX) */
+      function enforceAddress2Required() {
+        var $row = $('#billing_address_2_field');
+        if ($row.length && !$row.hasClass('validate-required')) {
+          $row.addClass('validate-required');
+        }
+      }
+      enforceAddress2Required();
+      $(document.body).on('updated_checkout init_checkout', enforceAddress2Required);
+
       /* Re-apply validation after WC AJAX updates (update_checkout replaces DOM) */
       $(document.body).on('updated_checkout', function(){
+        enforceAddress2Required();
         if (!submitted) return;
         $('.woocommerce-checkout .form-row.validate-required').each(function(){
           var input = $(this).find('input, select').first();
