@@ -325,17 +325,56 @@ add_action( 'wp_footer', function() {
         submitted = true;
         /* Do not block pointer-events on the form — WC needs to be able to re-enable it */
       });
-      $(document.body).on('checkout_error', function(){
+      $(document.body).on('checkout_error', function(e, errorMsg){
         $('#place_order').css('opacity','1').prop('disabled', false).text('Megrendelés');
         $('form.checkout').css({'opacity':'1','pointer-events':'auto','transition':''});
         submitted = true;
-        /* Validate all fields after WC returns error */
-        $('.woocommerce-checkout .form-row.validate-required').each(function(){
-          var input = $(this).find('input, select, textarea').first();
-          if (input.length) validateField(input[0], true);
-        });
-        var first = $('.noriks-invalid:first');
-        if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
+
+        /* Parse WC error notices and map them to fields */
+        setTimeout(function(){
+          $('.woocommerce-error li, .woocommerce-notices-wrapper .woocommerce-error li').each(function(){
+            var text = $(this).text().trim();
+            /* Try to find which field this error belongs to by matching label text */
+            $('.woocommerce-checkout .form-row').each(function(){
+              var $row = $(this);
+              var labelText = $row.find('> label').text().replace('*','').trim();
+              if (labelText && text.toLowerCase().indexOf(labelText.toLowerCase()) !== -1) {
+                showError($row, '\u2715 ' + text);
+              }
+            });
+          });
+
+          /* Also run local validation for empty required fields */
+          $('.woocommerce-checkout .form-row.validate-required').each(function(){
+            var input = $(this).find('input, select, textarea').first();
+            if (input.length) validateField(input[0], true);
+          });
+
+          /* Map known WC error patterns to specific fields */
+          var wcErrors = [];
+          $('.woocommerce-error li').each(function(){ wcErrors.push($(this).text().trim()); });
+          wcErrors.forEach(function(msg){
+            /* Postcode error */
+            if (msg.toLowerCase().indexOf('irányító') !== -1 || msg.toLowerCase().indexOf('postcode') !== -1 || msg.toLowerCase().indexOf('postal') !== -1) {
+              showError($('#billing_postcode_field'), '\u2715 ' + msg);
+            }
+            /* Phone error */
+            if (msg.toLowerCase().indexOf('telefon') !== -1 || msg.toLowerCase().indexOf('phone') !== -1) {
+              showError($('#billing_phone_field'), '\u2715 ' + msg);
+            }
+            /* Email error */
+            if (msg.toLowerCase().indexOf('e-mail') !== -1 || msg.toLowerCase().indexOf('email') !== -1) {
+              showError($('#billing_email_field'), '\u2715 ' + msg);
+            }
+            /* Address 2 error */
+            if (msg.toLowerCase().indexOf('házszám') !== -1 || msg.toLowerCase().indexOf('address_2') !== -1) {
+              showError($('#billing_address_2_field'), '\u2715 ' + msg);
+            }
+          });
+
+          var first = $('.noriks-invalid:first');
+          if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
+        }, 100);
       });
 
       function showError($row, msg) {
