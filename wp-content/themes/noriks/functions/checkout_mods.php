@@ -323,12 +323,12 @@ add_action( 'wp_footer', function() {
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
       $(document).on('click', '#place_order', function(){
         submitted = true;
-        $(this).css('opacity','0.6').text('Feldolgozás...');
-        $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
+        /* Do not block pointer-events on the form — WC needs to be able to re-enable it */
       });
       $(document.body).on('checkout_error', function(){
-        $('#place_order').css('opacity','1').text('Megrendelés');
-        $('form.checkout').css({'opacity':'1','pointer-events':''});
+        $('#place_order').css('opacity','1').prop('disabled', false).text('Megrendelés');
+        $('form.checkout').css({'opacity':'1','pointer-events':'auto','transition':''});
+        submitted = true;
         /* Validate all fields after WC returns error */
         $('.woocommerce-checkout .form-row.validate-required').each(function(){
           var input = $(this).find('input, select, textarea').first();
@@ -406,15 +406,7 @@ add_action( 'wp_footer', function() {
         if (submitted) validateField(this);
       });
 
-      /* Block WC's own validate_field from overriding our validation states */
-      $(document.body).on('validate_field', function(e, el){
-        var $el = $(el);
-        var $row = $el.closest('.form-row');
-        if ($row.hasClass('noriks-invalid') || $row.hasClass('noriks-valid')) {
-          e.stopImmediatePropagation();
-          return false;
-        }
-      });
+      /* NOTE: do NOT block WC's validate_field — it's needed for submit to proceed */
 
       /* Re-apply validation after WC AJAX updates (update_checkout replaces DOM) */
       $(document.body).on('updated_checkout', function(){
