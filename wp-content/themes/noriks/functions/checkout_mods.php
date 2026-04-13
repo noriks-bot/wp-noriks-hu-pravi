@@ -464,18 +464,15 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_first_name']['placeholder'] = 'Keresztnév';
     $fields['billing']['billing_last_name']['label'] = 'Vezetéknév';
     $fields['billing']['billing_last_name']['placeholder'] = 'Vezetéknév';
-    $fields['billing']['billing_address_1']['label'] = 'Utcanév';
-    $fields['billing']['billing_address_1']['placeholder'] = 'Utcanév';
-    $fields['billing']['billing_address_1']['required'] = true;
-    $fields['billing']['billing_address_2']['label'] = 'Házszám (lakás, emelet, ajtó)';
-    $fields['billing']['billing_address_2']['placeholder'] = 'Házszám (lakás, emelet, ajtó)';
+    $fields['billing']['billing_address_1']['label'] = 'Utca';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Utca';
+    $fields['billing']['billing_address_2']['label'] = 'Házszám';
+    $fields['billing']['billing_address_2']['placeholder'] = 'Házszám';
     $fields['billing']['billing_address_2']['required'] = true;
     $fields['billing']['billing_postcode']['label'] = 'Irányítószám';
     $fields['billing']['billing_postcode']['placeholder'] = 'Irányítószám';
-    $fields['billing']['billing_postcode']['required'] = true;
     $fields['billing']['billing_city']['label'] = 'Város';
     $fields['billing']['billing_city']['placeholder'] = 'Város';
-    $fields['billing']['billing_city']['required'] = true;
     $fields['billing']['billing_phone']['label'] = 'Telefon';
     $fields['billing']['billing_phone']['placeholder'] = 'Mobiltelefonszám';
     $fields['billing']['billing_phone']['required'] = true;
@@ -504,9 +501,19 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
         $f['input_class'] = array( 'input-text', 'form-input' );
     }
 
-    // Remove order notes completely from HU checkout.
+    // Keep order notes optional even if another plugin/theme refresh re-adds the field.
     if ( isset( $fields['order']['order_comments'] ) ) {
-        unset( $fields['order']['order_comments'] );
+        $fields['order']['order_comments']['required'] = false;
+        $fields['order']['order_comments']['label'] = 'Megjegyzés a rendeléshez';
+        $fields['order']['order_comments']['placeholder'] = 'Megjegyzések a rendeléshez.';
+        $fields['order']['order_comments']['class'] = array( 'form-row', 'notes', 'form-group', 'col-xs-12' );
+        $fields['order']['order_comments']['input_class'] = array( 'input-text', 'form-input' );
+        if ( isset( $fields['order']['order_comments']['custom_attributes']['required'] ) ) {
+            unset( $fields['order']['order_comments']['custom_attributes']['required'] );
+        }
+        if ( isset( $fields['order']['order_comments']['custom_attributes']['aria-required'] ) ) {
+            unset( $fields['order']['order_comments']['custom_attributes']['aria-required'] );
+        }
     }
 
     return $fields;
@@ -547,7 +554,7 @@ add_filter( 'woocommerce_available_payment_gateways', function( $gw ) {
 
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
-// Hard guard: remove any late-injected order notes field after checkout AJAX refreshes.
+// Hard guard: never let order notes become required after checkout AJAX refreshes.
 add_action( 'wp_footer', function() {
     if ( ! is_checkout() ) {
         return;
@@ -555,43 +562,21 @@ add_action( 'wp_footer', function() {
     ?>
     <script>
     jQuery(function($){
-      function removeOrderComments(){
-        $('#order_comments_field').remove();
-        $('.woocommerce-additional-fields__field-wrapper').find('#order_comments').closest('.form-row').remove();
+      function normalizeOrderComments(){
+        var $field = $('#order_comments');
+        if (!$field.length) return;
+
+        $field.prop('required', false).removeAttr('required aria-required');
+
+        var $row = $('#order_comments_field');
+        $row.removeClass('validate-required woocommerce-invalid').addClass('notes');
+        $row.find('.required').remove();
       }
 
-      function normalizeHuAddressFields(){
-        var $address1 = $('#billing_address_1');
-        var $address2 = $('#billing_address_2');
-        var $address1Field = $('#billing_address_1_field');
-        var $address2Field = $('#billing_address_2_field');
-
-        if ($address1.length) {
-          $address1.attr('placeholder', 'Utca');
-          $address1Field.find('label').contents().filter(function(){ return this.nodeType === 3; }).first().replaceWith('Utca');
-        }
-
-        if ($address2.length) {
-          $address2.attr('placeholder', 'Házszám');
-          $address2Field.find('label').contents().filter(function(){ return this.nodeType === 3; }).first().replaceWith('Házszám');
-          $address2Field.find('.optional').remove();
-        }
-      }
-
-      removeOrderComments();
-      normalizeHuAddressFields();
-      $(document.body).on('updated_checkout init_checkout checkout_error', function(){
-        removeOrderComments();
-        normalizeHuAddressFields();
-      });
-      $(document).on('submit', 'form.checkout', function(){
-        removeOrderComments();
-        normalizeHuAddressFields();
-      });
-      $(document).on('click', '#place_order', function(){
-        removeOrderComments();
-        normalizeHuAddressFields();
-      });
+      normalizeOrderComments();
+      $(document.body).on('updated_checkout init_checkout checkout_error', normalizeOrderComments);
+      $(document).on('submit', 'form.checkout', normalizeOrderComments);
+      $(document).on('click', '#place_order', normalizeOrderComments);
     });
     </script>
     <?php

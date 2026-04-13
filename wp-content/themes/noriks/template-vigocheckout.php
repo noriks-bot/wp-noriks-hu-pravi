@@ -197,6 +197,17 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
         <div class="col-2">
           <div class="woocommerce-shipping-fields">
 	</div>
+<div class="woocommerce-additional-fields">
+	
+	
+		
+			<h3>További információk</h3>
+
+		
+		<div class="woocommerce-additional-fields__field-wrapper">
+							<p class="form-row notes form-group col-xs-12" id="order_comments_field" data-priority=""><label for="order_comments" class="">Megjegyzés a rendeléshez&nbsp;<span class="optional">(opcionális)</span></label><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text form-input" id="order_comments" placeholder="Megjegyzések a rendeléshez.  "  rows="2" cols="5"maxlength="80"></textarea></span></p>					</div>
+
+	
 	<div id="custom_shipping">
 
         <h3>Szállítás</h3>
