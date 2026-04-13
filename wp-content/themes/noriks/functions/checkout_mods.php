@@ -467,10 +467,10 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_first_name']['placeholder'] = 'Keresztnév';
     $fields['billing']['billing_last_name']['label'] = 'Vezetéknév';
     $fields['billing']['billing_last_name']['placeholder'] = 'Vezetéknév';
-    $fields['billing']['billing_address_1']['label'] = 'Utca';
-    $fields['billing']['billing_address_1']['placeholder'] = 'Utca';
-    $fields['billing']['billing_address_2']['label'] = 'Házszám';
-    $fields['billing']['billing_address_2']['placeholder'] = 'Házszám';
+    $fields['billing']['billing_address_1']['label'] = 'Utcanév';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Utcanév';
+    $fields['billing']['billing_address_2']['label'] = 'Házszám (lakás, emelet, ajtó)';
+    $fields['billing']['billing_address_2']['placeholder'] = 'Házszám (lakás, emelet, ajtó)';
     $fields['billing']['billing_address_2']['required'] = true;
     $fields['billing']['billing_postcode']['label'] = 'Irányítószám';
     $fields['billing']['billing_postcode']['placeholder'] = 'Irányítószám';
@@ -494,8 +494,8 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_last_name']['class']  = array('form-row','form-row-last','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_address_1']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_address_2']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_postcode']['class']   = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required','validate-postcode');
-    $fields['billing']['billing_city']['class']       = array('form-row','form-row-wide','dropdown','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_postcode']['class']   = array('form-row','form-row-first','address-field','form-group','col-xs-6','validate-required','validate-postcode');
+    $fields['billing']['billing_city']['class']       = array('form-row','form-row-last','dropdown','form-group','col-xs-6','validate-required');
     $fields['billing']['billing_phone']['class']      = array('form-row','form-row-wide','form-group','col-xs-12','validate-required','validate-phone');
     $fields['billing']['billing_email']['class']      = array('form-row','form-row-wide','form-group','col-xs-12','validate-email');
 
@@ -526,8 +526,9 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  * Address hint after last name
  */
 add_filter( 'woocommerce_form_field_text', function( $field, $key ) {
-    if ( $key === 'billing_last_name' ) {
-        $field .= '<div class="form-row form-row-wide col-xs-12">Kérjük, adjon meg egy olyan címet, ahol <b>8:00 és 15:00 között</b> tartózkodik.</div>';
+    if ( $key === 'billing_address_1' ) {
+        $hint = '<p class="noriks-address-hint">Kérjük, adjon meg egy olyan címet, ahol <strong>8:00 és 15:00 között</strong> tartózkodik.</p>';
+        $field = $hint . $field;
     }
     return $field;
 }, 10, 2 );

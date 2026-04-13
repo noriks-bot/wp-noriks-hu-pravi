@@ -417,3 +417,15 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
     clear: both !important;
   }
 }
+
+
+/* ===== ADDRESS HINT TEXT ===== */
+.noriks-address-hint {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+.noriks-address-hint strong {
+  font-weight: 700;
+}
