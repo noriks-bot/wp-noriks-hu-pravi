@@ -451,7 +451,7 @@ add_filter( 'body_class', function( $classes ) {
  * WC checkout field config — match vigoshop HR layout
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    // Order — match vigoshop: name → address → phone → email
+    // Order: phone → email → first → last → address_1 → address_2 → postcode → city
     $fields['billing']['billing_phone']['priority']       = 10;
     $fields['billing']['billing_email']['priority']       = 20;
     $fields['billing']['billing_first_name']['priority']  = 30;
@@ -460,6 +460,9 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_address_2']['priority']   = 60;
     $fields['billing']['billing_postcode']['priority']    = 70;
     $fields['billing']['billing_city']['priority']        = 80;
+    // Remove country/state (hidden, not needed in HU)
+    unset( $fields['billing']['billing_country'] );
+    unset( $fields['billing']['billing_state'] );
     // phone/email priorities already set above (10/20)
 
     // Labels, placeholders, required
@@ -704,7 +707,25 @@ add_filter('woocommerce_checkout_posted_data', function($data){
 });
 
 /**
- * Validate billing_address_2 (kućni broj) is required
+ * Override WC locale address field labels/placeholders for HU
+ * WC uses locale-based overrides that bypass woocommerce_checkout_fields
+ */
+add_filter( 'woocommerce_get_country_locale', function( $locale ) {
+    $locale['HU']['address_1']['label']       = 'Utcanév';
+    $locale['HU']['address_1']['placeholder'] = 'Utcanév';
+    $locale['HU']['address_2']['label']       = 'Házszám (lakás, emelet, ajtó)';
+    $locale['HU']['address_2']['placeholder'] = 'Házszám (lakás, emelet, ajtó)';
+    $locale['HU']['address_2']['required']    = true;
+    $locale['HU']['address_2']['hidden']      = false;
+    $locale['HU']['postcode']['label']        = 'Irányítószám';
+    $locale['HU']['postcode']['placeholder']  = 'Irányítószám';
+    $locale['HU']['city']['label']            = 'Város';
+    $locale['HU']['city']['placeholder']      = 'Város';
+    return $locale;
+}, 20 );
+
+/**
+ * Validate billing_address_2 (kúćni broj) is required
  */
 add_action('woocommerce_checkout_process', function(){
     if ( empty( $_POST['billing_address_2'] ) ) {
