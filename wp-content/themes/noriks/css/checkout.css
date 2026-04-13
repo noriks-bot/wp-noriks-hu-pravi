@@ -416,6 +416,19 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
     width: 100% !important;
     clear: both !important;
   }
+
+  p#billing_postcode_field {
+    float: left !important;
+    clear: both !important;
+    width: 30% !important;
+    margin-right: 2% !important;
+  }
+
+  p#billing_city_field {
+    float: right !important;
+    clear: none !important;
+    width: 68% !important;
+  }
 }
 
 /* HU address fields — competitor-style static placeholders, no floating labels */
@@ -445,11 +458,44 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
   box-shadow: inset 0 1px 3px rgba(0,0,0,.18) !important;
 }
 
+#billing_address_1_field.custom-validated input,
+#billing_address_2_field.custom-validated input,
+#billing_postcode_field.custom-validated input,
+#billing_city_field.custom-validated input,
+#billing_address_1_field.custom-validated input:focus,
+#billing_address_2_field.custom-validated input:focus,
+#billing_postcode_field.custom-validated input:focus,
+#billing_city_field.custom-validated input:focus,
+#billing_address_1_field.woocommerce-validated input.input-text,
+#billing_address_2_field.woocommerce-validated input.input-text,
+#billing_postcode_field.woocommerce-validated input.input-text,
+#billing_city_field.woocommerce-validated input.input-text,
+#billing_address_1_field.woocommerce-validated input.input-text:focus,
+#billing_address_2_field.woocommerce-validated input.input-text:focus,
+#billing_postcode_field.woocommerce-validated input.input-text:focus,
+#billing_city_field.woocommerce-validated input.input-text:focus {
+  background-color: #fff !important;
+  border: 1px solid #cfcfcf !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.18) !important;
+}
+
 #billing_address_1_field.field--not-empty input,
 #billing_address_2_field.field--not-empty input,
 #billing_postcode_field.field--not-empty input,
 #billing_city_field.field--not-empty input {
   padding: 0 18px !important;
+}
+
+#billing_address_1_field,
+#billing_address_2_field,
+#billing_postcode_field,
+#billing_city_field {
+  margin-bottom: 12px !important;
+}
+
+#billing_city_field,
+#billing_postcode_field {
+  margin-top: 0 !important;
 }
 
 #billing_address_1::placeholder,
