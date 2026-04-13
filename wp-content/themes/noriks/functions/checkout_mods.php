@@ -557,10 +557,38 @@ add_action( 'wp_footer', function() {
         $('.woocommerce-additional-fields__field-wrapper').find('#order_comments').closest('.form-row').remove();
       }
 
+      function normalizeHuAddressFields(){
+        var $address1 = $('#billing_address_1');
+        var $address2 = $('#billing_address_2');
+        var $address1Field = $('#billing_address_1_field');
+        var $address2Field = $('#billing_address_2_field');
+
+        if ($address1.length) {
+          $address1.attr('placeholder', 'Utca');
+          $address1Field.find('label').contents().filter(function(){ return this.nodeType === 3; }).first().replaceWith('Utca');
+        }
+
+        if ($address2.length) {
+          $address2.attr('placeholder', 'Házszám');
+          $address2Field.find('label').contents().filter(function(){ return this.nodeType === 3; }).first().replaceWith('Házszám');
+          $address2Field.find('.optional').remove();
+        }
+      }
+
       removeOrderComments();
-      $(document.body).on('updated_checkout init_checkout checkout_error', removeOrderComments);
-      $(document).on('submit', 'form.checkout', removeOrderComments);
-      $(document).on('click', '#place_order', removeOrderComments);
+      normalizeHuAddressFields();
+      $(document.body).on('updated_checkout init_checkout checkout_error', function(){
+        removeOrderComments();
+        normalizeHuAddressFields();
+      });
+      $(document).on('submit', 'form.checkout', function(){
+        removeOrderComments();
+        normalizeHuAddressFields();
+      });
+      $(document).on('click', '#place_order', function(){
+        removeOrderComments();
+        normalizeHuAddressFields();
+      });
     });
     </script>
     <?php
