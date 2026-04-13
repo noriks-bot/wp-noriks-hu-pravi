@@ -316,7 +316,6 @@ add_action( 'wp_footer', function() {
     jQuery(function($){
       var messages = {
         required: '\u2715 Kötelező információ',
-        billing_address_2: '\u2715 Ha nincs házszáma, írja be: BB',
       };
       var submitted = false; /* only validate after first submit attempt */
       /* Set submitted=true when WC native button is clicked */
@@ -468,7 +467,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_address_1']['placeholder'] = 'Utca';
     $fields['billing']['billing_address_2']['label'] = 'Házszám';
     $fields['billing']['billing_address_2']['placeholder'] = 'Házszám';
-    $fields['billing']['billing_address_2']['required'] = true;
+    $fields['billing']['billing_address_2']['required'] = false;
     $fields['billing']['billing_postcode']['label'] = 'Irányítószám';
     $fields['billing']['billing_postcode']['placeholder'] = 'Irányítószám';
     $fields['billing']['billing_city']['label'] = 'Város';
@@ -490,7 +489,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_first_name']['class'] = array('form-row','form-row-first','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_last_name']['class']  = array('form-row','form-row-last','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_address_1']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_address_2']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_address_2']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12');
     $fields['billing']['billing_postcode']['class']   = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required','validate-postcode');
     $fields['billing']['billing_city']['class']       = array('form-row','form-row-wide','dropdown','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_phone']['class']      = array('form-row','form-row-wide','form-group','col-xs-12','validate-required','validate-phone');
@@ -697,13 +696,4 @@ add_filter('woocommerce_checkout_posted_data', function($data){
         }
     }
     return $data;
-});
-
-/**
- * Validate billing_address_2 (kućni broj) is required
- */
-add_action('woocommerce_checkout_process', function(){
-    if ( empty( $_POST['billing_address_2'] ) ) {
-        wc_add_notice( 'Kérjük, adja meg a házszámot.', 'error' );
-    }
 });
