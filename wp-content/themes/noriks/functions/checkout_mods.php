@@ -389,6 +389,13 @@ add_action( 'wp_footer', function() {
           return false;
         }
 
+        /* Postcode format — HU: exactly 4 digits */
+        var isPostcode = $row.hasClass('validate-postcode');
+        if (isPostcode && val && !/^\d{4}$/.test(val.trim())) {
+          showError($row, '\u2715 Az irányítószámnak 4 számjegyből kell állnia');
+          return false;
+        }
+
         /* Valid */
         if (val) showValid($row);
         return true;
