@@ -59,6 +59,9 @@ function noriks_ajax_add_to_cart() {
         // Trigger the standard WC action so side cart picks it up
         do_action('woocommerce_ajax_added_to_cart', $product_id);
         
+        // Clear WC notices so green banner doesn't show on next page load
+        wc_clear_notices();
+        
         // Get refreshed fragments (same as side cart does)
         ob_start();
         wc_setcookie('woocommerce_items_in_cart', WC()->cart->get_cart_contents_count());
