@@ -488,14 +488,14 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="https://noriks.com/hu/wp-content/uploads/2026/04/hu_majice.jpeg">
+     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
          <img src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
           
           <?php else: ?>
       
       
-     <img src="https://noriks.com/hu/wp-content/uploads/2026/04/hu_majice.jpeg">
+     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
         
             
