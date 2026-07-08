@@ -670,7 +670,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "";
   }
 
-  openBtn?.addEventListener("click", openModal);
+  // Delegated: any trigger (existing #open-size-chart or an accordion
+  // image with .js-open-size-chart) opens the modal.
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("#open-size-chart, #open-size-chart-secondary, .js-open-size-chart")) {
+      openModal(e);
+    }
+  });
   closeX?.addEventListener("click", closeModal);
   backdrop?.addEventListener("click", closeModal);
 

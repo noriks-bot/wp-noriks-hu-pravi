@@ -476,7 +476,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
            <?php if( $is_boxers ): ?>
        
         
-          <img src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
+          <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
           
           
           
@@ -484,18 +484,18 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         <?php elseif(  $is_carape ): ?>
         
         
-                  <img src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
+                  <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+     <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
-         <img src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
+         <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
           
           <?php else: ?>
       
       
-     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+     <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
         
             
