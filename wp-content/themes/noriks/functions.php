@@ -254,6 +254,22 @@ function enqueue_main_styles() {
     // Enqueue header.js
     wp_enqueue_script('header-js', get_template_directory_uri() . '/js/header.js', array('jquery'), filemtime(get_template_directory() . '/js/header.js'), true);
 
+    // Brand fonts (Huel-style): Inter (grotesk) + Fraunces (serif italic accents).
+    wp_enqueue_style(
+        'noriks-fonts',
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap',
+        array(),
+        null
+    );
+    // Typography overrides — must load after main.css to win.
+    wp_enqueue_style(
+        'noriks-typography',
+        get_template_directory_uri() . '/css/typography.css',
+        array( 'main-style', 'noriks-fonts' ),
+        filemtime(get_template_directory() . '/css/typography.css'),
+        'all'
+    );
+
         if ( function_exists( 'is_cart' ) && is_cart() ) {
         wp_enqueue_style(
             'cart-style',
