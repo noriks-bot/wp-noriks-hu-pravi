@@ -447,7 +447,10 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
 
 <br>
 
-        
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kompresijske-nogavice', $current_product_id ) ): ?>
+
+                15–20 Hgmm fokozatos kompresszióval a NORIKS kompressziós zoknik segítenek javítani a vérkeringést, csökkenteni a duzzanatot és enyhíteni a fáradt vagy nehéz lábak feszülését. Az oldalsó cipzár könnyűvé teszi a fel- és levételt – ideális a csökkent mozgásképességű vagy ízületi gyulladásban szenvedő személyeknek. A puha belső bélés védi a bőrt a cipzártól, és irritáció nélküli kényelmet biztosít.
+
         <?php else: ?>
         
         
@@ -473,9 +476,19 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
       </div>
       <div class="accordion-content">
           
-           <?php if( $is_boxers ): ?>
-       
-        
+           <?php if( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : cipőméret 36–40 / vádli körfogat : 23–36 cm<br>
+            <strong>L/XL</strong> : cipőméret 40–44 / vádli körfogat : 36–45 cm<br>
+            <strong>2XL</strong> : cipőméret 44–48 / vádli körfogat : 45–56 cm<br><br>
+            Kérjük, mérje meg a vádli körfogatát a legszélesebb ponton, hogy megtalálja a méretét.<br><br>
+            Javasoljuk, hogy a méretet a vádli körfogata alapján válassza, ne a szokásos cipőméret alapján.
+          </div>
+
+        <?php elseif( $is_boxers ): ?>
+
+
           <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png">
           
           
@@ -522,6 +535,10 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
                        Színes ruhákhoz. Kímélő mosási program hideg vízben. Szárítsa kiterítve vagy alacsony hőmérsékleten. Ne szárítsa.     
         
         
+          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
+
+                Kézi mosás hideg vízben vagy gépi mosás kímélő programon. Ne használjon fehérítőt.<br><br>Kizárólag levegőn szárítsa – ne használjon szárítógépet, hogy megőrizze a rugalmasságot és a kompresszió hatékonyságát.
+
           <?php else: ?>
             <?php echo get_field("__overwrite_sekcije_bellow_3"); ?>
         <?php endif; ?>

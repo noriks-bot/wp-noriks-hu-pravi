@@ -198,13 +198,23 @@
   <div  style="<?php if ( has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', get_the_ID() ) ): ?>  display: block; <?php endif; ?>"
         class="size-chart-left">
       
-      <?php if ( has_term( array( 'boxerek', 'orto-boxeralsok' , 'bokserice-sastavi-paket', 'bokserice', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() )   && 
+      <?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
+
+      <div style="line-height:1.9; text-align:left; margin:40px 0; padding:0 6px; font-size:15px; color:#111;">
+        <strong>S/M</strong> : cipőméret 36–40 / vádli körfogat : 23–36 cm<br>
+        <strong>L/XL</strong> : cipőméret 40–44 / vádli körfogat : 36–45 cm<br>
+        <strong>2XL</strong> : cipőméret 44–48 / vádli körfogat : 45–56 cm<br><br>
+        Kérjük, mérje meg a vádli körfogatát a legszélesebb ponton, hogy megtalálja a méretét.<br><br>
+        Javasoljuk, hogy a méretet a vádli körfogata alapján válassza, ne a szokásos cipőméret alapján.
+      </div>
+
+      <?php elseif ( has_term( array( 'boxerek', 'orto-boxeralsok' , 'bokserice-sastavi-paket', 'bokserice', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() )   &&
        !has_term( 'black-friday', 'product_cat', get_the_ID() )   ): ?>
-      
+
     <img
-    
+
     style="margin-top: 70px;margin-bottom: 70px;"
-    
+
       src="https://noriks.com/hu/wp-content/uploads/2026/02/boxers_size_hu.png"
       alt="Size Guide">
       
