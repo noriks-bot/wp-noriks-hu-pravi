@@ -1213,6 +1213,63 @@ document.addEventListener('DOMContentLoaded', function(){
 $faq_list = get_field('faq_list', 'option');
 $faq_list2 = get_field('faq_list_2', 'option');
 $faq_list3 = get_field('faq_list_3', 'option');
+
+$is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
+
+// Compression-sock benefit content — replaces ONLY the product-info
+// container on sock products. Delivery/returns stay as they are.
+$knc_faq = array(
+  array(
+    'questioon' => 'Nehéz és fáradt lábak',
+    'answer'    => 'A NORIKS kompressziós zoknik 15–20 Hgmm fokozatos kompressziót alkalmaznak, hogy a bokától felfelé serkentsék a vérkeringést. Ahelyett, hogy a vér a lábakban pangana, a fokozatos nyomás támogatja a természetes visszaáramlást. A lábad már néhány óra után könnyebbnek érzi magát.'
+  ),
+  array(
+    'questioon' => 'Visszerek és vénás problémák',
+    'answer'    => 'Amikor a vérkeringés gyengül, a vénák kitágulnak, láthatóvá és fájdalmassá válnak. A NORIKS zoknik enyhe, de állandó nyomást fejtenek ki, amely támogatja a vénafalakat és megkönnyíti a véráramlást. Ideális kiegészítője az orvosi kezelésnek, vagy megelőzésként a veszélyeztetett személyeknek.'
+  ),
+  array(
+    'questioon' => 'Duzzanat és vízvisszatartás',
+    'answer'    => 'A hosszan tartó ülés vagy állás folyadékfelhalmozódást okoz a bokában és a vádliban. A NORIKS zoknik a bokánál fejtik ki a legerősebb nyomást, amely felfelé fokozatosan csökken — ez a fokozatos kompresszió segít csökkenteni a duzzanatot és megakadályozza, hogy a vízvisszatartás a nap folyamán megtelepedjen.'
+  ),
+  array(
+    'questioon' => 'Zsibbadás és bizsergés',
+    'answer'    => 'A túl szűk vagy rosszul illeszkedő zoknik nyomják az ereket, és ezt a kellemetlen bizsergő érzést okozzák. A NORIKS zoknik lélegző anyagból és kiegyensúlyozott kompresszióval készülnek, amely serkenti a vérkeringést anélkül, hogy elzárná a véráramlást. A lábad vitális és érzékeny marad, zsibbadás és bizsergés nélkül.'
+  ),
+  array(
+    'questioon' => 'Kényelem érzékeny bőrre',
+    'answer'    => 'Még az enyhe nyomás is kellemetlenné válhat érzékeny vagy irritált bőrön. A NORIKS zoknik puha, lélegző anyagot, a cipzárnál védő belső bélést és mérsékelt kompressziót egyesítenek a hatékony támogatásért dörzsölés vagy irritáció nélkül. Viseld egész nap aggodalom nélkül.'
+  ),
+);
+
+// On sock products, swap the list only for the product-info container.
+// NOTE: matches the Hungarian product-info title; adjust the needle if the
+// actual faq_title differs.
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq ) {
+  if ( $is_knc && stripos( (string) $title, 'Termékinformáci' ) !== false ) {
+    return $knc_faq;
+  }
+  return $list;
+};
+
+$render_faq_items = function( $list ) {
+  if ( $list && is_array( $list ) ):
+    foreach ( $list as $faq_item ): ?>
+      <div class="faq-item">
+        <button class="faq-question">
+          <?php echo $faq_item["questioon"]; ?>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <p><?php echo $faq_item["answer"]; ?></p>
+        </div>
+      </div>
+    <?php endforeach;
+  endif;
+};
+
+$faq_title_1 = get_field('faq_title_1', 'option');
+$faq_title_2 = get_field('faq_title_2', 'option');
+$faq_title_3 = get_field('faq_title_3', 'option');
 ?>
 
 <section class="faq-section">
@@ -1220,54 +1277,24 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
     <!-- first faq container -->
     <div class="faq-container">
-        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #222223; margin-bottom: 10px; "><?php echo get_field('faq_title_1', 'option'); ?></h4>
-        <?php if( $faq_list && is_array($faq_list) ): foreach( $faq_list as $faq_item ): ?>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <?php echo $faq_item["questioon"]; ?>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="faq-answer">
-                    <p> <?php echo $faq_item["answer"]; ?></p>
-                </div>
-            </div>
-        <?php endforeach; endif; ?>
+        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #222223; margin-bottom: 10px; "><?php echo $faq_title_1; ?></h4>
+        <?php $render_faq_items( $faq_pick( $faq_title_1, $faq_list ) ); ?>
     </div>
     <!-- first faq container -->
 
     <!-- 2 faq container -->
     <div class="faq-container">
         <br/>
-        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #001e36; margin-bottom: 10px; "><?php echo get_field('faq_title_2', 'option'); ?></h4>
-        <?php if( $faq_list2 && is_array($faq_list2) ): foreach( $faq_list2 as $faq_item ): ?>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <?php echo $faq_item["questioon"]; ?>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="faq-answer">
-                    <p> <?php echo $faq_item["answer"]; ?></p>
-                </div>
-            </div>
-        <?php endforeach; endif; ?>
+        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #001e36; margin-bottom: 10px; "><?php echo $faq_title_2; ?></h4>
+        <?php $render_faq_items( $faq_pick( $faq_title_2, $faq_list2 ) ); ?>
     </div>
     <!-- 2 faq container -->
 
     <!-- 3 faq container -->
     <div class="faq-container">
         <br/>
-        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #001e36; margin-bottom: 10px; "><?php echo get_field('faq_title_3', 'option'); ?></h4>
-        <?php if( $faq_list3 && is_array($faq_list3) ): foreach( $faq_list3 as $faq_item ): ?>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <?php echo $faq_item["questioon"]; ?>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="faq-answer">
-                    <p> <?php echo $faq_item["answer"]; ?></p>
-                </div>
-            </div>
-        <?php endforeach; endif; ?>
+        <h4 style="text-align:left; font-size: 1rem; font-weight: 700; color: #001e36; margin-bottom: 10px; "><?php echo $faq_title_3; ?></h4>
+        <?php $render_faq_items( $faq_pick( $faq_title_3, $faq_list3 ) ); ?>
     </div>
     <!-- 3 faq container -->
 </section>
