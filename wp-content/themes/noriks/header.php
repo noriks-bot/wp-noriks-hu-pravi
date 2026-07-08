@@ -133,22 +133,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	
 	
+	<?php
+  // Top scrolling bar icons (inline SVG, inherit text color).
+  $mq_ico_truck  = '<svg class="mq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5h11v9H3z"/><path d="M14 9.5h3.8l2.7 3v3H14z"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17.3" cy="17.5" r="1.6"/></svg>';
+  $mq_ico_shield = '<svg class="mq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg>';
+?>
 	<div class="top-header">
   <div class="marquee">
     <div class="marquee-content">
-      <span><a href="/hu/shop">Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop">30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
-      <!--<span><a href="/hu/shop">Téli akció: Akár 70% kedvezmény!</a></span>-->
+      <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
 
       <!-- DUPLICATED for seamless infinite loop -->
-      <span><a href="/hu/shop">Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop">30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
-     <!-- <span><a href="/hu/shop">Téli akció: Akár 70% kedvezmény!</a></span>-->
-      
+      <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
+
        <!-- DUPLICATED for seamless infinite loop -->
-      <span><a href="/hu/shop">Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop">30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
-     <!-- <span><a href="/hu/shop">Téli akció: Akár 70% kedvezmény!</a></span>-->
+      <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
     </div>
   </div>
 </div>
@@ -157,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 .top-header {
   width: 100%;
   background: #d5d5d5;
-  padding: 2px 0;
+  padding: 6px 0;
   overflow: hidden;
 }
 
@@ -166,18 +168,24 @@ document.addEventListener('DOMContentLoaded', function () {
   overflow: hidden;
   white-space: nowrap;
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .marquee-content {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
    color: black;
   gap: 70px;
+  line-height: 1;
   animation: marqueeScroll 28s linear infinite; /* adjust speed here */
 }
 
 .marquee-content span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
     color: black;
 }
 
@@ -188,6 +196,17 @@ document.addEventListener('DOMContentLoaded', function () {
   text-decoration: none;
     color: black;
     text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  gap: 6px;
+}
+
+.marquee-content .mq-ico {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  display: block;
 }
 
 /* Perfect infinite sliding with no jumps */
@@ -289,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <?php else: ?>
                 <!-- NORMAL ITEMS -->
-                <a href="<?php echo esc_url($link); ?>" class="nav-link">
+                <a href="<?php echo esc_url($link); ?>" class="nav-link<?php echo ( $i === count($header_nav) - 1 ) ? ' nav-link--pill' : ''; ?>">
                     <?php echo esc_html($text); ?>
                 </a>
             <?php endif; ?>
@@ -606,6 +625,7 @@ document.addEventListener('DOMContentLoaded', function () {
 .navbar-center {
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -615,6 +635,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   .navbar-center {
     flex-direction: column;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: -350px; /* Hidden by default */
@@ -665,54 +686,59 @@ document.addEventListener('DOMContentLoaded', function () {
     <span class="language-close" onclick="closeLanguageModal()">&times;</span>
     <h3><?php  echo get_field("country_shop_list_POPUP_t1","options"); ?></h3>
    <div class="language-options">
- 
- 
-      
-  <a href="/" class="language-option">
+
+  <a href="https://noriks.com/" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/eu.svg"><span>English (Europe)</span>
   </a>
-  
-<a href="/hr" class="language-option">
+
+  <a href="https://noriks.com/hr" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/hr.svg"><span>Croatia (HR)</span>
   </a>
-  
-   <a href="/hu" class="language-option">
+
+  <a href="https://noriks.com/hu" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/hu.svg"><span>Hungary (HU)</span>
   </a>
-  <!--
-    <a href="/de" class="language-option">
-    <img src="https://static.devit.software/countries/flags/rectangle/de.svg"><span>Germany (DE)</span>
-  </a>
-  -->
 
-  <a href="/pl" class="language-option">
+  <a href="https://noriks.com/pl" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/pl.svg"><span>Poland (PL)</span>
   </a>
-  <a href="/sk" class="language-option">
+
+  <a href="https://noriks.com/sk" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/sk.svg"><span>Slovakia (SK)</span>
   </a>
-  <a href="/cz" class="language-option">
+
+  <a href="https://noriks.com/cz" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/cz.svg"><span>Czech Republic (CZ)</span>
   </a>
-  <!--
-  <a href="/ro" class="language-option">
+
+  <a href="https://noriks.com/ro" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/ro.svg"><span>Romania (RO)</span>
   </a>
-  -->
-  <a href="/gr" class="language-option">
+
+  <a href="https://noriks.com/gr" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/gr.svg"><span>Greece (GR)</span>
   </a>
-  <!--
-  <a href="/si" class="language-option">
+
+  <a href="https://noriks.com/bg" class="language-option">
+    <img src="https://static.devit.software/countries/flags/rectangle/bg.svg"><span>Bulgaria (BG)</span>
+  </a>
+
+  <a href="https://noriks.com/it" class="language-option">
+    <img src="https://static.devit.software/countries/flags/rectangle/it.svg"><span>Italy (IT)</span>
+  </a>
+
+  <a href="https://noriks.com/si" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/si.svg"><span>Slovenia (SI)</span>
   </a>
-  -->
-  
-    <a href="https://www.noriksofficial.com/" class="language-option">
+
+  <a href="https://noriks.com/de" class="language-option">
+    <img src="https://static.devit.software/countries/flags/rectangle/de.svg"><span>Germany (DE)</span>
+  </a>
+
+  <a href="https://www.noriksofficial.com/" class="language-option">
     <img src="https://static.devit.software/countries/flags/rectangle/us.svg"><span>English (USA)</span>
   </a>
-  
-  
+
 </div>
   </div>
 </div>
@@ -894,12 +920,29 @@ color: white;
     margin: 0 15px;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.59px !important;
+    text-transform: none;
+    letter-spacing: 0.3px !important;
 }
 
 .header .navbar-center a:hover {
   text-decoration: underline;
+}
+
+/* Last menu item as a pill button (orange, black text) */
+.header .navbar-center a.nav-link--pill {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  background: #f5a623;
+  color: black !important;
+  padding: 6px 11px;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 0 !important;
+}
+.header .navbar-center a.nav-link--pill:hover {
+  background: #e0951c;
+  text-decoration: none;
 }
 
 .header .navbar-right {
