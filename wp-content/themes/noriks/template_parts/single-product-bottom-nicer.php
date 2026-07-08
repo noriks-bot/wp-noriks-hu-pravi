@@ -1,3 +1,66 @@
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
+<!-- Compression socks: NORIKS vs. others comparison (demo/UGC videos need HU assets — omitted) -->
+<section class="why-section knc-compare-section">
+  <div class="knc-compare-wrap">
+    <h2 class="knc-compare-title">NORIKS vs. a többiek</h2>
+    <div class="knc-table-scroll">
+      <table class="knc-table">
+        <thead>
+          <tr>
+            <th class="knc-feat"></th>
+            <th class="knc-comp">Klasszikus zoknik<span>(Bauerfeind, medi…)</span></th>
+            <th class="knc-comp">TV-zoknik<span>(Zip Sox &amp; Co.)</span></th>
+            <th class="knc-us">NORIKS<em class="knc-badge">1. sz.</em></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Orvosi kompresszió</td><td class="ok">✓</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Cipzár a könnyű felvételhez</td><td class="no">✕</td><td class="ok">✓</td><td class="us ok">✓</td></tr>
+          <tr><td>Önálló felvétel segítség nélkül</td><td class="no">✕</td><td class="mid">~</td><td class="us ok">✓</td></tr>
+          <tr><td>Megerősített cipzár, sosem akad be</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Lélegző anyag</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Egész napos kényelem (+12 óra)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>60 napos pénzvisszafizetési garancia</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr class="knc-price"><td>Ár páronként</td><td>85 €-tól</td><td>~15 €</td><td class="us">23,33 €-tól</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<style>
+  .knc-compare-section { background:#fff; padding:30px 0 40px; }
+  .knc-compare-wrap { max-width:940px; margin:0 auto; padding:0 16px; }
+  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#111; margin:0 0 24px; }
+  .knc-table-scroll { border-radius:16px; overflow:hidden; box-shadow:0 12px 34px rgba(18,48,90,.12); border:1px solid #edf0f4; }
+  .knc-table { width:100%; border-collapse:collapse; table-layout:fixed; margin:0 !important; }
+  .knc-table th, .knc-table td { padding:15px 12px; text-align:center; font-size:15px; }
+  .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; font-size:14px; }
+  .knc-table thead th:first-child { width:34%; background:#fff; }
+  .knc-table .knc-comp { background:#767676; }
+  .knc-table .knc-comp span { display:block; font-weight:400; font-size:11.5px; opacity:.8; margin-top:3px; }
+  .knc-table .knc-us { background:#111; }
+  .knc-badge { display:inline-block; margin-left:6px; background:#fff; color:#111; font-style:normal; font-weight:700; font-size:10.5px; padding:2px 8px; border-radius:999px; vertical-align:middle; }
+  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#111; font-size:14px; line-height:1.3; padding-left:18px; }
+  .knc-table tbody tr { border-bottom:1px solid #eef0f4; }
+  .knc-table tbody tr:nth-child(even) { background:#fafbfc; }
+  .knc-table td.ok { color:#1a9e5f; font-size:19px; font-weight:700; }
+  .knc-table td.no { color:#cdd2da; font-size:18px; }
+  .knc-table td.mid { color:#e0a52e; font-size:18px; font-weight:700; }
+  .knc-table td.us { background:#f3f3f3 !important; }
+  .knc-table td.us.ok { color:#1a9e5f; }
+  .knc-table .knc-price td { font-weight:700; color:#4a5568; }
+  .knc-table .knc-price td:first-child { color:#1e2a3a; }
+  .knc-table .knc-price td.us { color:#111; font-size:16px; }
+  @media (max-width:640px){
+    .knc-table th, .knc-table td { padding:12px 6px; font-size:13px; }
+    .knc-table thead th { font-size:12px; }
+    .knc-table thead th:first-child { width:40%; }
+    .knc-table tbody td:first-child { font-size:12px; padding-left:10px; }
+    .knc-badge { display:block; margin:4px auto 0; width:-moz-max-content; width:max-content; }
+  }
+</style>
+<?php endif; ?>
+
 <?php if ( has_term( array( 'kezdocsomag','orto-kezdocsomag', 'paketo-ekkinisis', 'starter-pack' ), 'product_cat', get_the_id() ) ) : ?>
 <section class="why-section">
     <div style="max-width: 1440px;" class="container why-container">
