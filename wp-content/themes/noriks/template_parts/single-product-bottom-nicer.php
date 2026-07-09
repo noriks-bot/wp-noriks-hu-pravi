@@ -374,13 +374,15 @@
         <div style="background: #f9f9f9;padding: 0;padding-left: 10px; padding-right: 10px;" class="comparison-intro comparison-intro-gray ">
             <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
             <h1 style="color:black; margin-bottom: 4px;">
-            <?php if ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) ): ?>
+            <?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
+                Nem vagy egyedül a tökéletes kompressziós zokni keresésében.
+            <?php elseif ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) ): ?>
                 <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
             <?php else: ?>
                 Nem vagy egyedül a tökéletes boxeralsó keresésében.
             <?php endif; ?>
             </h1>
-            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?></p>
+            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
         </div>
     </section>
 </div>
@@ -442,9 +444,15 @@ $is_bokserice_page = has_term(
     'product_cat',
     $current_product_id
 );
+$is_nogavice_page = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) );
 
-// Include review pools
-if ( ! $is_bokserice_page ) {
+// Fallback product name shown in review cards.
+$rv_fallback_title = $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló';
+
+// Include review pools (own pool per product group)
+if ( $is_nogavice_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_nogavice.php';
+} elseif ( ! $is_bokserice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
 } else {
     include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'_bokserice.php';
@@ -512,15 +520,17 @@ function get_wc_product_pool(
     }
 
     $is_bokserice = false;
+    $is_nogavice  = false;
     if ( $product_id ) {
         $is_bokserice = has_term(
             array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
             'product_cat',
             $product_id
         );
+        $is_nogavice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $product_id) );
     }
 
-    $cache_key = $transient_key . ( $is_bokserice ? '_bokserice' : '_all' );
+    $cache_key = $transient_key . ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) );
 
     if ( function_exists( 'get_transient' ) ) {
         $cached = get_transient( $cache_key );
@@ -536,7 +546,9 @@ function get_wc_product_pool(
         'orderby' => 'date',
         'order'   => 'DESC',
     ];
-    if ( $is_bokserice ) {
+    if ( $is_nogavice ) {
+        $args['category'] = [ 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ];
+    } elseif ( $is_bokserice ) {
         $args['category'] = [ 'bokserice' ];
     } else {
         $args['tax_query'] = [
@@ -775,7 +787,8 @@ $daily_seed  = $today_obj->format('Y-m-d');
 
 // Avatar pools based on page category
 $avatar_type = $is_bokserice_page ? 'bokserice' : 'majice';
-$avatar_pool = get_review_avatar_pool($avatar_type);
+// Compression socks: text-only reviews (no avatar images).
+$avatar_pool = $is_nogavice_page ? array() : get_review_avatar_pool($avatar_type);
 
 $product_pool = get_wc_product_pool();
 
@@ -812,6 +825,10 @@ $prod_count = count($auto_reviews_en);
 $ship_count = count($auto_reviews_ship);
 ?>
 
+<?php if ( $is_nogavice_page ) : ?>
+<style>/* compression socks: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php endif; ?>
+
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
     <div class="container basic-reviews-section-container" style="width:100%;max-width:1440px;padding-top:20px!important;margin:0 auto;padding-left: 10px; padding-right: 10px;">
         <!-- Tabs -->
@@ -829,7 +846,7 @@ $ship_count = count($auto_reviews_ship);
             <?php if (!empty($initial_product)) : foreach ($initial_product as $review) :
                 $name   = $review['name'] ?? 'Névtelen';
                 $text   = $review['text'] ?? '';
-                $title  = !empty($review['product_title']) ? $review['product_title'] : 'Egy szürke póló';
+                $title  = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
                 $url    = !empty($review['product_url'])   ? $review['product_url']   : '#';
                 $stars  = '★★★★★';
                 $date_display = $review['assigned_date'] ?? '';
@@ -976,7 +993,7 @@ document.addEventListener('DOMContentLoaded', function(){
             article.className = 'review-card is-new';
 
             const url       = review.product_url   || '#';
-            const title     = review.product_title || 'Egy szürke póló';
+            const title     = review.product_title || '<?php echo esc_js($rv_fallback_title); ?>';
             const name      = review.name          || 'Névtelen';
             const text      = review.text          || '';
             const headline  = review.headline      || '';

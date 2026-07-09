@@ -1,0 +1,31 @@
+<?php
+// Review pool for compression socks (kompressziós zokni).
+// Hungarian translations of the real Croatian sock reviews (Noriks_Reviews_DE_HR_HU).
+$auto_reviews_en = array(
+    array("name" => "István K.", "text" => "Nagyon meg vagyok elégedve, milyen kényelmesek a zoknik és milyen jól hordhatók."),
+    array("name" => "Márk P.", "text" => "Ez a tökéletes zokni! Nagyon elégedett vagyok, és másoknak is ajánlom. 5 csillag!"),
+    array("name" => "Tamás R.", "text" => "Kiválóan illeszkednek. Igazi kényeztetés."),
+    array("name" => "József D.", "text" => "Ezek a legjobb kompressziós zoknik, amim eddig volt."),
+    array("name" => "Lukács M.", "text" => "Minden szuper, szívesen újra."),
+    array("name" => "Péter G.", "text" => "szuper"),
+    array("name" => "Antal B.", "text" => "Jó, átgondolt dolog. A zokni felvételéhez szükséges idő jelentősen rövidebb."),
+    array("name" => "Miklós R.", "text" => "Nagyon jó minőség és kidolgozás, sajnos vissza kellett küldenem, mert túl rövidek voltak. A visszaküldés és a vételár visszatérítése semmi gondot nem okozott — a visszaküldés után minden nagyon gyorsan ment."),
+    array("name" => "Mátyás S.", "text" => "Egyelőre még nem érzek javulást, de nem adom fel. A zokni felvétele a cipzárnak köszönhetően teljesen erőfeszítés nélküli. Üdv"),
+    array("name" => "Dániel K.", "text" => "A cipzár praktikus. Viszont mivel vastagabb a vádlim, elég sok gondom van a cipzár behúzásával. Talán az L méretet kellene kipróbálnom, de akkor a lábfej lehet, hogy túl nagy lenne? 38-as cipőméretnél."),
+    array("name" => "Zoltán P.", "text" => "Minden szuper, kiválóan illeszkednek. Kényelmes viselet."),
+    array("name" => "Barnabás N.", "text" => "Alapvetően tetszenek, csak a fekete zokninál a cipzár záráskor mindig beakad egy fülnél, és tovább nem megy. A világos zoknit minden nap hordom, jól betölti a szerepét, de nem annyira, mint a receptre kapottak."),
+    array("name" => "Rezső T.", "text" => "Számomra igazi megkönnyebbülés felvenni őket. Öt perc sem kell hozzá."),
+    array("name" => "András M.", "text" => "Másképp és kényelmesebbre képzeltem."),
+    array("name" => "Dénes K.", "text" => "Könnyen felvehetők. A csomagot bizonyos várakozási idő után kaptam meg. Az illeszkedés pontossága nagyon jó, ellentétben a korábbi szaküzleti mérésekkel. A cipzáras rendszer stabil. A cipzárakat befelé helyeztem át, így a szükséges erőfeszítés könnyebben leküzdhető. Sajnos a cipzár belső védője nagyon gyorsan beakad. De egy hétvégi gyakorlás elégnek kell lennie. A viselet nagyon kényelmes, izzadt láb nélkül, a széleken szorítás nélkül. A levétel egyszerűen zseniálisan könnyű — nem igényel sem túlzott erőfeszítést, sem mások segítségét."),
+    array("name" => "Kristóf V.", "text" => "A zokni jól felvehető. Az egyetlen kifogásom a cipzár, amely viselés közben magától kinyílik. Jó lenne, ha a cipzáron lenne egy kis biztosíték, amely megakadályozza a magától való kinyílást. Egyébként kényelmes viselet."),
+    array("name" => "Gábor L.", "text" => "A cipzár mégsem záródik olyan könnyen, mint a reklámjaikban. De egy kis gyakorlással egészen jól megy. Az ár-érték arány stimmel. A vádli körfogata kicsit szűk a 36-os cipőméretnél."),
+    array("name" => "István C.", "text" => "Teljesen elégedett."),
+    array("name" => "Viktor M.", "text" => "Az első felvétel kicsit nehéz volt, de egyébként tényleg szuper."),
+    array("name" => "Róbert S.", "text" => "A zoknik jelentősen túl szűkek nekem. A kisebb méret az apámnak volt szánva; és a nagyobbak is annyira szűkek, hogy nem tudja magától bezárni a cipzárt. A zoknit felül, a cipzár fölött kell összenyomni — csak így megy."),
+    array("name" => "Dávid H.", "text" => "Teljesen el vagyok ragadtatva 🤩"),
+    array("name" => "Milán J.", "text" => "Egyelőre 👍"),
+    array("name" => "Fülöp B.", "text" => "Tényleg el vagyok ragadtatva, milyen könnyen felvehetők a zoknik és milyen kényelmesek."),
+    array("name" => "Dárió N.", "text" => "Tisztelt Hölgyem/Uram! Évek óta küzdök a 3-as osztályú kompressziós zoknikkal felhúzó segédeszközökkel. A segítség nélküli felvétel a mozgékonyságomnak és erőmnek köszönhetően még egészen jól megy. Aztán rátaláltam Önökre. A félelem ellenére, hogy a kompresszió esetleg nem lesz elég, megmértem magam és rendeltem. Teljesen el vagyok bűvölve a viselés kényelmétől — fájdalom nélkül átvészelni a napot egyszerűen leírhatatlan, a még kényelmesebb fel- és levétel pedig igazi bónusz, hála a cipzárnak. Ugyanilyen pozitívan értékelem a zökkenőmentes rendelési folyamatot és az ügyfélszolgálatot. A jövőben is Önöknél fogok rendelni."),
+    array("name" => "Zsolt M.", "text" => "Nagyon jó megoldás. A viselet szinte észre sem vehető. Tetszik."),
+    array("name" => "Boldizsár T.", "text" => "Kényelmes a levételnél."),
+);
