@@ -49,10 +49,8 @@
 
 	<?php
 	// ===== Klaviyo newsletter =====
-	// TODO(HU): replace with the Hungarian footer list ID (Klaviyo -> Lists
-	// & Segments -> Settings -> List ID). Left as placeholder so signups are
-	// NOT sent to another market's list until the HU list is set.
-	$nf_klaviyo_list = 'REPLACE_LIST_ID';
+	// HU footer list "footer-hu".
+	$nf_klaviyo_list = 'T3ZUwS';
 
 	$nf_social  = get_field( 'social_list', 'options' );
 	$nf_col2_h  = get_field( 'footer_midle_col2_header', 'option' );

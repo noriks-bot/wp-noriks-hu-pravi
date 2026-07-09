@@ -276,7 +276,39 @@ Próbálja ki a NORIKS-t kedvezőbben.
       </div>
     </a>
 
-   
+    <!-- Card 5 - Zoknik (compression socks) -->
+    <a class="collection-card" href="/hu/product-category/zoknik/">
+      <div class="collection-card__media">
+        <img src="https://devhr.noriks.com/wp-content/uploads/2025/11/stumfi_beli-crni_10paket-683x1024.jpg" alt="Zoknik" />
+      </div>
+      <div class="collection-card__body">
+        <div class="collection-card__text">
+          <div class="collection-card__topline">
+            <h3 class="collection-card__name">Zoknik</h3>
+          </div>
+          <p class="collection-card__desc">A könnyebb, pihentebb lábakért.</p>
+        </div>
+        <span class="collection-card__arrow" aria-hidden="true">›</span>
+      </div>
+    </a>
+
+    <!-- Card 6 - Nyári akció (summer sale) -->
+    <a class="collection-card" href="/hu/product-category/nyari-akcio/">
+      <div class="collection-card__media">
+        <img src="https://noriks.com/hu/wp-content/uploads/2026/07/ChatGPT-Image-Jul-9-2026-09_32_25-AM-1.png" alt="Nyári akció" />
+      </div>
+      <div class="collection-card__body">
+        <div class="collection-card__text">
+          <div class="collection-card__topline">
+            <h3 class="collection-card__name">Nyári akció</h3>
+          </div>
+          <p class="collection-card__desc">A nyár legjobb árai.</p>
+        </div>
+        <span class="collection-card__arrow" aria-hidden="true">›</span>
+      </div>
+    </a>
+
+
   </div>
 </section>
 
@@ -328,7 +360,7 @@ Próbálja ki a NORIKS-t kedvezőbben.
 /* ---- Grid ---- */
 .collections__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 10px;
 }
 
