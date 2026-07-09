@@ -35,12 +35,13 @@ function noriks_product_type_map() : array {
         'starter'   => array( 'kezdocsomag', 'orto-kezdocsomag', 'orto-starter', 'orto-majica-bokserica', 'starter-pack', 'paketo-ekkinisis' ),
         'majice'    => array( 'polok', 'orto-polok', 't-shirts', 'tricka', 'blouzakia' ),
         'bokserice' => array( 'boxerek', 'orto-boxeralsok', 'bokserice-sastavi-paket', 'bokserice', 'orto-bokserice', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
-        'carape'    => array( 'zoknik', 'zimske-carape', 'kaltses', 'socks', 'kompreszios-zokni', 'orto-kompresziós-zokni' ),
+        'carape'    => array( 'zoknik', 'zimske-carape', 'kaltses', 'socks', 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ),
 
         // --- sub-variants / special buckets ---
         // Compression socks: front category 'kompreszios-zokni' (child of zoknik)
-        // and orto category 'orto-kompresziós-zokni'.
-        'kompresijske-nogavice'   => array( 'kompreszios-zokni', 'orto-kompresziós-zokni' ),
+        // and orto category 'orto-kompresziós-zokni'. Both accent variants are
+        // listed in case WordPress stored the slug without the ó.
+        'kompresijske-nogavice'   => array( 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),

@@ -412,7 +412,7 @@ function gck_render_bundle_selector() {
     }
     // Compression socks (HU orto category: orto-kompresziós-zokni).
     if (
-        has_term( array( 'orto-kompresziós-zokni' ), 'product_cat', $product_id )
+        has_term( array( 'orto-kompresziós-zokni', 'orto-kompreszios-zokni', 'kompreszios-zokni', 'kompresziós-zokni' ), 'product_cat', $product_id )
         || ( stripos( (string) $product->get_slug(), 'zokni' ) !== false )
         || ( stripos( (string) $product->get_slug(), 'kompresz' ) !== false )
     ) {
@@ -710,7 +710,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-kezdocsomag', 'orto-polok', 'orto-boxeralsok', 'orto-kompresziós-zokni' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-kezdocsomag', 'orto-polok', 'orto-boxeralsok', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni', 'kompreszios-zokni', 'kompresziós-zokni' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -720,9 +720,9 @@ function gck_render_bundle_selector() {
         </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-kompresziós-zokni' ), 'product_cat', $product_id ) ) : // wider size select for compression socks ?>
+    <?php if ( has_term( array( 'orto-kompresziós-zokni', 'orto-kompreszios-zokni', 'kompreszios-zokni', 'kompresziós-zokni' ), 'product_cat', $product_id ) ) : // wider size select for compression socks ?>
         <style>
-          .bundle-box select { max-width: 195px !important; min-width: 92px !important; }
+          .bundle-box select { max-width: 195px !important; min-width: 92px !important; padding-right: 26px !important; }
         </style>
     <?php endif; ?>
     
@@ -812,7 +812,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-kompresziós-zokni' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks ?>
+        <?php if ( ! has_term( array( 'orto-kompresziós-zokni', 'orto-kompreszios-zokni', 'kompreszios-zokni', 'kompresziós-zokni' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Tökéletes illeszkedés</strong></li>
@@ -828,7 +828,7 @@ function gck_render_bundle_selector() {
         </ul>
         <?php endif; ?>
 
-        <?php if ( ! $show_countdown && ! has_term( array( 'orto-kompresziós-zokni' ), 'product_cat', $product_id ) ) : ?>
+        <?php if ( ! $show_countdown && ! has_term( array( 'orto-kompresziós-zokni', 'orto-kompreszios-zokni', 'kompreszios-zokni', 'kompresziós-zokni' ), 'product_cat', $product_id ) ) : ?>
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                 <path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.84375"></path>
