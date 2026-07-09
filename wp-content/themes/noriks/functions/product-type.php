@@ -35,12 +35,12 @@ function noriks_product_type_map() : array {
         'starter'   => array( 'kezdocsomag', 'orto-kezdocsomag', 'orto-starter', 'orto-majica-bokserica', 'starter-pack', 'paketo-ekkinisis' ),
         'majice'    => array( 'polok', 'orto-polok', 't-shirts', 'tricka', 'blouzakia' ),
         'bokserice' => array( 'boxerek', 'orto-boxeralsok', 'bokserice-sastavi-paket', 'bokserice', 'orto-bokserice', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
-        'carape'    => array( 'zoknik', 'zimske-carape', 'kaltses', 'socks', 'kompresszios-zokni', 'orto-kompresszios-zokni' ),
+        'carape'    => array( 'zoknik', 'zimske-carape', 'kaltses', 'socks', 'kompreszios-zokni', 'orto-kompresziós-zokni' ),
 
         // --- sub-variants / special buckets ---
-        // NOTE: HU has no dedicated compression-sock category yet. Using these
-        // slugs as best-guess; if the real HU slug differs, change ONLY this line.
-        'kompresijske-nogavice'   => array( 'kompresszios-zokni', 'orto-kompresszios-zokni' ),
+        // Compression socks: front category 'kompreszios-zokni' (child of zoknik)
+        // and orto category 'orto-kompresziós-zokni'.
+        'kompresijske-nogavice'   => array( 'kompreszios-zokni', 'orto-kompresziós-zokni' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
