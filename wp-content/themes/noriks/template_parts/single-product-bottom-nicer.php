@@ -21,7 +21,7 @@
           <tr><td>Lélegző anyag</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Egész napos kényelem (+12 óra)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>60 napos pénzvisszafizetési garancia</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr class="knc-price"><td>Ár páronként</td><td>85 €-tól</td><td>~15 €</td><td class="us">23,33 €-tól</td></tr>
+          <tr class="knc-price"><td>Ár páronként</td><td>34.000 Ft-tól</td><td>~6.000 Ft</td><td class="us">9.330 Ft-tól</td></tr>
         </tbody>
       </table>
     </div>
