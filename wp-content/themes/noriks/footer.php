@@ -88,7 +88,7 @@
 						</div>
 						<p class="nf-signup-note">
 							A feliratkozással hozzájárulsz az e-mailek fogadásához. Bármikor leiratkozhatsz.
-							<a href="/hu/adatvedelmi-tajekoztato/">Adatvédelmi tájékoztató.</a>
+							<a href="/hu/privacy-policy/">Adatvédelmi irányelvek.</a>
 						</p>
 						<p class="nf-signup-msg" role="status" aria-live="polite"></p>
 					</form>
