@@ -582,6 +582,12 @@ function gck_render_bundle_selector() {
 
 .color-barna    { background: #9f6f4e; }
 
+/* Beige / nude (HU "Bézs" -> slug "bezs"; + common variants) */
+.color-bezs     { background: #e4e0cf; }
+.color-drapp    { background: #e4e0cf; }
+.color-testszinu{ background: #e4d3c0; }
+.color-borszin  { background: #e4d3c0; }
+
 .color-zold     { background: #294d3b; }
 
 

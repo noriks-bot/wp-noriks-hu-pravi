@@ -1304,11 +1304,10 @@ $knc_faq = array(
   ),
 );
 
-// On sock products, swap the list only for the product-info container.
-// NOTE: matches the Hungarian product-info title; adjust the needle if the
-// actual faq_title differs.
+// On sock products, swap the list only for the product-info container
+// (titled "Termék Információk").
 $faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq ) {
-  if ( $is_knc && stripos( (string) $title, 'Termékinformáci' ) !== false ) {
+  if ( $is_knc && stripos( (string) $title, 'Termék Információ' ) !== false ) {
     return $knc_faq;
   }
   return $list;
