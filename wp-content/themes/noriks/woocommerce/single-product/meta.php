@@ -420,7 +420,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
  <div class="accordion">
 
 
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) ) ) ) : // hide details/size/wash accordions on back belt + bunion ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ) ) : // hide details accordion on back belt (bunion shows its own text) ?>
     <!-- 1 - detajli -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -429,10 +429,14 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
       </div>
       <div class="accordion-content">
           
-         <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ) ): ?>
-         
-         
-         
+         <?php if( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
+
+                A NORIKS bütyökkorrigáló szabadalmaztatott csuklós mechanizmust használ, amely finoman visszahelyezi a nagylábujjat a természetes helyzetébe, és célzott, állítható kompressziót fejt ki. Ezzel tehermentesíti a fájdalmas kidudorodást, csökkenti a gyulladást és enyhíti a kellemetlenséget járás, állás és pihenés közben.<br><br>A puha belső bélés védi a bőrt és hosszabb viselés esetén is kényelmet biztosít, a nyújtás erőssége pedig a rugalmas pántokkal egyszerűen állítható.<br><br>Nem invazív és sokoldalú — nincsenek oldalak, egyaránt illeszkedik a bal és a jobb lábra, valamint minden lábmérethez, a gyerekmérettől a legnagyobb felnőtt méretig. Napi 30 perctől néhány óráig terjedő használat elegendő a fokozatos, természetes korrekcióhoz.
+
+         <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ) ): ?>
+
+
+
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
@@ -469,6 +473,9 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
     
     
      
+     <?php endif; // /hide details accordion on back belt ?>
+
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
