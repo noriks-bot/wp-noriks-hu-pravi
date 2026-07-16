@@ -23,11 +23,13 @@ $orto_rev_note = $orto_is_bun
 /* FAQ (Hungarian) — belt vs bunion. */
 if ( $orto_is_bun ) {
     $orto_faq = array(
-        array( 'q' => 'Milyen gyorsan érzek eredményt?', 'a' => 'Sok felhasználó már néhány hét következetes, esti viselés után érezhető fájdalomcsillapodást és a nagylábujj egyenesebb helyzetét tapasztalja. A tartós eredményhez napi 30 perctől 1–3 óráig terjedő, rendszeres használatot javasolunk.' ),
-        array( 'q' => 'Fáj a használata?', 'a' => 'Nem. Az érzés eleinte szokatlan lehet, mivel a nagylábujjat fokozatosan a természetes helyzetébe húzza vissza, de nem fájdalmas. Az intenzitás a rugalmas pántokkal az Ön igényei szerint állítható.' ),
-        array( 'q' => 'Viselhetem alvás közben is?', 'a' => 'Igen, éjszaka is viselheti. Mozgásbarát kialakításának köszönhetően akár mozgás közben is hordható, de a legjobb nyugalmi helyzetben – a kanapén, tévénézés, olvasás vagy alvás közben.' ),
-        array( 'q' => 'Minden lábméretre megfelelő?', 'a' => 'Igen, a korrektor úgy készült, hogy kényelmesen illeszkedjen minden lábmérethez, és bal, illetve jobb lábon egyaránt használható.' ),
-        array( 'q' => 'Van pénzvisszafizetési garancia?', 'a' => 'Igen, elégedettségi garanciát kínálunk. Ha nem elégedett, vegye fel velünk a kapcsolatot az info@noriks.com címen a visszatérítésért. Javasoljuk, hogy a korrektort a döntés előtt legalább 30 napig próbálja ki.' ),
+        array( 'q' => 'Milyen gyorsan érzem magam jobban?', 'a' => 'Körülbelül 30 perc alatt — ennyi idő kell a kellemetlenség enyhítéséhez. Két héten át tartó rendszeres használat mellett jelentős enyhülést tapasztal a mindennapi tevékenységek – járás, állás vagy alvás – során.' ),
+        array( 'q' => 'Milyen gyorsan veszem észre a változást a bütyökön?', 'a' => 'A bütyök súlyosságától függően a legtöbb vásárló 4–8 hét után lát látható javulást. Kezdődő bütyök: 4 hét. Enyhe bütyök: 4 hét. Súlyos bütyök: 8 hét.' ),
+        array( 'q' => 'Viselhető cipőben? Tudok járni benne?', 'a' => 'Nem, nem fér bele a cipőbe. Igen, tud járni benne. Ugyanakkor nyugalmi használatra tervezték – a kanapén pihenve, tévénézés, olvasás vagy alvás közben.' ),
+        array( 'q' => 'Mi van, ha kényelmetlennek találom?', 'a' => 'Ez teljesen normális! A NORIKS korrektort elég erősre terveztük ahhoz, hogy helyreállítsa a nagylábujj ízületét, megállítsa a gyulladást és csökkentse a kellemetlenséget. Lehet, hogy 1–2 alkalom kell a megszokáshoz, de utána sokkal jobban fogja érezni magát!' ),
+        array( 'q' => 'Meddig használjam?', 'a' => 'Javasoljuk, hogy napi 30 perccel kezdje, és fokozatosan növelje 1–3 órás alkalomig. Amikor már kényelmes, alvás közben is viselheti. Viselje pihenés közben – a kanapén, tévénézés, olvasás vagy alvás közben.' ),
+        array( 'q' => 'Segít az én konkrét állapotomon?', 'a' => 'A NORIKS korrektor ideális a következőkhöz: a járást vagy állást érintő kellemetlenség enyhítése; a bütyök okozta kellemetlenség enyhítése pihenés vagy alvás közben; a korai stádiumú, esetleg súlyosbodó bütykök kezelése; műtét után visszatérő bütykök; súlyos, műtétre érett bütykök segítése; valamint hatékony, nem sebészeti megoldásként.' ),
+        array( 'q' => 'Passzol a lábamra? Van jobb és bal oldal?', 'a' => 'A lábmérettől függetlenül – a legkisebb gyerekmérettől a nagy felnőtt lábméretig – a NORIKS korrektor kényelmesen illeszkedik. Nincsenek oldalak! Cserélhető kialakításának köszönhetően könnyedén alkalmazkodik a bal vagy jobb lábhoz.' ),
     );
 } else {
     $orto_faq = array(
