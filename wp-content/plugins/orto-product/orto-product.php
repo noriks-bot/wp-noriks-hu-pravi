@@ -430,13 +430,28 @@ function gck_render_bundle_selector() {
     }
 
     $custom_attrs = gck_get_custom_attributes_in_order( $product );
-    if ( count( $custom_attrs ) < 2 ) return;
+
+    // Special orto products that don't use the standard colour + size selectors:
+    //  - orto-bunion  : quantity-only bundle, NO colour and NO size selectors.
+    //  - orto-ortopas : single "Veličina" attribute, no colour (size selector only).
+    // Every other product keeps the original 2-attribute (colour + size) requirement.
+    $gck_no_attrs    = has_term( 'orto-bunion', 'product_cat', $product_id );
+    $gck_single_size = has_term( 'orto-ortopas', 'product_cat', $product_id );
+
+    if ( ! $gck_no_attrs && ! $gck_single_size && count( $custom_attrs ) < 2 ) return;
 
     $split  = gck_split_attrs_color_size( $custom_attrs );
     $colors = $split['colors'];
     $sizes  = $split['sizes'];
 
-    if ( empty($colors) || empty($sizes) ) return;
+    if ( $gck_no_attrs ) {
+        $colors = array();
+        $sizes  = array();
+    } elseif ( $gck_single_size ) {
+        if ( empty($sizes) ) return;
+    } else {
+        if ( empty($colors) || empty($sizes) ) return;
+    }
 
     $attr_groups = gck_pair_color_size_groups( $colors, $sizes );
 
@@ -980,7 +995,7 @@ function gck_render_bundle_selector() {
         </script>
     <?php endif; ?>
 
-    <?php if ( $show_countdown ) : ?>
+    <?php if ( $show_countdown && ! $gck_no_attrs ) : ?>
     <div class="gck-size-link-wrap" style="text-align:right; margin:0 0 8px 0;">
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
@@ -992,7 +1007,31 @@ function gck_render_bundle_selector() {
     </div>
     <?php endif; ?>
 
-    <div id="bundle-selector" class="bundle-box" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
+    <?php if ( $gck_single_size ) : ?>
+    <style>
+      /* Ortopas: duga imena veličina — puni širine select, manji font, jedan red. */
+      #bundle-selector.is-single-size .bundle-pairs,
+      #bundle-selector.is-single-size .bundle-pair,
+      #bundle-selector.is-single-size .bundle-attr-row { width: 100% !important; display: block !important; }
+      #bundle-selector.is-single-size .gck-size-select {
+          display: block !important;
+          width: 50% !important;
+          max-width: 50% !important;
+          min-width: 0 !important;
+          flex: 0 0 auto !important;
+          box-sizing: border-box;
+          font-size: 12px;
+          padding: 11px 30px 11px 12px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+      }
+      @media (max-width: 767px) {
+          #bundle-selector.is-single-size .gck-size-select { width: 80% !important; max-width: 80% !important; }
+      }
+    </style>
+    <?php endif; ?>
+    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         $loop_index    = 0;
@@ -1121,7 +1160,7 @@ function gck_render_bundle_selector() {
                         $gck_paid = (int) $gck_m[1];
                         $gck_free = (int) $gck_m[2];
                     }
-                    $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 );
+                    $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 && ! $gck_no_attrs );
                     ?>
                     <?php
                     // Render passes. Normal: single pass, all groups interleaved per pair.

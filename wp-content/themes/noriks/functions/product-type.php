@@ -42,6 +42,10 @@ function noriks_product_type_map() : array {
         // and orto category 'orto-kompresziós-zokni'. Both accent variants are
         // listed in case WordPress stored the slug without the ó.
         'kompresijske-nogavice'   => array( 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ),
+        // Orthopedic back belt (ortopedski pojas za leđa).
+        'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
+        // Bunion corrector (korektor čukljeva / halux valgus).
+        'bunion'                  => array( 'orto-bunion', 'bunion' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
