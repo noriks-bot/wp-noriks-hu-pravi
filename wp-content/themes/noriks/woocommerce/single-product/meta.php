@@ -475,7 +475,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
      
      <?php endif; // /hide details accordion on back belt ?>
 
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion + fisiorest ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
