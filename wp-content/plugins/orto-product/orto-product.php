@@ -1076,7 +1076,7 @@ function gck_render_bundle_selector() {
                 ? (int) round( ( ( (float) $data['regular'] - (float) $data['total'] ) / (float) $data['regular'] ) * 100 )
                 : 0;
         ?>
-            <label style="position: relative; <?php if ( ($loop_index == 1 ||  $loop_index == 3) && ! $show_group_titles) : ?> margin-top: 25px;  <?php endif; ?>"
+            <label style="position: relative; <?php if ( ($loop_index == 1 ||  $loop_index == 3) && ! $show_group_titles) : ?> margin-top: 25px;  <?php endif; ?><?php echo $is_default ? ' border-color:#f39c12; background:#f39c1217;' : ''; ?>"
                    class="bundle-option<?php echo $is_default ? ' active' : ''; ?>">
 
                 <?php if ( ! $show_group_titles ) : ?>
@@ -1349,8 +1349,18 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateBundleUI(selectedRadio) {
         const selectedOfferId = selectedRadio.value;
 
-        selector.querySelectorAll('.bundle-option').forEach(card => card.classList.remove('active'));
-        selectedRadio.closest('.bundle-option')?.classList.add('active');
+        // Inline stilovi (osim .active klase) da orange preživi LiteSpeed UCSS/CSS optimizaciju.
+        selector.querySelectorAll('.bundle-option').forEach(card => {
+            card.classList.remove('active');
+            card.style.borderColor = '';
+            card.style.background = '';
+        });
+        const activeCard = selectedRadio.closest('.bundle-option');
+        if (activeCard) {
+            activeCard.classList.add('active');
+            activeCard.style.borderColor = '#f39c12';
+            activeCard.style.background = '#f39c1217';
+        }
 
         selector.querySelectorAll('.bundle-pairs').forEach(wrap => {
             const oid = wrap.getAttribute('data-offer-id');
