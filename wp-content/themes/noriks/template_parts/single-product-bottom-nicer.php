@@ -7,6 +7,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-bunion' );
     } elseif ( noriks_is_type( 'ortopas' ) ) {
         get_template_part( 'template_parts/product-bottom/why-ortopas' );
+    } elseif ( noriks_is_type( 'fisiorest' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-fisiorest' );
     }
 }
 ?>
