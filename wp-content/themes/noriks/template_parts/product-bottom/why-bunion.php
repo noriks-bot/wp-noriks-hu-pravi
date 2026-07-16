@@ -288,11 +288,11 @@ $bun_steps = array(
   function paintOrto(){
     var sel = document.getElementById('bundle-selector');
     if(!sel) return;
-    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.borderColor=''; c.style.background=''; });
+    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
     var checked = sel.querySelector('input[name="bundle_option"]:checked');
     var card = checked ? checked.closest('.bundle-option')
              : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
-    if(card){ card.style.borderColor='#f39c12'; card.style.background='#f39c1217'; }
+    if(card){ card.style.setProperty('border-color','#f39c12','important'); card.style.setProperty('background','#f39c1217','important'); }
   }
   function bindOrto(){
     var sel = document.getElementById('bundle-selector');
