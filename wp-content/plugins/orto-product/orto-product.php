@@ -495,7 +495,7 @@ function gck_render_bundle_selector() {
           color: black;
           letter-spacing: 0.3px;
       }
-      .bundle-option.active { border-color: #f39c12; background: #f39c1217; }
+      .bundle-option.active { border-color: #f39c12 !important; background: #f39c1217 !important; }
       .bundle-pairs { margin-top: 10px; padding-top: 10px; border-top: 1px solid #969696; }
 
       .bundle-pair { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
