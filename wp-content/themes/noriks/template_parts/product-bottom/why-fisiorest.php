@@ -21,9 +21,9 @@ $fis_hero_video = $fis_v . 'hero.mp4';
 
 // 3) Szakértők ajánlják
 $fis_experts = array(
-    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Okleveles masszázsterapeuta', 'org' => 'The Ergo Expert' ),
+    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Okleveles masszázsterapeuta', 'org' => '' ),
     array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Erin Cooper','role' => 'Gyógytornász doktor',        'org' => '' ),
-    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Csontkovács doktor',          'org' => 'Synergy Wellness NYC' ),
+    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Csontkovács doktor',          'org' => '' ),
 );
 // 4) Felhasználói vélemények
 $fis_ugc = array(
@@ -80,7 +80,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Szakértők ajánlják</h2>
       <p>„A NORIKS az egyik legjobb nyakpárna jelenleg a piacon. Mivel több mint 25 éve vagyok a wellness közösségben, sokféle nyakpárnát kipróbáltam, és ami a NORIKS-ot kiemeli, az a trakciós funkció…</p>
       <p>Ha előretolt fejtartásod vagy 'görnyedt tartásod' van, a trakció segíthet a csigolyák újraigazításában, hogy teljesen megtámasszák a testet. Én magam is használom, és ajánlom az ügyfeleimnek!"</p>
-      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>CMT, The Ergo Expert</p>
+      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>Okleveles masszázsterapeuta</p>
     </div>
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
@@ -225,9 +225,9 @@ $fis_upgrades = array(
   }
 
   /* 1) Tudományosan igazolt — szürke kártya */
-  .fis-science { padding: 40px 0; }
+  .fis-science { background: #f4f4f4; padding: 44px 0; }
   .fis-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
-  .fis-box { background: #f4f4f4; border-radius: 16px; padding: 36px 30px; }
+  .fis-box { background: transparent; border-radius: 0; padding: 0; }
   .fis-title { font-size: clamp(23px,2.9vw,32px); font-weight: 800; color: #1c1c1c; line-height: 1.2; margin: 0 0 26px; }
   .fis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
   .fis-card { padding: 0 22px; border-left: 1px solid #dcdcdc; }
