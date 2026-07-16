@@ -388,7 +388,9 @@ if ( function_exists( 'noriks_is_type' ) ) {
         <div style="background: #f9f9f9;padding: 0;padding-left: 10px; padding-right: 10px;" class="comparison-intro comparison-intro-gray ">
             <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
             <h1 style="color:black; margin-bottom: 4px;">
-            <?php if ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>
+            <?php if ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>
+                Nem vagy egyedül a nyakfeszültség elleni küzdelemben.
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>
                 Nem vagy egyedül a bütyökfájdalom elleni küzdelemben.
             <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>
                 Nem vagy egyedül a hátfájás elleni küzdelemben.
@@ -400,7 +402,7 @@ if ( function_exists( 'noriks_is_type' ) ) {
                 Nem vagy egyedül a tökéletes boxeralsó keresésében.
             <?php endif; ?>
             </h1>
-            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Emberek ezrei használják már a NORIKS bütyökkorrigálót a kisebb fájdalomért és a nagylábujj helyesebb tartásáért – otthon, tévénézés vagy alvás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Emberek ezrei viselik már a NORIKS ortopédiai hátövet a kisebb fájdalomért és stabilabb hátért – munka közben, teheremelésnél és hosszú ülés során.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
+            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Emberek ezrei használják már a NORIKS FisioRestet a kisebb nyakfájdalomért és feszültségért – trakció, rezgés és meleg egy eszközben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Emberek ezrei használják már a NORIKS bütyökkorrigálót a kisebb fájdalomért és a nagylábujj helyesebb tartásáért – otthon, tévénézés vagy alvás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Emberek ezrei viselik már a NORIKS ortopédiai hátövet a kisebb fájdalomért és stabilabb hátért – munka közben, teheremelésnél és hosszú ülés során.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
         </div>
     </section>
 </div>
@@ -465,14 +467,18 @@ $is_bokserice_page = has_term(
 $is_nogavice_page = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) );
 $is_ortopas_page  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) );
 $is_bunion_page   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) );
+$is_fisiorest_page = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) );
 
 // Fallback product name shown in review cards.
-$rv_fallback_title = $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
+$rv_fallback_title = $is_fisiorest_page ? 'NORIKS | FisioRest'
+                   : ( $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
                    : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
-                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) );
+                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) );
 
 // Include review pools (own pool per product group)
-if ( $is_bunion_page ) {
+if ( $is_fisiorest_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_fisiorest.php';
+} elseif ( $is_bunion_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_bunion.php';
 } elseif ( $is_ortopas_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_ortopas.php';
@@ -549,6 +555,7 @@ function get_wc_product_pool(
     $is_nogavice  = false;
     $is_ortopas   = false;
     $is_bunion    = false;
+    $is_fisiorest = false;
     if ( $product_id ) {
         $is_bokserice = has_term(
             array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
@@ -558,9 +565,10 @@ function get_wc_product_pool(
         $is_nogavice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $product_id) );
         $is_ortopas  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $product_id) );
         $is_bunion   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $product_id) );
+        $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $product_id) );
     }
 
-    $cache_key = $transient_key . ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) );
+    $cache_key = $transient_key . ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) );
 
     if ( function_exists( 'get_transient' ) ) {
         $cached = get_transient( $cache_key );
@@ -576,7 +584,9 @@ function get_wc_product_pool(
         'orderby' => 'date',
         'order'   => 'DESC',
     ];
-    if ( $is_bunion ) {
+    if ( $is_fisiorest ) {
+        $args['category'] = [ 'orto-fisiorest' ];
+    } elseif ( $is_bunion ) {
         $args['category'] = [ 'orto-bunion' ];
     } elseif ( $is_ortopas ) {
         $args['category'] = [ 'orto-ortopas' ];
@@ -859,8 +869,8 @@ $prod_count = count($auto_reviews_en);
 $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page ) : ?>
-<style>/* socks + belt + bunion: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) : ?>
+<style>/* socks + belt + bunion + fisiorest: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
