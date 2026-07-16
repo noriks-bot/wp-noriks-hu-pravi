@@ -1,16 +1,12 @@
 <?php
-/* Bütyökkorrigáló (bunion) és ortopédiai hátöv (ortopas): saját alsó tartalom.
-   Külön why-* + reviews-orto (recenziók + GYIK), majd korai return. */
+/* Bütyökkorrigáló (bunion) és ortopédiai hátöv (ortopas): saját why-szekciók.
+   NINCS return — utána a közös értékelés-rendszer + GYIK fut le (a többi
+   why-szekció típusonként van kapuzva, így ezekre a termékekre nem jelenik meg). */
 if ( function_exists( 'noriks_is_type' ) ) {
     if ( noriks_is_type( 'bunion' ) ) {
         get_template_part( 'template_parts/product-bottom/why-bunion' );
-        get_template_part( 'template_parts/product-bottom/reviews-orto' );
-        return;
-    }
-    if ( noriks_is_type( 'ortopas' ) ) {
+    } elseif ( noriks_is_type( 'ortopas' ) ) {
         get_template_part( 'template_parts/product-bottom/why-ortopas' );
-        get_template_part( 'template_parts/product-bottom/reviews-orto' );
-        return;
     }
 }
 ?>
@@ -390,7 +386,11 @@ if ( function_exists( 'noriks_is_type' ) ) {
         <div style="background: #f9f9f9;padding: 0;padding-left: 10px; padding-right: 10px;" class="comparison-intro comparison-intro-gray ">
             <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
             <h1 style="color:black; margin-bottom: 4px;">
-            <?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
+            <?php if ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>
+                Nem vagy egyedül a bütyökfájdalom elleni küzdelemben.
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>
+                Nem vagy egyedül a hátfájás elleni küzdelemben.
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
                 Nem vagy egyedül a tökéletes kompressziós zokni keresésében.
             <?php elseif ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) ): ?>
                 <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
@@ -398,7 +398,7 @@ if ( function_exists( 'noriks_is_type' ) ) {
                 Nem vagy egyedül a tökéletes boxeralsó keresésében.
             <?php endif; ?>
             </h1>
-            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
+            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Emberek ezrei használják már a NORIKS bütyökkorrigálót a kisebb fájdalomért és a nagylábujj helyesebb tartásáért – otthon, tévénézés vagy alvás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Emberek ezrei viselik már a NORIKS ortopédiai hátövet a kisebb fájdalomért és stabilabb hátért – munka közben, teheremelésnél és hosszú ülés során.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
         </div>
     </section>
 </div>
@@ -461,12 +461,20 @@ $is_bokserice_page = has_term(
     $current_product_id
 );
 $is_nogavice_page = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) );
+$is_ortopas_page  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) );
+$is_bunion_page   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) );
 
 // Fallback product name shown in review cards.
-$rv_fallback_title = $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló';
+$rv_fallback_title = $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
+                   : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
+                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) );
 
 // Include review pools (own pool per product group)
-if ( $is_nogavice_page ) {
+if ( $is_bunion_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_bunion.php';
+} elseif ( $is_ortopas_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_ortopas.php';
+} elseif ( $is_nogavice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_nogavice.php';
 } elseif ( ! $is_bokserice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
@@ -537,6 +545,8 @@ function get_wc_product_pool(
 
     $is_bokserice = false;
     $is_nogavice  = false;
+    $is_ortopas   = false;
+    $is_bunion    = false;
     if ( $product_id ) {
         $is_bokserice = has_term(
             array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
@@ -544,9 +554,11 @@ function get_wc_product_pool(
             $product_id
         );
         $is_nogavice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $product_id) );
+        $is_ortopas  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $product_id) );
+        $is_bunion   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $product_id) );
     }
 
-    $cache_key = $transient_key . ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) );
+    $cache_key = $transient_key . ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) );
 
     if ( function_exists( 'get_transient' ) ) {
         $cached = get_transient( $cache_key );
@@ -562,7 +574,11 @@ function get_wc_product_pool(
         'orderby' => 'date',
         'order'   => 'DESC',
     ];
-    if ( $is_nogavice ) {
+    if ( $is_bunion ) {
+        $args['category'] = [ 'orto-bunion' ];
+    } elseif ( $is_ortopas ) {
+        $args['category'] = [ 'orto-ortopas' ];
+    } elseif ( $is_nogavice ) {
         $args['category'] = [ 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ];
     } elseif ( $is_bokserice ) {
         $args['category'] = [ 'bokserice' ];
@@ -841,8 +857,8 @@ $prod_count = count($auto_reviews_en);
 $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_nogavice_page ) : ?>
-<style>/* compression socks: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page ) : ?>
+<style>/* socks + belt + bunion: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
@@ -1339,8 +1355,37 @@ $knc_faq = array(
 
 // On sock products, swap the list only for the product-info container
 // (titled "Termék Információk").
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq ) {
-  if ( $is_knc && stripos( (string) $title, 'Termék Információ' ) !== false ) {
+// Bunion corrector product FAQ (Hungarian, NORIKS).
+$bunion_faq = array(
+  array( 'questioon' => 'Milyen gyorsan érzem magam jobban?', 'answer' => 'Körülbelül 30 perc alatt — ennyi idő kell a kellemetlenség enyhítéséhez. Két héten át tartó rendszeres használat mellett jelentős enyhülést tapasztal a mindennapi tevékenységek – járás, állás vagy alvás – során.' ),
+  array( 'questioon' => 'Milyen gyorsan veszem észre a változást a bütyökön?', 'answer' => 'A bütyök súlyosságától függően a legtöbb vásárló 4–8 hét után lát látható javulást. Kezdődő bütyök: 4 hét. Enyhe bütyök: 4 hét. Súlyos bütyök: 8 hét.' ),
+  array( 'questioon' => 'Viselhető cipőben? Tudok járni benne?', 'answer' => 'Nem, nem fér bele a cipőbe. Igen, tud járni benne. Ugyanakkor nyugalmi használatra tervezték – a kanapén pihenve, tévénézés, olvasás vagy alvás közben.' ),
+  array( 'questioon' => 'Mi van, ha kényelmetlennek találom?', 'answer' => 'Ez teljesen normális! A NORIKS korrektort elég erősre terveztük ahhoz, hogy helyreállítsa a nagylábujj ízületét, megállítsa a gyulladást és csökkentse a kellemetlenséget. Lehet, hogy 1–2 alkalom kell a megszokáshoz, de utána sokkal jobban fogja érezni magát!' ),
+  array( 'questioon' => 'Meddig használjam?', 'answer' => 'Javasoljuk, hogy napi 30 perccel kezdje, és fokozatosan növelje 1–3 órás alkalomig. Amikor már kényelmes, alvás közben is viselheti. Viselje pihenés közben – a kanapén, tévénézés, olvasás vagy alvás közben.' ),
+  array( 'questioon' => 'Segít az én konkrét állapotomon?', 'answer' => 'A NORIKS korrektor ideális a következőkhöz: a járást vagy állást érintő kellemetlenség enyhítése; a bütyök okozta kellemetlenség enyhítése pihenés vagy alvás közben; a korai stádiumú, esetleg súlyosbodó bütykök kezelése; műtét után visszatérő bütykök; súlyos, műtétre érett bütykök segítése; valamint hatékony, nem sebészeti megoldásként.' ),
+  array( 'questioon' => 'Passzol a lábamra? Van jobb és bal oldal?', 'answer' => 'A lábmérettől függetlenül – a legkisebb gyerekmérettől a nagy felnőtt lábméretig – a NORIKS korrektor kényelmesen illeszkedik. Nincsenek oldalak! Cserélhető kialakításának köszönhetően könnyedén alkalmazkodik a bal vagy jobb lábhoz.' ),
+);
+
+// Back belt product FAQ (Hungarian, NORIKS).
+$ortopas_faq = array(
+  array( 'questioon' => 'Milyen gyorsan érzek fájdalomcsillapodást?', 'answer' => 'Sok felhasználó már közvetlenül a NORIKS öv felhelyezése után érezhető enyhülést tapasztal az isiász és a derékfájás terén. A célzott kompresszió azonnali támogatást nyújt, stabilizálja a gerincet és csökkenti az idegekre nehezedő nyomást. A tartós hatás érdekében javasoljuk, hogy az övet az utasításoknak megfelelően legalább két héten át következetesen viselje.' ),
+  array( 'questioon' => 'Hogyan helyezzem fel helyesen az övet?', 'answer' => 'A NORIKS övet a csípő köré, közvetlenül az övvonal alá kell viselni. A keresztcsonti terület fölött (a hát alsó része, közvetlenül a fenék fölött) és a csípőtaraj alatt helyezkedjen el. További információért tekintse meg a használati útmutatót.' ),
+  array( 'questioon' => 'Gyengíti az öv az izmaimat?', 'answer' => 'Nem, a NORIKS öv nem gyengíti az izmokat úgy, mint egy deréktámasz fűző. Csupán segít összetartani az SI-ízületeket és visszaállítja a szalagok normál feszességét. Hetekig vagy hónapokig viselheti izomsorvadástól való félelem nélkül.' ),
+  array( 'questioon' => 'Viselhetem az övet alvás közben is?', 'answer' => 'Igen, az övet éjszaka is viselheti. A viselés időtartama nincs korlátozva, és a hosszabb viselésnek nincs negatív hatása.' ),
+  array( 'questioon' => 'Mennyire szorosan kell felhelyezni?', 'answer' => 'Az övnek szorosan kell illeszkednie, de nem túl feszesen, hogy elkerülje a kellemetlenséget. Gond nélkül tudnia kell mozogni anélkül, hogy az öv bevágna vagy elcsúszna. A feszesség a rugalmas pántokkal könnyen állítható.' ),
+  array( 'questioon' => 'Kinek ajánljuk?', 'answer' => 'Mindenkinek, aki derékfájással, isiásszal, izomfeszüléssel, porckorongsérvvel, csípő- vagy medencefájdalommal, illetve SI-ízületi problémákkal küzd. Kortól, nemtől, magasságtól és testsúlytól függetlenül.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Elégedettségi garanciát kínálunk! Ha nem elégedett a NORIKS övvel, vegye fel velünk a kapcsolatot az info@noriks.com címen a visszaküldés és visszatérítés érdekében 90 napon belül. A határidő az öv kézhezvételétől számít.' ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq ) {
+  $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_bunion_page && $is_info ) {
+    return $bunion_faq;
+  }
+  if ( $is_ortopas_page && $is_info ) {
+    return $ortopas_faq;
+  }
+  if ( $is_knc && $is_info ) {
     return $knc_faq;
   }
   return $list;
