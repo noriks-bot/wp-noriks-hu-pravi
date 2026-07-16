@@ -1,3 +1,19 @@
+<?php
+/* Bütyökkorrigáló (bunion) és ortopédiai hátöv (ortopas): saját alsó tartalom.
+   Külön why-* + reviews-orto (recenziók + GYIK), majd korai return. */
+if ( function_exists( 'noriks_is_type' ) ) {
+    if ( noriks_is_type( 'bunion' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-bunion' );
+        get_template_part( 'template_parts/product-bottom/reviews-orto' );
+        return;
+    }
+    if ( noriks_is_type( 'ortopas' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-ortopas' );
+        get_template_part( 'template_parts/product-bottom/reviews-orto' );
+        return;
+    }
+}
+?>
 <?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
 <!-- Compression socks: NORIKS vs. others comparison (demo/UGC videos need HU assets — omitted) -->
 <section class="why-section knc-compare-section">

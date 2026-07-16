@@ -420,6 +420,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
  <div class="accordion">
 
 
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) ) ) ) : // hide details/size/wash accordions on back belt + bunion ?>
     <!-- 1 - detajli -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -546,6 +547,8 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
     </div>
 
 
+
+    <?php endif; // /hide details/size/wash accordions on back belt + bunion ?>
 
     <!-- 4 povrati in menjave -->
     <div class="accordion-item">
