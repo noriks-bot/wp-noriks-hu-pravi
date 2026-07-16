@@ -300,3 +300,25 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
     .opz-table thead th { font-size: 14px; }
   }
 </style>
+
+<script>
+/* Narancasti active bundle-option preko inline stila (theme-side, preživljava LiteSpeed UCSS). */
+(function(){
+  function paintOrto(){
+    var sel = document.getElementById('bundle-selector');
+    if(!sel) return;
+    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.borderColor=''; c.style.background=''; });
+    var checked = sel.querySelector('input[name="bundle_option"]:checked');
+    var card = checked ? checked.closest('.bundle-option')
+             : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
+    if(card){ card.style.borderColor='#f39c12'; card.style.background='#f39c1217'; }
+  }
+  function bindOrto(){
+    var sel = document.getElementById('bundle-selector');
+    if(!sel) return;
+    paintOrto();
+    sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintOrto); });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindOrto); } else { bindOrto(); }
+})();
+</script>
