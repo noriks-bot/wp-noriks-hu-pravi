@@ -206,11 +206,13 @@ $fis_upgrades = array(
   .fis-upg-title { font-weight: 800; color: #1c1c1c; margin: 0 0 8px; font-size: 16px; }
   .fis-upg-text { font-size: 14px; line-height: 1.5; color: #444; margin: 0; }
   .fis-eng, .fis-cheaper { padding: 40px 0; }
-  .fis-cheaper { background: #f0efe9; }
+  .fis-cheaper { background: #f4f4f4; }
   .fis-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
   .fis-row2-copy p { font-size: 15.5px; line-height: 1.65; color: #333; }
   .fis-row2-media { border-radius: 16px; overflow: hidden; }
   .fis-row2-media video { width: 100%; height: auto; display: block; }
+  .fis-cheaper .fis-row2-media { aspect-ratio: 16 / 10; }
+  .fis-cheaper .fis-row2-media video { height: 100%; object-fit: cover; }
   @media (max-width: 900px) {
     .fis-exp-grid { grid-template-columns: 1fr; gap: 24px; }
     .fis-ugc-grid { grid-template-columns: 1fr 1fr; }
