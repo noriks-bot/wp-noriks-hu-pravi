@@ -40,10 +40,10 @@ $fis_thermo = array(
 );
 // 6) Négy fejlesztés
 $fis_upgrades = array(
-    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' ),
-    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' ),
-    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' ),
-    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' ),
+    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' , 'ico' => 'battery.png' ),
+    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' , 'ico' => 'silk.png' ),
+    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' , 'ico' => 'timer.png' ),
+    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' , 'ico' => 'heat.png' ),
 );
 ?>
 
@@ -134,7 +134,7 @@ $fis_upgrades = array(
     <div class="fis-upg-grid">
       <?php foreach ( $fis_upgrades as $g ) : ?>
         <div class="fis-upg-card">
-          <div class="fis-upg-dot" aria-hidden="true"></div>
+          <img class="fis-upg-ico" src="<?php echo esc_url( get_template_directory_uri() . '/img/fisiorest-icons/' . $g['ico'] ); ?>" alt="" loading="lazy" width="120" height="120">
           <div class="fis-upg-title"><?php echo esc_html( $g['t'] ); ?></div>
           <p class="fis-upg-text"><?php echo esc_html( $g['d'] ); ?></p>
         </div>
@@ -202,7 +202,7 @@ $fis_upgrades = array(
   .fis-thermo-label { position: absolute; left: 16px; bottom: 14px; color: #fff; font-weight: 800; font-size: 18px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
   .fis-upg { padding: 44px 0; }
   .fis-upg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-  .fis-upg-dot { width: 46px; height: 46px; border-radius: 50%; background: #223047; margin: 0 auto 14px; }
+  .fis-upg-ico { width: 56px; height: 56px; object-fit: contain; display: block; margin: 0 auto 14px; }
   .fis-upg-title { font-weight: 800; color: #1c1c1c; margin: 0 0 8px; font-size: 16px; }
   .fis-upg-text { font-size: 14px; line-height: 1.5; color: #444; margin: 0; }
   .fis-eng, .fis-cheaper { padding: 40px 0; }

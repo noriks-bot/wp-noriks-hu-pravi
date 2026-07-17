@@ -1389,8 +1389,23 @@ $ortopas_faq = array(
   array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Elégedettségi garanciát kínálunk! Ha nem elégedett a NORIKS övvel, vegye fel velünk a kapcsolatot az info@noriks.com címen a visszaküldés és visszatérítés érdekében 90 napon belül. A határidő az öv kézhezvételétől számít.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq ) {
+// FisioRest product FAQ (Hungarian, NORIKS).
+$fisiorest_faq = array(
+  array( 'questioon' => 'Hogyan működik a NORIKS FisioRest?', 'answer' => 'A FisioRest a trakciót, a hőt és a vibrációs masszázst ötvözi ergonomikus, memóriahabos kialakítással. Ez a technológia pontosan a megfelelő szögben nyújtja meg a nyakat, és tehermentesíti a nyaki gerincet. Ezután nyugtató meleg masszázzsal fokozza a tápanyagban és oxigénben gazdag vérellátást az izmokban, ezzel segítve a szövetek regenerálódását.' ),
+  array( 'questioon' => 'Mitől jobb a FisioRest a többi eszköznél?', 'answer' => 'A NORIKS FisioRest attól különleges, hogy <strong>három terápiát egyesít egyben</strong> — hő, masszázs és gyengéd trakció —, amelyek ellazítják az izmokat és újraigazítják a nyakat a tartós enyhülésért. Ráadásul <strong>vezeték nélküli, biztonságosan el lehet rajta aludni, és hűsítő selyembe van burkolva</strong>, olyan kényelmet nyújtva, amilyet máshol nem talál.' ),
+  array( 'questioon' => 'Hogyan használjam a FisioRestet?', 'answer' => '1. Töltse fel a mellékelt USB-C kábellel és töltőadapterrel körülbelül 4–6 órán át. 2. Tartsa nyomva a masszázs vagy a hő gombot 5 másodpercig, amíg a jelzőfény kigyullad. 3. A gombok újbóli megnyomásával válthat a különböző masszázssebességek és hőfokozatok között. 4. Élvezze a pihentető masszázst!' ),
+  array( 'questioon' => 'Meddig használjam a FisioRestet?', 'answer' => 'Javasoljuk, hogy 15 perccel kezdje, hogy a nyaka hozzászokjon. Idővel felépítheti a teljes munkamenetig. Tájékoztatásul: a gyengéd hő + masszázs + trakció ciklus 30 percig tart, ami általában tökéletes idő a nyak ellazítására és természetes ívének helyreállítására.' ),
+  array( 'questioon' => 'Vezeték nélküli a FisioRest?', 'answer' => 'Igen! A NORIKS FisioRest teljesen vezeték nélküli és újratölthető a mindennapi használathoz.' ),
+  array( 'questioon' => 'Hogyan tisztítsam a FisioRestet?', 'answer' => 'Az anyaga olaj- és porálló, de javasoljuk, hogy használat után törölje át a FisioRestet fertőtlenítő kendővel, mivel a párna huzata nem mosható.' ),
+  array( 'questioon' => 'Mindenki számára biztonságos a használata?', 'answer' => 'A NORIKS FisioRestet úgy terveztük, hogy kortól és nemtől függetlenül mindenki igényeihez alkalmazkodjon. Minden helyzet más azonban. Az Ön igényeire szabott részletes útmutatásért javasoljuk, hogy konzultáljon orvosával.' ),
+  array( 'questioon' => 'Visszaküldhetem, ha nem látok eredményt?', 'answer' => 'Természetesen! Teljes pénzvisszafizetési garanciát nyújtunk a kézhezvételtől számított 90 napon belül, ha nem elégedett a termékkel. Írjon nekünk az info@noriks.com címre, és az üzenet kézhezvételétől számított 12 órán belül válaszolunk!' ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_fisiorest_page && $is_info ) {
+    return $fisiorest_faq;
+  }
   if ( $is_bunion_page && $is_info ) {
     return $bunion_faq;
   }
