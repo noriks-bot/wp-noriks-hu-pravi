@@ -40,10 +40,10 @@ $fis_thermo = array(
 );
 // 6) Négy fejlesztés
 $fis_upgrades = array(
-    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' , 'ico' => 'battery.png' ),
-    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' , 'ico' => 'silk.png' ),
-    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' , 'ico' => 'timer.png' ),
-    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' , 'ico' => 'heat.png' ),
+    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' , 'ico' => 'battery-v2.png' ),
+    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' , 'ico' => 'silk-v2.png' ),
+    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' , 'ico' => 'timer-v2.png' ),
+    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' , 'ico' => 'heat-v2.png' ),
 );
 ?>
 
