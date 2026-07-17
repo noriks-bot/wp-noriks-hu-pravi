@@ -21,9 +21,9 @@ $fis_hero_video = $fis_v . 'hero.mp4';
 
 // 3) Szakértők ajánlják
 $fis_experts = array(
-    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Okleveles masszázsterapeuta', 'org' => '' ),
-    array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Erin Cooper','role' => 'Gyógytornász doktor',        'org' => '' ),
-    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Csontkovács doktor',          'org' => '' ),
+    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Balogh Réka',    'role' => 'Okleveles masszázsterapeuta', 'org' => '' ),
+    array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Szabó Erika','role' => 'Gyógytornász doktor',        'org' => '' ),
+    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. Nagy Dávid','role' => 'Csontkovács doktor',          'org' => '' ),
 );
 // 4) Felhasználói vélemények
 $fis_ugc = array(
@@ -80,7 +80,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Szakértők ajánlják</h2>
       <p>„A NORIKS az egyik legjobb nyakpárna jelenleg a piacon. Mivel több mint 25 éve vagyok a wellness közösségben, sokféle nyakpárnát kipróbáltam, és ami a NORIKS-ot kiemeli, az a trakciós funkció…</p>
       <p>Ha előretolt fejtartásod vagy 'görnyedt tartásod' van, a trakció segíthet a csigolyák újraigazításában, hogy teljesen megtámasszák a testet. Én magam is használom, és ajánlom az ügyfeleimnek!"</p>
-      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>Okleveles masszázsterapeuta</p>
+      <p class="fis-exp-author"><strong>Balogh Réka</strong><br>Okleveles masszázsterapeuta</p>
     </div>
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
