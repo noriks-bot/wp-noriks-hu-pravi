@@ -27,10 +27,10 @@ $fis_experts = array(
 );
 // 4) Felhasználói vélemények
 $fis_ugc = array(
-    array( 'vid' => $fis_v.'v09.mp4', 'cap' => '„Végre hosszú idő után fájdalommentes vagyok…"' ),
+    array( 'vid' => $fis_v.'v09c.mp4', 'cap' => '„Végre hosszú idő után fájdalommentes vagyok…"' ),
     array( 'vid' => $fis_v.'v06.mp4', 'cap' => '„A NORIKS párna a mindennapjaim új nélkülözhetetlen kelléke…"' ),
-    array( 'vid' => $fis_v.'v11.mp4', 'cap' => '„Nagyon sokat segít a nyak és váll feszültségének oldásában."' ),
-    array( 'vid' => $fis_v.'v02.mp4', 'cap' => '„Ha friss anyuka vagy, lehet, hogy pont erre van szükséged…"' ),
+    array( 'vid' => $fis_v.'v11c.mp4', 'cap' => '„Nagyon sokat segít a nyak és váll feszültségének oldásában."' ),
+    array( 'vid' => $fis_v.'v02c.mp4', 'cap' => '„Ha friss anyuka vagy, lehet, hogy pont erre van szükséged…"' ),
 );
 // 5) ThermoTrac 3 az 1-ben
 $fis_thermo = array(
