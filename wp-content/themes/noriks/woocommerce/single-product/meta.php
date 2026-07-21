@@ -420,7 +420,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
  <div class="accordion">
 
 
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // hide details accordion on back belt + fisiorest (bunion shows its own text) ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // hide details accordion on back belt + fisiorest + norikshers (bunion shows its own text) ?>
     <!-- 1 - detajli -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
