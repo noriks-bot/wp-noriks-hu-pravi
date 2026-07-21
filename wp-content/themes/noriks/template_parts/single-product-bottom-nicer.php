@@ -132,9 +132,9 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
   <div class="knc-ugc-wrap">
     <h2 class="knc-ugc-title">Mit mondanak vásárlóink</h2>
     <div class="knc-ugc-grid">
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-1-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-2-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-3-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1-hu.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-1-hu-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2-hu.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-2-hu-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3-hu.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-3-hu-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
     </div>
   </div>
 </section>
