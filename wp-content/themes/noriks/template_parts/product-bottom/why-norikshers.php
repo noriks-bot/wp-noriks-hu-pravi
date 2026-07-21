@@ -86,12 +86,6 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   </div>
 </section>
 
-<!-- ============ 5) Milyen hegeknél segít (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'06.png' ); ?>" alt="Milyen hegeknél segít a NORIKS HERS" loading="lazy"></div></section>
-
-<!-- ============ 6) Vásárlói vélemények (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'07.png' ); ?>" alt="NORIKS HERS vásárlói vélemények" loading="lazy"></div></section>
-
 <!-- ============ 7) Mellékhatások nélkül ============ -->
 <section class="nhs-zero">
   <div class="nhs-wrap nhs-row2">
@@ -128,9 +122,6 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     <div class="nhs-cta-wrap"><a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki, ami tényleg működik</a></div>
   </div>
 </section>
-
-<!-- ============ 9) Hogyan használja (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'14.png' ); ?>" alt="Hogyan használja a NORIKS HERS-t" loading="lazy"></div></section>
 
 <!-- ============ 10) Eredmény 30 nap alatt (utolsó) ============ -->
 <section class="nhs-results">
@@ -189,6 +180,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   .nhs-ic { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #ede6fb; color: #7c3aed; font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; }
   .nhs-cta-solid { margin-top: 8px; text-align: center; }
   .nhs-science { background: #faf8ff; padding: 44px 0; }
+  .nhs-science .nhs-eyebrow-i { text-align: left; }
   .nhs-science p { font-size: 15.5px; line-height: 1.6; color: #333; margin: 0 0 12px; }
   .nhs-check { list-style: none; margin: 16px 0 0; padding: 0; }
   .nhs-check li { position: relative; padding: 0 0 12px 30px; font-size: 15.5px; color: #180D33; }
