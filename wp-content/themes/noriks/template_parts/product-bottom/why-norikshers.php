@@ -11,7 +11,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 <section class="nhs-reason">
   <div class="nhs-wrap">
     <p class="nhs-eyebrow-i">Az igazi ok</p>
-    <h2 class="nhs-h1">amiért a ráncok és hegek nem halványulnak</h2>
+    <h2 class="nhs-h1">Amiért a ráncok és hegek nem halványulnak</h2>
     <p class="nhs-lead">Kipróbált krémeket, amelyek csodát ígértek.<br>Gondolt a botoxra is, de az ijesztő, drága, vagy egyszerűen nem Önhöz való.</p>
     <div class="nhs-reason-grid">
       <div class="nhs-col nhs-cons">
@@ -54,7 +54,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-sci-copy">
       <p class="nhs-eyebrow-i">A tudomány</p>
-      <h2 class="nhs-h2">a simaság mögött</h2>
+      <h2 class="nhs-h2">A simaság mögött</h2>
       <p><strong>A szilikoncsíkokat a bőrgyógyászatban használják</strong> a bőr gyógyulásának és a kollagén újraépülésének elősegítésére.</p>
       <p><strong>A NORIKS HERS ugyanezt a bevált módszert használja</strong>, kollagénnel dúsítva a vonalak kisimítására és a hegek lágyítására — biztonságosan és gyengéden.</p>
       <ul class="nhs-check">
@@ -145,7 +145,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
           <p><?php echo wp_kses_post($s['t']); ?></p>
         </div>
       <?php endforeach; ?>
-      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki kockázat nélkül 99 napig</a>
+      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki kockázat nélkül 30 napig</a>
       <p class="nhs-cta-note"><em>Nincs elragadtatva? Teljes visszatérítés!</em></p>
     </div>
   </div>

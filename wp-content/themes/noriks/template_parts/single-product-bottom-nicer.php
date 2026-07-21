@@ -1540,7 +1540,7 @@ $norikshers_faq = array(
   array( 'questioon' => 'A helyén marad, amíg alszom?', 'answer' => 'Igen! A NORIKS HERS bőrbarát, tartós ragasztóval készült, amely követi a mozdulatait. Lélegző, és a helyén marad, még oldalt alvóknál is.' ),
   array( 'questioon' => 'Milyen területeken használhatom?', 'answer' => 'Bárhol! A legtöbb vásárló a NORIKS HERS-t a következőkön használja: homlokráncok, szemöldökközti ráncok, mosolyráncok, nyakráncok, pattanás utáni nyomok, császármetszés hegei, striák, sebészeti vagy sérülési hegek.' ),
   array( 'questioon' => 'Miben jobb a NORIKS HERS az olcsó online tapaszoknál?', 'answer' => 'Sok online árult tapasz gyenge minőségű, vékony vagy rossz ragasztót használ. A NORIKS HERS prémium szilikont használ, laboratóriumban tesztelt a biztonságra és tartósságra, és egész éjjel a helyén marad. Emellett dedikált ügyfélszolgálatot és gyorsabb cserét kínálunk, ha segítségre van szüksége.' ),
-  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, 99 napos kockázatmentes garanciát kínálunk. Ha nem elégedett, csak vegye fel velünk a kapcsolatot, és rendezzük.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, 30 napos kockázatmentes garanciát kínálunk. Ha nem elégedett, csak vegye fel velünk a kapcsolatot, és rendezzük.' ),
 );
 
 $faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq ) {
