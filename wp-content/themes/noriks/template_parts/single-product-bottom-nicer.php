@@ -587,15 +587,19 @@ $is_nogavice_page = ( function_exists('noriks_is_type') && noriks_is_type('kompr
 $is_ortopas_page  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) );
 $is_bunion_page   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) );
 $is_fisiorest_page = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) );
+$is_norikshers_review_page = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $current_product_id) );
 
 // Fallback product name shown in review cards.
-$rv_fallback_title = $is_fisiorest_page ? 'NORIKS | FisioRest'
+$rv_fallback_title = $is_norikshers_review_page ? 'NORIKS HERS'
+                   : ( $is_fisiorest_page ? 'NORIKS | FisioRest'
                    : ( $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
                    : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
-                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) );
+                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) ) );
 
 // Include review pools (own pool per product group)
-if ( $is_fisiorest_page ) {
+if ( $is_norikshers_review_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_norikshers.php';
+} elseif ( $is_fisiorest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_fisiorest.php';
 } elseif ( $is_bunion_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_bunion.php';
@@ -675,6 +679,7 @@ function get_wc_product_pool(
     $is_ortopas   = false;
     $is_bunion    = false;
     $is_fisiorest = false;
+    $is_norikshers = false;
     if ( $product_id ) {
         $is_bokserice = has_term(
             array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ),
@@ -685,9 +690,10 @@ function get_wc_product_pool(
         $is_ortopas  = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $product_id) );
         $is_bunion   = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $product_id) );
         $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $product_id) );
+        $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $product_id) );
     }
 
-    $cache_key = $transient_key . ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) );
+    $cache_key = $transient_key . ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) ) );
 
     if ( function_exists( 'get_transient' ) ) {
         $cached = get_transient( $cache_key );
@@ -703,7 +709,9 @@ function get_wc_product_pool(
         'orderby' => 'date',
         'order'   => 'DESC',
     ];
-    if ( $is_fisiorest ) {
+    if ( $is_norikshers ) {
+        $args['category'] = [ 'orto-norikshers', 'orto-noriks-hers' ];
+    } elseif ( $is_fisiorest ) {
         $args['category'] = [ 'orto-fisiorest' ];
     } elseif ( $is_bunion ) {
         $args['category'] = [ 'orto-bunion' ];
@@ -988,8 +996,8 @@ $prod_count = count($auto_reviews_en);
 $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) : ?>
-<style>/* socks + belt + bunion + fisiorest: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page ) : ?>
+<style>/* socks + belt + bunion + fisiorest + norikshers: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
