@@ -38,12 +38,12 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-media"><img src="<?php echo esc_url( $nh.'15.png' ); ?>" alt="NORIKS HERS felhelyezés" loading="lazy"></div>
     <div class="nhs-b-list">
-      <div class="nhs-chip"><span>✨</span> Kisimítja a homlok-, szem- és mosolyráncokat egyetlen éjszaka alatt</div>
-      <div class="nhs-chip"><span>🔄</span> Segít, hogy a bőr feszesebbnek és frissebbnek tűnjön</div>
-      <div class="nhs-chip"><span>🛡️</span> Segít megelőzni az új ráncok kialakulását</div>
-      <div class="nhs-chip"><span>💧</span> Fokozza a nedvességet, így a bőr teltebb</div>
-      <div class="nhs-chip"><span>✔️</span> Újrahasználható akár 5 alkalommal</div>
-      <div class="nhs-chip"><span>🌙</span> Gyengéd a mindennapi éjszakai használathoz minden bőrtípuson</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Kisimítja a homlok-, szem- és mosolyráncokat egyetlen éjszaka alatt</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Segít, hogy a bőr feszesebbnek és frissebbnek tűnjön</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Segít megelőzni az új ráncok kialakulását</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Fokozza a nedvességet, így a bőr teltebb</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Újrahasználható akár 5 alkalommal</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Gyengéd a mindennapi éjszakai használathoz minden bőrtípuson</div>
       <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Tüntesse el a ráncaimat még ma este →</a>
     </div>
   </div>
@@ -183,9 +183,10 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   .nhs-cta-solid { background: #7c3aed; }
   .nhs-cta-note { font-size: 13.5px; color: #5b5175; margin: 12px 0 0; }
   .nhs-benefits { padding: 44px 0; }
-  .nhs-b-list { display: flex; flex-direction: column; gap: 12px; }
-  .nhs-chip { display: flex; align-items: center; gap: 12px; background: #f4efff; border: 1px solid #e4d9fb; border-radius: 12px; padding: 14px 16px; font-size: 15px; color: #180D33; line-height: 1.35; }
-  .nhs-chip span { font-size: 18px; }
+  .nhs-b-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .nhs-b-list > a { grid-column: 1 / -1; }
+  .nhs-chip { display: flex; align-items: center; gap: 11px; background: #f7f3ff; border: 1px solid #e7dcfb; border-radius: 14px; padding: 14px 15px; font-size: 14px; color: #180D33; line-height: 1.35; }
+  .nhs-ic { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #ede6fb; color: #7c3aed; font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; }
   .nhs-cta-solid { margin-top: 8px; text-align: center; }
   .nhs-science { background: #faf8ff; padding: 44px 0; }
   .nhs-science p { font-size: 15.5px; line-height: 1.6; color: #333; margin: 0 0 12px; }
@@ -226,6 +227,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     .nhs-cons p, .nhs-pros p { margin-bottom: 12px; }
     .nhs-reason-grid .nhs-media { order: -1; }
     .nhs-proof-grid { grid-template-columns: 1fr; }
+    .nhs-b-list { grid-template-columns: 1fr; }
   }
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
