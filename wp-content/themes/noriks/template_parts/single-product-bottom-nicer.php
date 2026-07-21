@@ -13,7 +13,30 @@ if ( function_exists( 'noriks_is_type' ) ) {
 }
 ?>
 <?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
-<!-- Compression socks: NORIKS vs. others comparison (demo/UGC videos need HU assets — omitted) -->
+<?php
+// Compression socks: demo + comparison + benefits + UGC (assets in img/ and img/kompresijske-videos/).
+$kn_dir_path = get_template_directory() . '/img/';
+$kn_dir_uri  = get_template_directory_uri() . '/img/';
+$kn_matches  = glob( $kn_dir_path . 'kompresijske*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', GLOB_BRACE );
+$kn_matches  = is_array( $kn_matches ) ? $kn_matches : array();
+sort( $kn_matches );
+$kn_img_1       = isset( $kn_matches[0] ) ? ( $kn_dir_uri . rawurlencode( basename( $kn_matches[0] ) ) ) : '';
+$kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;"></div>';
+$knv = get_template_directory_uri() . '/img/kompresijske-videos/';
+?>
+<!-- Így működik a gyakorlatban (product demo videos, autoplay on view) — FIRST -->
+<section class="why-section knc-demo">
+  <div class="knc-demo-wrap">
+    <h2 class="knc-demo-title">Így működik a gyakorlatban</h2>
+    <div class="knc-demo-grid">
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" poster="<?php echo esc_url( $knv ); ?>demo-1-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" poster="<?php echo esc_url( $knv ); ?>demo-2-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" poster="<?php echo esc_url( $knv ); ?>demo-3-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" poster="<?php echo esc_url( $knv ); ?>demo-4-poster.jpg" muted loop playsinline preload="none"></video>
+    </div>
+  </div>
+</section>
+<!-- Compression socks: NORIKS vs. others comparison -->
 <section class="why-section knc-compare-section">
   <div class="knc-compare-wrap">
     <h2 class="knc-compare-title">NORIKS vs. a többiek</h2>
@@ -73,6 +96,100 @@ if ( function_exists( 'noriks_is_type' ) ) {
     .knc-badge { display:block; margin:4px auto 0; width:-moz-max-content; width:max-content; }
   }
 </style>
+
+<!-- Miért kompressziós zokni? (előnyök) -->
+<section class="why-section">
+  <div style="max-width: 1440px;" class="container why-container">
+    <div class="why-col">
+      <div class="video-wrapper">
+        <?php if ( $kn_img_1 ) : ?>
+          <img loading="lazy" decoding="async" style="width:100%; aspect-ratio:1/1; object-fit:cover;" src="<?php echo esc_url( $kn_img_1 ); ?>" alt="Kompressziós zokni">
+        <?php else : echo $kn_placeholder; endif; ?>
+      </div>
+    </div>
+    <div class="why-col why-content">
+      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
+        MIÉRT KOMPRESSZIÓS ZOKNI?
+      </h2>
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Jobb vérkeringés, kevesebb fáradtság</strong></p>
+        <p class="description">A fokozatos kompresszió gyengéden serkenti a szív felé irányuló véráramlást, csökkenti a lábak nehézség- és fáradtságérzetét, és segít, hogy a lábak a leghosszabb napon is könnyűek maradjanak.</p>
+      </div>
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Kevesebb duzzanat</strong></p>
+        <p class="description">Ideális hosszú utazásokhoz, hosszan tartó álláshoz vagy üléshez. Az egyenletes nyomás csökkenti a folyadék-visszatartást, valamint a boka és a vádli duzzanatát.</p>
+      </div>
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Érezhető támogatás</strong></p>
+        <p class="description">Az anatómiai szabás a helyén tartja a zoknit, felül nem szorít. Feszes, mégis kényelmes támogatás érzése egész nap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mit mondanak vásárlóink (UGC testimonial videos, load on click) -->
+<section class="why-section knc-ugc">
+  <div class="knc-ugc-wrap">
+    <h2 class="knc-ugc-title">Mit mondanak vásárlóink</h2>
+    <div class="knc-ugc-grid">
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-1-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-2-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-3-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .knc-demo { background:#f4f4f4; padding:30px 0 22px; }
+  .knc-demo-wrap, .knc-ugc-wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+  .knc-demo-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 22px; }
+  .knc-demo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .knc-lazyvid { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px; background:#eceae4; display:block; }
+  .knc-ugc { background:#fff; padding:34px 0 42px; }
+  .knc-ugc-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 24px; }
+  .knc-ugc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:820px; margin:0 auto; }
+  .knc-ugc-item { position:relative; aspect-ratio:9/16; border-radius:8px; overflow:hidden; background:#0d2444; cursor:pointer; }
+  .knc-ugc-item video { width:100%; height:100%; object-fit:cover; display:block; }
+  .knc-ugc-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.92); }
+  .knc-ugc-play::after { content:""; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%); border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #111; }
+  @media (max-width:768px){
+    .knc-demo-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  }
+  @media (max-width:560px){
+    .knc-ugc-grid { grid-template-columns:1fr; max-width:320px; }
+  }
+</style>
+
+<script>
+(function(){
+  var lazy = document.querySelectorAll('.knc-lazyvid');
+  if ('IntersectionObserver' in window && lazy.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var v = en.target;
+        if (en.isIntersecting){
+          if (!v.src){ v.src = v.dataset.src; }
+          var p = v.play(); if (p && p.catch) p.catch(function(){});
+        } else { v.pause(); }
+      });
+    }, { threshold:0.25 });
+    lazy.forEach(function(v){ io.observe(v); });
+  } else {
+    lazy.forEach(function(v){ if(!v.src){ v.src = v.dataset.src; v.play&&v.play(); } });
+  }
+  document.querySelectorAll('.knc-ugc-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      if (item.dataset.loaded) return;
+      item.dataset.loaded = '1';
+      var play = item.querySelector('.knc-ugc-play'); if (play) play.remove();
+      var v = item.querySelector('.knc-ugc-video');
+      if (!v){ v = document.createElement('video'); v.className = 'knc-ugc-video'; item.appendChild(v); }
+      v.src = item.dataset.src; v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    });
+  });
+})();
+</script>
 <?php endif; ?>
 
 <?php if ( has_term( array( 'kezdocsomag','orto-kezdocsomag', 'paketo-ekkinisis', 'starter-pack' ), 'product_cat', get_the_id() ) ) : ?>
