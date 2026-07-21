@@ -129,23 +129,36 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   </div>
 </section>
 
-<!-- ============ 9) Eredmény 30 nap alatt ============ -->
+<!-- ============ 9) Hogyan használja (grafika) ============ -->
+<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'14.png' ); ?>" alt="Hogyan használja a NORIKS HERS-t" loading="lazy"></div></section>
+
+<!-- ============ 10) Eredmény 30 nap alatt (utolsó) ============ -->
 <section class="nhs-results">
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-media"><img src="<?php echo esc_url( $nh.'12.png' ); ?>" alt="NORIKS HERS eredmények" loading="lazy"></div>
     <div class="nhs-res-copy">
       <h2 class="nhs-h2">Lásson eredményt 30 nap alatt vagy <em>visszakapja a pénzét!</em></h2>
-      <div class="nhs-stat"><span class="nhs-pct">98%</span><p><strong>Simább bőrt</strong> és csökkent finom vonalakat tapasztalt már az <strong>első héten</strong>.</p></div>
-      <div class="nhs-stat"><span class="nhs-pct">95%</span><p>Azt mondta, a NORIKS HERS <strong>hatékonyabb</strong>, mint a kipróbált ránc- vagy hegkrémek.</p></div>
-      <div class="nhs-stat"><span class="nhs-pct">91%</span><p><strong>Halványabb hegekről és jobb textúráról</strong> számolt be a rendszeres éjszakai használat után.</p></div>
+      <?php
+      $nhs_stats = array(
+        array( 'p' => '98', 'dash' => '172.4', 't' => '<strong>Simább bőrt</strong> és csökkent finom vonalakat tapasztalt már az <strong>első héten</strong>.' ),
+        array( 'p' => '95', 'dash' => '167.1', 't' => 'Azt mondta, a NORIKS HERS <strong>hatékonyabb</strong>, mint a kipróbált ránc- vagy hegkrémek.' ),
+        array( 'p' => '91', 'dash' => '160.1', 't' => '<strong>Halványabb hegekről és jobb textúráról</strong> számolt be a rendszeres éjszakai használat után.' ),
+      );
+      foreach ( $nhs_stats as $s ) : ?>
+        <div class="nhs-stat">
+          <svg class="nhs-ring" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#e6def7" stroke-width="4"/>
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" stroke-dasharray="<?php echo esc_attr($s['dash']); ?> 175.9" transform="rotate(-90 32 32)"/>
+            <text x="32" y="38" text-anchor="middle" class="nhs-ring-t"><?php echo esc_html($s['p']); ?>%</text>
+          </svg>
+          <p><?php echo wp_kses_post($s['t']); ?></p>
+        </div>
+      <?php endforeach; ?>
       <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki kockázat nélkül 99 napig</a>
       <p class="nhs-cta-note"><em>Nincs elragadtatva? Teljes visszatérítés!</em></p>
     </div>
   </div>
 </section>
-
-<!-- ============ 10) Hogyan használja (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'14.png' ); ?>" alt="Hogyan használja a NORIKS HERS-t" loading="lazy"></div></section>
 
 <style>
   .nhs-wrap { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
@@ -200,10 +213,12 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   .nhs-cmp-table td.mid { color: #8a7fa5; font-size: 12.5px; }
   .nhs-cmp-table td.us.ok { color: #1a9e5f; }
   .nhs-results { padding: 44px 0; }
-  .nhs-stat { display: flex; align-items: flex-start; gap: 14px; margin: 0 0 16px; }
-  .nhs-pct { flex: 0 0 auto; font-size: 26px; font-weight: 800; color: #7c3aed; min-width: 58px; }
-  .nhs-stat p { font-size: 14.5px; line-height: 1.5; color: #333; margin: 4px 0 0; }
+  .nhs-stat { display: flex; align-items: center; gap: 16px; margin: 0 0 18px; }
+  .nhs-ring { width: 58px; height: 58px; flex: 0 0 58px; }
+  .nhs-ring-t { font-size: 17px; font-weight: 700; fill: #180D33; font-family: Georgia,'Times New Roman',serif; font-style: italic; }
+  .nhs-stat p { font-size: 14.5px; line-height: 1.5; color: #333; margin: 0; }
   .nhs-res-copy .nhs-cta { margin-top: 8px; }
+  #bundle-selector .bundle-option.active { border-color: #7c3aed !important; background: #7c3aed14 !important; }
   @media (max-width: 860px) {
     .nhs-row2 { grid-template-columns: 1fr; gap: 22px; }
     .nhs-reason-grid { grid-template-columns: 1fr; gap: 8px; }
@@ -225,7 +240,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
     var checked = sel.querySelector('input[name="bundle_option"]:checked');
     var card = checked ? checked.closest('.bundle-option') : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
-    if(card){ card.style.setProperty('border-color','#f39c12','important'); card.style.setProperty('background','#f39c1217','important'); }
+    if(card){ card.style.setProperty('border-color','#7c3aed','important'); card.style.setProperty('background','#7c3aed14','important'); }
   }
   function bindOrto(){
     var sel = document.getElementById('bundle-selector'); if(!sel) return;
