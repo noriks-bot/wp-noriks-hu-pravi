@@ -1520,8 +1520,26 @@ $fisiorest_faq = array(
   array( 'questioon' => 'Visszaküldhetem, ha nem látok eredményt?', 'answer' => 'Természetesen! Teljes pénzvisszafizetési garanciát nyújtunk a kézhezvételtől számított 90 napon belül, ha nem elégedett a termékkel. Írjon nekünk az info@noriks.com címre, és az üzenet kézhezvételétől számított 12 órán belül válaszolunk!' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq ) {
+// NORIKS HERS (szilikon kollagén csíkok ráncokra) — termék GYIK (magyar, NORIKS HERS).
+$is_norikshers_page = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
+$norikshers_faq = array(
+  array( 'questioon' => 'Miben különbözik a hagyományos ránctapaszoktól vagy hegkrémektől?', 'answer' => 'A legtöbb ránctapasz papírból vagy hidrokolloidból készül, a hegkrémek pedig gyakran csak a bőr felszínén maradnak. A NORIKS HERS klinikai minőségű szilikont használ, amelyben a bőrgyógyászok évek óta megbíznak a hegek textúrájának és a bőr rugalmasságának látható javítására — most pedig a ráncok csökkentésére is alkalmazzák.' ),
+  array( 'questioon' => 'Egyetlen tapasz tényleg hathat a ráncokra és a hegekre is?', 'answer' => 'Igen, mert a ráncok és a hegek egyaránt a kollagén lebomlásának vagy a bőr gyenge regenerációjának jelei. A szilikon támogatja a nedvesség megtartását, a kollagén újraépülését és a bőr textúrájának simítását, ami mindkettőnek jót tesz.' ),
+  array( 'questioon' => 'Mennyi idő alatt látok eredményt?', 'answer' => 'A legtöbb felhasználó már 1–3 használat után látható simulást tapasztal a finom vonalaknál, a hegek megjelenése pedig 2–3 hét rendszeres használat alatt javul. A mélyebb hegek és ráncok tovább tarthatnak, de az eredmények idővel épülnek.' ),
+  array( 'questioon' => 'Biztonságos érzékeny vagy pattanásra hajlamos bőrre?', 'answer' => 'Feltétlenül. A NORIKS HERS hipoallergén, latexmentes és elég gyengéd az érzékeny területekhez, mint a szem vagy a száj környéke, sőt a gyógyuló pattanásnyomokhoz is. Ha nagyon reaktív a bőre, mindig teszteljen először egy kis felületen.' ),
+  array( 'questioon' => 'Meddig viselhetem?', 'answer' => 'A legjobb eredményért 6–8 órán át, éjszaka javasoljuk a NORIKS HERS viselését. Nappal is használhatja — csak ügyeljen arra, hogy a bőr tiszta és olaj- vagy szérummentes legyen alatta.' ),
+  array( 'questioon' => 'Meddig tart egy tekercs?', 'answer' => 'Attól függően, milyen gyakran és hol használja, egy tekercs 3–6 hétig is kitart. Mivel újrahasználható, sokkal költséghatékonyabb, mint az egyszer használatos tapaszok vagy krémek.' ),
+  array( 'questioon' => 'A helyén marad, amíg alszom?', 'answer' => 'Igen! A NORIKS HERS bőrbarát, tartós ragasztóval készült, amely követi a mozdulatait. Lélegző, és a helyén marad, még oldalt alvóknál is.' ),
+  array( 'questioon' => 'Milyen területeken használhatom?', 'answer' => 'Bárhol! A legtöbb vásárló a NORIKS HERS-t a következőkön használja: homlokráncok, szemöldökközti ráncok, mosolyráncok, nyakráncok, pattanás utáni nyomok, császármetszés hegei, striák, sebészeti vagy sérülési hegek.' ),
+  array( 'questioon' => 'Miben jobb a NORIKS HERS az olcsó online tapaszoknál?', 'answer' => 'Sok online árult tapasz gyenge minőségű, vékony vagy rossz ragasztót használ. A NORIKS HERS prémium szilikont használ, laboratóriumban tesztelt a biztonságra és tartósságra, és egész éjjel a helyén marad. Emellett dedikált ügyfélszolgálatot és gyorsabb cserét kínálunk, ha segítségre van szüksége.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, 99 napos kockázatmentes garanciát kínálunk. Ha nem elégedett, csak vegye fel velünk a kapcsolatot, és rendezzük.' ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_norikshers_page && $is_info ) {
+    return $norikshers_faq;
+  }
   if ( $is_fisiorest_page && $is_info ) {
     return $fisiorest_faq;
   }
