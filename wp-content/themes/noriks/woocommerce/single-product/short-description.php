@@ -96,3 +96,26 @@ if ( ! $short_description ) {
        letter-spacing: -0.5px !important;
     }
   </style>
+
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ) : ?>
+<div class="nhs-usp">
+  <div class="nhs-usp-guarantee"><span>◈</span> 99 napos pénzvisszafizetési garancia</div>
+  <div class="nhs-usp-grid">
+    <div><span class="nhs-usp-ic">≈</span> Csökkenti a ráncokat</div>
+    <div><span class="nhs-usp-ic">↓</span> Csökkenti a finom vonalakat</div>
+    <div><span class="nhs-usp-ic">☾</span> Halványítja a hegeket éjszaka</div>
+    <div><span class="nhs-usp-ic">✚</span> Extra tapadós</div>
+    <div><span class="nhs-usp-ic">↻</span> Újrahasználható és tartós</div>
+    <div><span class="nhs-usp-ic">↗</span> Fokozza a kollagéntermelést</div>
+  </div>
+</div>
+<style>
+  .nhs-usp { margin: 14px 0 8px; }
+  .nhs-usp-guarantee { display: inline-flex; align-items: center; gap: 8px; border: 1px dashed #b79cf0; border-radius: 999px; padding: 7px 16px; font-size: 13.5px; font-weight: 600; color: #180D33; margin-bottom: 16px; }
+  .nhs-usp-guarantee span { color: #7c3aed; }
+  .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+  .nhs-usp-grid > div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2a2340; }
+  .nhs-usp-ic { flex: 0 0 auto; width: 20px; text-align: center; color: #180D33; font-size: 15px; }
+  @media (max-width: 480px) { .nhs-usp-grid { grid-template-columns: 1fr; } }
+</style>
+<?php endif; ?>
