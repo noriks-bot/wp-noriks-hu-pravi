@@ -283,7 +283,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 </section>
 <?php endif; ?>
 
-<?php if ( has_term( array( 'polok', 'orto-polok', 'szettek', 't-shirts', 'blouzakia' ), 'product_cat', get_the_id() ) || has_term( array('sady', 'set', 'seta', 'bundles'), 'product_cat', get_the_id() )) : ?>
+<?php if ( has_term( array( 'polok', 'orto-polok', 'szettek', 't-shirts', 'blouzakia', 'orto-majica-darila' ), 'product_cat', get_the_id() ) || has_term( array('sady', 'set', 'seta', 'bundles'), 'product_cat', get_the_id() )) : ?>
 <section class="why-section">
     <div class="container why-container">
         <!-- Left Video -->
