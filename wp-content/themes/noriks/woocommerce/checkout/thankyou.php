@@ -51,14 +51,14 @@ if ( $upsell_is_majice ) {
     );
     $upsell_title_text = 'Adjon hozzá pólókat most – 50% kedvezmény';
 } else {
-    $upsell_product_id = 2781; // Fekete boxeralsó
-    $upsell_name       = 'Fekete boxeralsó';
+    $upsell_product_id = 2829; // Szürke boxeralsó (siva verzija, ista struktura kot crna)
+    $upsell_name       = 'Szürke boxeralsó';
     $upsell_qty_prices = array( 1 => 1790, 3 => 5370, 5 => 8950 );
-    $upsell_qty_names  = array( 1 => '1x Fekete boxeralsó', 3 => '3x Fekete boxeralsó', 5 => '5x Fekete boxeralsó' );
+    $upsell_qty_names  = array( 1 => '1x Szürke boxeralsó', 3 => '3x Szürke boxeralsó', 5 => '5x Szürke boxeralsó' );
     $upsell_qty_images = array(
-        1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-        3 => 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
-        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+        1 => 'https://noriks.com/hu/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg',
+        3 => 'https://noriks.com/hu/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 3x siva kompozitna, ko obstaja
+        5 => 'https://noriks.com/hu/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 5x siva kompozitna, ko obstaja
     );
     $upsell_title_text = 'Adjon hozzá boxeralsókat most – 50% kedvezmény';
 }
