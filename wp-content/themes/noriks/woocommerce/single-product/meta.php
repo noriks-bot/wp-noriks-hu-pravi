@@ -459,7 +459,37 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
     <?php endif; ?>
 
 
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // hide details accordion on back belt + fisiorest + norikshers (bunion shows its own text) ?>
+    <!-- ErgoSit ortopedski jastuk: prva dva accordion mjesta (kopija originala, HU) -->
+    <?php if ( function_exists('noriks_is_type') && noriks_is_type( 'ortopedski-jastuk', $current_product_id ) ) : ?>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Termékspecifikációk</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <ul style="margin:8px 0 12px; padding-left:18px;">
+          <li style="margin:0 0 8px;"><strong>Külső huzat:</strong> Lélegző kötött anyag, levehető és mosógépben mosható, hipoallergén</li>
+          <li style="margin:0 0 8px;"><strong>Mag:</strong> OrthoFlex™ adaptív hab | Nem mérgező, OEKO-TEX® tanúsítvánnyal | Nyomáscsökkentésre + a testtartás igazítására tervezve</li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Mitől ennyire különleges?</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <ul style="margin:8px 0 12px; padding-left:18px;">
+          <li style="margin:0 0 10px;"><strong>OrthoFlex™ memóriahab:</strong> Nagy sűrűségű hab, amely csökkenti a nyomást és ellaposodás nélkül alkalmazkodik — támasztja a farokcsontot, a csípőt és a gerincet az egész napos kényelemért.</li>
+          <li style="margin:0 0 10px;"><strong>BreatheEase™ huzat:</strong> Puha, lélegző és bőrbarát. Levehető és mosógépben mosható, hogy a párna mindig friss maradjon.</li>
+          <li style="margin:0 0 10px;"><strong>Kiegyensúlyozott alátámasztás:</strong> Nem túl puha, nem túl kemény. Úgy tervezték, hogy igazítsa a testtartást és enyhítse a hosszú órákig tartó ülés okozta fájó pontokat.</li>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?>
+
+
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) ) ) : // hide details accordion on back belt + fisiorest + norikshers + ortopedski jastuk (bunion shows its own text) ?>
     <!-- 1 - detajli -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -526,7 +556,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
      
      <?php endif; // /hide details accordion on back belt ?>
 
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers + ortopedski jastuk ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
