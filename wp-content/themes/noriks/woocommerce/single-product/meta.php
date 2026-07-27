@@ -420,6 +420,45 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
  <div class="accordion">
 
 
+    <!-- KidsNest: prva dva accordion mjesta (dugi sadrzaj iz summary-ja) -->
+    <?php if ( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ) : ?>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Gyermeke arca éppen most formálódik — és 9 éves koráig van rá ideje</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <p>A légúti kutatók és a gyermek-fogszakorvosok évek óta ugyanarra a mintázatra figyelmeztetnek — a legtöbb szülő mégsem hallott róla soha. Úgy hívják: <strong>hosszúarc-szindróma</strong> (adenoid arc).</p>
+        <p>Minden éjjel, amikor a gyermek nyitott szájjal alszik egy rossz párnán, négy dolog történik egyszerre: a nyelv hátraesik, az állkapocs hátrahúzódik, a szájpadlás magas ívbe szűkül, és az arc vízszintes helyett függőleges irányban kezd nőni. A 3. és 9. életév között eltelt több ezer ilyen éjszaka után a változások rögzülnek.</p>
+        <p>Ezért jelennek meg ma a 9 évesek a fogszabályzó orvosnál hátrahúzódott állal, karikás szemekkel, torlódott fogakkal — és egy drága fogszabályzó-számlával. Az, ahogyan a gyermek 3 és 9 éves kora között lélegzik, erősen befolyásolja az arcot, amelyet egész életében viselni fog.</p>
+        <p>A NORIKS <strong>KidsNest</strong> úgy készült, hogy a kiváltó okra hasson — a fej és az állkapocs rossz helyzetére a 9 órányi alvás alatt — a <strong>3 zónás ergonomikus szerkezettel</strong>, amely a fejet, a nyakat és az állkapcsot már az első éjszakától megfelelő vonalban tartja.</p>
+        <p><strong>Amit a gyermekénél látni fog:</strong></p>
+        <ul style="margin:6px 0 12px;padding-left:18px;">
+          <li style="margin:0 0 7px;"><strong>Kevesebb szájon át légzés:</strong> éjszaka csukott ajkak, visszatérő orron át légzés, vége a reggeli szájszárazságnak.</li>
+          <li style="margin:0 0 7px;"><strong>Csendesebb éjszakák:</strong> a horkolás a legtöbb gyermeknél 1–2 héten belül elcsendesedik.</li>
+          <li style="margin:0 0 7px;"><strong>A fejlődő állkapocs támogatása:</strong> megfelelő testhelyzet éjszakáról éjszakára, azokban az években, amikor ez a legfontosabb.</li>
+          <li style="margin:0 0 7px;"><strong>Okos megelőzés:</strong> egy párna ma — a drága korrekciók helyett holnap.</li>
+        </ul>
+        <p><strong>Egy párna ma este. Vagy ezrek később.</strong></p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Elmúlt 9 éves? Az időablak szűkül. A károsodás nem áll meg.</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <p>A tanács, amit hallott, csak félig igaz. Igen, a felső szájpadlás 9 éves kor körül megszilárdul. De az arc 20 éves korig fejlődik, az alsó állkapocs 17 éves korig nő, a légutak pedig folyamatosan alkalmazkodnak.</p>
+        <p>Ezért a 9. életév utáni minden szájon át lélegzett éjszaka új károsodást rak a régire: fogcsikorgatás, fejfájás, nem pihentető alvás, romló koncentráció — és a fáradtság, amit mindenki lustaságnak néz. A tinédzsere nem lusta. Alig kap levegőt hat órán át minden éjjel.</p>
+        <p>A KidsNest <strong>9–18 éves</strong> mérete idősebb fejre, nyakra és vállra készült. Más kontúr, más magasság, más alátámasztás. Ugyanaz az alapmechanizmus: a fej, a nyak és az állkapocs megfelelő vonalban tartása, egész éjjel, egy még növekedésben lévő testen.</p>
+        <p>Amit a szülők észrevesznek: a horkolás 7–14 éjszaka alatt elcsendesedik, visszatér az igazi reggeli energia, a fejfájások halványulnak, a fókusz visszatér.</p>
+        <p>A legjobb időablak továbbra is a 3. és 9. életév közötti. Az erős időablak a 8. és 18. közötti. Egyik sincs teljesen bezárva — de minden várakozással töltött éjszaka újabb terhet rak a testre, amely megpróbál regenerálódni.</p>
+        <p><strong>A tegnap elmúlt. A ma este még az Öné.</strong></p>
+      </div>
+    </div>
+    <?php endif; ?>
+
+
     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // hide details accordion on back belt + fisiorest + norikshers (bunion shows its own text) ?>
     <!-- 1 - detajli -->
     <div class="accordion-item">
@@ -429,9 +468,21 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
       </div>
       <div class="accordion-content">
           
-         <?php if( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
+         <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
+
+                A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző, mosható huzattal, amely egyszerűen levehető.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–18 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
 
                 A NORIKS bütyökkorrigáló szabadalmaztatott csuklós mechanizmust használ, amely finoman visszahelyezi a nagylábujjat a természetes helyzetébe, és célzott, állítható kompressziót fejt ki. Ezzel tehermentesíti a fájdalmas kidudorodást, csökkenti a gyulladást és enyhíti a kellemetlenséget járás, állás és pihenés közben.<br><br>A puha belső bélés védi a bőrt és hosszabb viselés esetén is kényelmet biztosít, a nyújtás erőssége pedig a rugalmas pántokkal egyszerűen állítható.<br><br>Nem invazív és sokoldalú — nincsenek oldalak, egyaránt illeszkedik a bal és a jobb lábra, valamint minden lábmérethez, a gyerekmérettől a legnagyobb felnőtt méretig. Napi 30 perctől néhány óráig terjedő használat elegendő a fokozatos, természetes korrekcióhoz.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) ): ?>
+
+                A NORIKS inkontinencia-boxeralsó puha, antibakteriális bambuszrostból készült, víztaszító külső réteggel. Középpontjában a 7 rétegű PureDry™ mag áll, amely azonnal felszív és bezár akár 300 ml folyadékot, így a bőr száraz marad, a szivárgás pedig belül marad.<br><br>A szabás vékony és diszkrét — úgy néz ki és olyan érzés, mint a normál fehérnemű, terjedelem és „pelenkaérzés” nélkül. A láb menti védelem megakadályozza az oldalirányú szivárgást, a szagkontroll pedig egész nap frissességet biztosít.<br><br>Mosható és újrahasználható — több száz mosáson keresztül megőrzi nedvszívó képességét, környezetbarát és költséghatékony alternatívaként az eldobható betétekkel és pelenkákkal szemben.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $current_product_id) ): ?>
+
+                A NORIKS FIT fejlett ionos kompressziós anyagból készült, amely testhezálló, támogató szabást biztosít. A célzott kompresszió egyenletesen feszesíti a hasat és a derekat, kisimítja a sziluettet és támogatja az egyenes testtartást — a légzést vagy a mozgást korlátozó szorítás nélkül.<br><br>A mikroszövésű szálak serkentik a vérkeringést, és segítenek, hogy napközben egyenesebben álljon és magabiztosabbnak érezze magát. Az anyag könnyű, lélegző és nedvességelvezető, így száraz és kényelmes marad.<br><br>A vékony és diszkrét szabás bármilyen ing alatt láthatatlanná teszi, ugyanakkor sportpólóként is használható. Az eredmény: élesebb megjelenés, jobb testtartás és önbizalom — amint felveszi.
 
          <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ) ): ?>
 
@@ -483,8 +534,82 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-           <?php if( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
+
+           <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
+
+          <div class="kn-size">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest méretek életkor szerint" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <p style="margin:0;line-height:1.6;"><strong>A gyermek két méret között van?</strong> Mindig a nagyobbat válassza. A párnát úgy tervezték, hogy a gyermek növekedése közben is támogassa az egészséges testhelyzetet — a nagyobb méret több helyet ad és hosszabb használati időt biztosít.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) ): ?>
+
+          <div class="lbx-size">
+            <p style="margin:0 0 6px;font-weight:700;">Hogyan mérje meg a csípőjét</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Tekerje a mérőszalagot a csípő legszélesebb pontja köré (a fenéken át), megfeszítés nélkül. Álljon lazán és egyenesen, majd jegyezze fel a méretet centiméterben.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#12233b;color:#fff;">
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Méret</th>
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Csípő (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $lbx_sizes = array(
+                  array('S','76 cm-ig','30"-ig'),
+                  array('M','77 – 85 cm','30 – 33"'),
+                  array('L','86 – 94 cm','34 – 37"'),
+                  array('XL','95 – 102 cm','37 – 40"'),
+                  array('2XL','103 – 114 cm','41 – 45"'),
+                  array('3XL','115 – 121 cm','45 – 48"'),
+                  array('4XL','122 – 129 cm','48 – 51"'),
+                  array('5XL','130 – 137 cm','51 – 54"'),
+                  array('6XL','138 – 145 cm','54 – 57"'),
+                  array('7XL','146 – 153 cm','57 – 60"'),
+                  array('8XL','154 cm és felette','61" és felette'),
+                );
+                foreach ( $lbx_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7fafb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:8px 10px;font-weight:700;"><?php echo esc_html($r[0]); ?></td>
+                    <td style="padding:8px 10px;"><?php echo esc_html($r[1]); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Két méret között van?</strong> Az optimális kényelem és a maximális nedvszívás érdekében mindig a nagyobb méretet ajánljuk.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $current_product_id) ): ?>
+
+          <div class="kmf-size">
+            <table style="width:100%;border-collapse:collapse;font-size:15px;">
+              <thead>
+                <tr style="background:#111;color:#fff;">
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Méret</th>
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Megfelelő testsúly</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $kmf_sizes = array(
+                  array('S','50 – 70 kg'), array('M','70 – 90 kg'), array('L','90 – 110 kg'), array('XL','110 – 130 kg'),
+                  array('2XL','130 – 150 kg'), array('3XL','150 – 170 kg'), array('4XL','170 – 190 kg'), array('5XL','190 – 210 kg'),
+                );
+                foreach ( $kmf_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f4f4' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eaeaea;">
+                    <td style="padding:9px 12px;font-weight:800;"><?php echo esc_html($r[0]); ?></td>
+                    <td style="padding:9px 12px;font-weight:700;"><?php echo esc_html($r[1]); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:12px 0 0;line-height:1.6;">Válassza ki a méretét a testsúlya alapján. Két méret között van? Erősebb kompresszióhoz a kisebb méretet válassza.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
 
           <div style="line-height:1.9;">
             <strong>S/M</strong> : cipőméret 36–40 / vádli körfogat : 23–36 cm<br>
@@ -525,14 +650,23 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
     </div>
 
 
-    <!-- 3 - savjeti za pranje-->
+    <!-- 3 - savjeti za pranje--> <!-- skriveno na kidsnest -->
+    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ) ): ?>
+             <?php if( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) ): ?>
+
+                Mossa 30–40 °C-on, kímélő programon. Öblítő és fehérítő nélkül. Levegőn szárítsa. Több száz mosáson keresztül megőrzik nedvszívó képességüket.
+
+             <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $current_product_id) ): ?>
+
+                Gépi mosás hideg, kímélő programon. Fehérítő és öblítő nélkül. Ne szárítsa szárítógépben — levegőn szárítsa, hogy megőrizze a kompressziót és a formát.
+
+             <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle && ! ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ) ): ?>
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
         
          
@@ -552,6 +686,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         <?php endif; ?>
       </div>
     </div>
+    <?php endif; // /hide wash accordion on kidsnest ?>
 
 
 

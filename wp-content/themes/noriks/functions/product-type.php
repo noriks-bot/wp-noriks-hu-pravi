@@ -51,6 +51,8 @@ function noriks_product_type_map() : array {
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
+        // KidsNest children's pillow for proper breathing/posture (Needo-style).
+        'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ),
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
