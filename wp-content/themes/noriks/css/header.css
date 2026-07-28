@@ -21,6 +21,13 @@
   animation: marqueeScroll 28s linear infinite;
 }
 
+.marquee-content .mq-ico {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  display: block;
+}
+
 .marquee-content span {
   display: inline-block;
     color: black;
