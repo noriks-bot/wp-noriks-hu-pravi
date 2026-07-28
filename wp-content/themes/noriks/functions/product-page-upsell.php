@@ -41,6 +41,14 @@ function noriks_pp_upsell_register_fields() {
 				'instructions' => 'Hozzáadja a "Vásárolja együtt és spóroljon" dobozt közvetlenül a Kosárba gomb alá. A vásárló méretet választ, 4 darab kerül hozzáadásra upsell áron. Csak erre a termékre vonatkozik.',
 				'ui'           => 1,
 			),
+			array(
+				'key'          => 'field_noriks_pp_upsell2',
+				'label'        => 'Upsell #2 megjelenítése a gomb alatt (2 póló: fekete + szürke)',
+				'name'         => 'noriks_pp_upsell2',
+				'type'         => 'true_false',
+				'instructions' => 'Második upsell doboz: 2 pólóból álló csomag (1 fekete + 1 szürke), a vásárló egy méretet választ mindkettőhöz. Független az első kapcsolótól.',
+				'ui'           => 1,
+			),
 		),
 		'location'   => array(
 			array(
