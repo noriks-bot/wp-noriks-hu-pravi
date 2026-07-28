@@ -155,66 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </div>
 
-<style>
-.top-header {
-  width: 100%;
-  background: #d5d5d5;
-  padding: 6px 0;
-  overflow: hidden;
-}
-
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  color: black;
-  display: flex;
-  align-items: center;
-}
-
-.marquee-content {
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
-   color: black;
-  gap: 70px;
-  line-height: 1;
-  animation: marqueeScroll 28s linear infinite; /* adjust speed here */
-}
-
-.marquee-content span {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-    color: black;
-}
-
-.marquee-content a {
-  color: black;
-  font-size: 13px;
-  font-weight: normal;
-  text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-  gap: 6px;
-}
-
-.marquee-content .mq-ico {
-  width: 19px;
-  height: 19px;
-  flex: 0 0 auto;
-  display: block;
-}
-
-/* Perfect infinite sliding with no jumps */
-@keyframes marqueeScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
+<!-- Marquee styles moved to css/header.css -->
 
 
 
