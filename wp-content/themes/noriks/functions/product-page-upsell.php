@@ -2,14 +2,14 @@
 /**
  * NORIKS — upsell na stranici proizvoda ("Kupi zajedno i uštedi").
  *
- * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 4x Plave Bokserice
+ * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 4x Zöld boxer
  * po istoj cijeni kao post-purchase upsell na thank you stranici (14,97 € za 3 kom).
  *
  * - Uključuje se ACF prekidačem `noriks_pp_upsell` (polje registrirano u KODU, dolje).
  *   Prekidač je per-proizvod, pa se upsell može uključiti samo tamo gdje ga želimo.
  * - Kupac bira SAMO veličinu (jedan izbornik, sva 4 komada iste veličine).
  * - Kad je kvačica označena, uz glavni proizvod se u košaricu dodaje zasebna stavka
- *   (varijacija plavih bokserica) s upsell cijenom.
+ *   (varijacija zelenih bokserica) s upsell cijenom.
  * - Stavka se u narudžbi označava meta poljem `_noriks_upsell` = 'product_page_upsell'
  *   (isti mehanizam kao sidecart i thank you upsell).
  *
@@ -35,7 +35,7 @@ function noriks_pp_upsell_register_fields() {
 		'fields' => array(
 			array(
 				'key'          => 'field_noriks_pp_upsell',
-				'label'        => 'Upsell megjelenítése a gomb alatt (4x Kék boxer)',
+				'label'        => 'Upsell megjelenítése a gomb alatt (4x Zöld boxer)',
 				'name'         => 'noriks_pp_upsell',
 				'type'         => 'true_false',
 				'instructions' => 'Hozzáadja a "Vásárolja együtt és spóroljon" dobozt közvetlenül a Kosárba gomb alá. A vásárló méretet választ, 4 darab kerül hozzáadásra upsell áron. Csak erre a termékre vonatkozik.',
@@ -72,16 +72,16 @@ function noriks_pp_upsell_register_fields() {
  * ============================================================ */
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
-		'product_id' => 2793,                    // Plave Bokserice (varijabilni proizvod)
+		'product_id' => 2801,                    // Zelene Bokserice (varijabilni proizvod)
 		'qty'        => 4,                       // uvijek 4 komada, iste veličine
 		'total'      => 7190,                   // ista cijena kao thank you upsell (4 komada)
-		'title'      => '4x Kék boxer',
+		'title'      => '4x Zöld boxer',
 		'desc'       => 'Szellős és puha — adja a rendeléshez %s%% kedvezménnyel.', // %s = izracunati popust
 		'size_attr'  => 'Méret',
 		// Interna oznaka paketa (SKU konvencija kao kod bundle proizvoda + UPSELL na kraju).
-		'sku'        => 'NORIKS-BOX-BLUE-4-PACK-UPSELL',
+		'sku'        => 'NORIKS-BOX-GREEN-4-PACK-UPSELL',
 		// Kompozitna slika 4 komada na svijetlo sivoj podlozi (kvadratna).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-modre.png',
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-zelene.png',
 	) );
 }
 
