@@ -23,7 +23,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 2) Pocnite veceras — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'01-poravnan.webp' ); ?>" alt="Tökéletes vonalban — fej, nyak és gerinc alvás közben" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'01-poravnan-hu.webp' ); ?>" alt="Tökéletes vonalban — fej, nyak és gerinc alvás közben" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <p class="kn-eyebrow">Fogorvosokkal közösen fejlesztve a gyermeki légutakért</p>
       <h2 class="kn-h2 kn-h2-blue">Kezdje el már ma este helyrehozni a rejtett károsodást.</h2>

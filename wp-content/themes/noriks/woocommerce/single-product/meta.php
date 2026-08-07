@@ -578,7 +578,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
            <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
 
           <div class="kn-size">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest méretek életkor szerint" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine-hu.webp" alt="KidsNest méretek életkor szerint" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
             <p style="margin:0;line-height:1.6;"><strong>A gyermek két méret között van?</strong> Mindig a nagyobbat válassza. A párnát úgy tervezték, hogy a gyermek növekedése közben is támogassa az egészséges testhelyzetet — a nagyobb méret több helyet ad és hosszabb használati időt biztosít.</p>
           </div>
 
