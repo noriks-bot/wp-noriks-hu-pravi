@@ -512,6 +512,10 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
                 A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző, mosható huzattal, amely egyszerűen levehető.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–18 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
+
+                A NORIKS KneeFix rugalmas térdrögzítő, amely négy funkciót egyesít egyetlen támasztórendszerben: pontos tárcsával állítható kompressziót, kettős oldalsó stabilizátorokat, a térdkalácsot tehermentesítő zselépárnát és szilikonos csúszásgátló szegélyt, amely a helyén tartja a rögzítőt.<br><br>A merev ortézisekkel ellentétben a KneeFix nem merevíti ki a térdet — természetes mozgás közben támasztja meg. A kompressziót másodpercek alatt beállítod: reggel szorosabbra, délután lazábbra, attól függően, mennyit vagy talpon. Így a térd stabilitást kap felálláskor, lépcsőn, sétánál és hosszabb állásnál is.<br><br>Az anyag könnyű, szellőző és elvezeti a nedvességet, ezért a rögzítő órákon át hordható izzadás és bevágás nélkül. Vékony és diszkrét — a nadrág alatt szinte észre sem venni.<br><br>S-től 2XL-ig kapható testsúly szerint, bal és jobb térdre készült változatban, így a passzolás pontos marad.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
 
                 A NORIKS bütyökkorrigáló szabadalmaztatott csuklós mechanizmust használ, amely finoman visszahelyezi a nagylábujjat a természetes helyzetébe, és célzott, állítható kompressziót fejt ki. Ezzel tehermentesíti a fájdalmas kidudorodást, csökkenti a gyulladást és enyhíti a kellemetlenséget járás, állás és pihenés közben.<br><br>A puha belső bélés védi a bőrt és hosszabb viselés esetén is kényelmet biztosít, a nyújtás erőssége pedig a rugalmas pántokkal egyszerűen állítható.<br><br>Nem invazív és sokoldalú — nincsenek oldalak, egyaránt illeszkedik a bal és a jobb lábra, valamint minden lábmérethez, a gyerekmérettől a legnagyobb felnőtt méretig. Napi 30 perctől néhány óráig terjedő használat elegendő a fokozatos, természetes korrekcióhoz.
@@ -566,7 +570,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
      
      <?php endif; // /hide details accordion on back belt ?>
 
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) ) ) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers + ortopedski jastuk ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers + ortopedski jastuk ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -691,7 +695,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
 
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na kidsnest -->
-    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ) ) : ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
