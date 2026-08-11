@@ -45,6 +45,8 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // Bunion corrector (korektor čukljeva / halux valgus).
+        // KneeFix ortopedska steznica za koljeno.
+        'kneefix'                 => array( 'orto-kneefix' ),
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
