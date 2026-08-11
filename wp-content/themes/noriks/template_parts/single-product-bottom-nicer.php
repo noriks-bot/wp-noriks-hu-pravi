@@ -531,7 +531,11 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
                 Nem Ön az egyetlen, aki élesebb sziluettet és jobb testtartást keres.
             <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>
                 Nem Ön az egyetlen, aki fájdalommentes ülésre vágyik.
-            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>
+
+             Nem Ön az egyetlen, aki stabilabb térdet keres.
+
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>Több ezer vásárló hordja már a NORIKS KneeFix rögzítőt a stabilabb térdért – lépcsőn, sétán és hosszú állás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
                 Nem Ön az egyetlen, aki nyugodt gyermekálmot keres.
             <?php elseif ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) ): ?>
                 <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
@@ -609,12 +613,14 @@ $is_norikshers_review_page = ( function_exists('noriks_is_type') && noriks_is_ty
 $is_leakboxers_page = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) );
 $is_kompmajice_page = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $current_product_id) );
 $is_kidsnest_page   = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) );
+$is_kneefix_page    = ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) );
 $is_jastuk_page     = ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk', $current_product_id) );
 // Leak boxers / kompresijske majice / kidsnest / ortopedski jastuk take precedence even if they still carry the socks category.
 if ( $is_leakboxers_page || $is_kompmajice_page || $is_kidsnest_page || $is_jastuk_page ) { $is_nogavice_page = false; }
 
 // Fallback product name shown in review cards.
-$rv_fallback_title = $is_jastuk_page ? 'NORIKS ErgoSit ortopéd ülőpárna'
+$rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
+                     : ( $is_jastuk_page ? 'NORIKS ErgoSit ortopéd ülőpárna'
                    : ( $is_kidsnest_page ? 'NORIKS KidsNest párna'
                    : ( $is_leakboxers_page ? 'NORIKS nedvszívó boxeralsó'
                    : ( $is_kompmajice_page ? 'NORIKS FIT kompressziós póló'
@@ -622,11 +628,13 @@ $rv_fallback_title = $is_jastuk_page ? 'NORIKS ErgoSit ortopéd ülőpárna'
                    : ( $is_fisiorest_page ? 'NORIKS | FisioRest'
                    : ( $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
                    : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
-                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) ) ) ) ) ) );
+                   : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) ) ) ) ) ) ) );
 
 // Include review pools (own pool per product group)
 if ( $is_jastuk_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_ortopedski_jastuk.php';
+} elseif ( $is_kneefix_page ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_kneefix.php';
 } elseif ( $is_kidsnest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_kidsnest.php';
 } elseif ( $is_leakboxers_page ) {
@@ -1004,7 +1012,7 @@ $daily_seed  = $today_obj->format('Y-m-d');
 // Avatar pools based on page category
 $avatar_type = $is_bokserice_page ? 'bokserice' : 'majice';
 // Compression socks + leak boxers + kompresijske majice + kidsnest + ortopedski jastuk: text-only reviews (no avatar images).
-$avatar_pool = ( $is_nogavice_page || $is_leakboxers_page || $is_kompmajice_page || $is_kidsnest_page || $is_jastuk_page ) ? array() : get_review_avatar_pool($avatar_type);
+$avatar_pool = ( $is_nogavice_page || $is_leakboxers_page || $is_kompmajice_page || $is_kidsnest_page || $is_jastuk_page || $is_kneefix_page ) ? array() : get_review_avatar_pool($avatar_type);
 
 // On single-product landing pages (leak boxers / kompresijske majice) the cards should
 // reference THIS product (via $rv_fallback_title), not random pool products.
@@ -1043,7 +1051,7 @@ $prod_count = count($auto_reviews_en);
 $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page || $is_leakboxers_page || $is_kompmajice_page || $is_kidsnest_page || $is_jastuk_page ) : ?>
+<?php if ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page || $is_leakboxers_page || $is_kompmajice_page || $is_kidsnest_page || $is_jastuk_page || $is_kneefix_page ) : ?>
 <style>/* socks + belt + bunion + fisiorest + norikshers + leakboxers + kompsfit + kidsnest + jastuk: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
@@ -1650,6 +1658,38 @@ $leakboxers_faq = array(
 );
 
 // KidsNest gyerekpárna — termék GYIK (NORIKS, tompított állítások).
+$is_kneefix_faq = ( function_exists('noriks_is_type') && noriks_is_type('kneefix') );
+$kneefix_faq = array(
+  array(
+    'questioon' => 'Alkalmas a KneeFix mindennapi viselésre?',
+    'answer'    => 'Igen. A NORIKS KneeFix kifejezetten a hétköznapi mozdulatokhoz készült — járáshoz, munkához, lépcsőzéshez vagy hosszabb álláshoz.',
+  ),
+  array(
+    'questioon' => 'Beállíthatom magam a kompressziót?',
+    'answer'    => 'Igen. A beépített precíz állítókerékkel Ön állítja be a kompressziót — annyi támaszt, amennyi kellemes.',
+  ),
+  array(
+    'questioon' => 'Lecsúszik a rögzítő járás közben?',
+    'answer'    => 'A KneeFix csúszásmentes szilikonszegéllyel készült, amely segít csökkenteni a lecsúszást és a felgyűrődést viselés közben.',
+  ),
+  array(
+    'questioon' => 'Hordhatom a rögzítőt ruha alatt?',
+    'answer'    => 'Igen. A rugalmas, vékony szabás kényelmes viseletet tesz lehetővé a legtöbb hétköznapi ruha alatt.',
+  ),
+  array(
+    'questioon' => 'Mindkét térdre jó a rögzítő?',
+    'answer'    => 'Rendeléskor kiválasztja az oldalt (bal vagy jobb), így a rögzítő pontosan arra a térdre illeszkedik, amelyiket támogatni szeretné.',
+  ),
+  array(
+    'questioon' => 'Hordhatom hosszabb ideig a rögzítőt?',
+    'answer'    => 'A rögzítő mindennapi viselésre készült. Sok vásárló hordja munkában, sétán és a napi teendők közben.',
+  ),
+  array(
+    'questioon' => 'Hogyan válasszak méretet?',
+    'answer'    => 'A méretek testsúly szerint vannak meghatározva: S (50–60 kg), M (61–75 kg), L (76–90 kg), XL (91–110 kg) és 2XL (110 kg+).',
+  ),
+);
+
 $kidsnest_faq = array(
   array( 'questioon' => 'Milyen gyorsan látom, hogy a szájon át légzés megszűnik?', 'answer' => 'A legtöbb szülő az első 5–7 éjszakán belül csendesebb légzést és kevesebb nyitott szájjal történő ébredést tapasztal. A 14. éjszakára a legtöbb gyermeknél a horkolás elcsendesedik, és az ajkak csukva maradnak. A teljes különbséget — láthatóan jobb testhelyzet és nyugodtabb alvás — a szülők leggyakrabban a 21–30. nap környékén írják le. Használja minden éjjel.' ),
   array( 'questioon' => 'Milyen korosztálynak készült a KidsNest?', 'answer' => 'A KidsNest három méretben kapható: 1–3, 3–9 és 9–18 éves korig. A legfontosabb időablak a 3. és 9. életév közé esik, amikor a szájpadlás és az állkapocs a legintenzívebben fejlődik — de minden életkornak megvan a maga mérete és a maga haszna.' ),
@@ -1670,11 +1710,12 @@ $jastuk_faq = array(
   array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, minden NORIKS ErgoSit 60 napos kényelmi garanciával érkezik. Ha nem érez kevesebb fájdalmat és több kényelmet, vegye fel velünk a kapcsolatot, és rendezzük.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_jastuk && $is_info ) {
     return $jastuk_faq;
   }
+  if ( $is_kneefix_faq && $is_info ) { return $kneefix_faq; }
   if ( $is_kidsnest && $is_info ) {
     return $kidsnest_faq;
   }
