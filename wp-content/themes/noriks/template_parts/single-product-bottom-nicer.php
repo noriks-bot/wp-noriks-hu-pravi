@@ -1686,7 +1686,7 @@ $kneefix_faq = array(
   ),
   array(
     'questioon' => 'Hogyan válasszak méretet?',
-    'answer'    => 'A méretek testsúly szerint vannak meghatározva: S (50–60 kg), M (61–75 kg), L (76–90 kg), XL (91–110 kg) és 2XL (110 kg+).',
+    'answer'    => 'A méretek testsúly szerint vannak meghatározva: M (50–75 kg), L (76–90 kg), XL (91–110 kg) és 2XL (110 kg+).',
   ),
 );
 
