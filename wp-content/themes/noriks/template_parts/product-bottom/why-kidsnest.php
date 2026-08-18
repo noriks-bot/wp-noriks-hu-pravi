@@ -43,7 +43,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
       <p>Az ergonomikus gyerekpárna <strong>a fejet és a nyakat természetes vonalban tartja, és segít megelőzni a fej hátrabillenését</strong> az éjszaka folyamán. Így a gerinc megfelelő vonalban marad — még akkor is, ha a gyermek sokat forgolódik álmában.</p>
       <p><strong>Az eredmény: nyugodtabb alvás és jobb regeneráció.</strong></p>
     </div>
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'02-san.jpg' ); ?>" alt="Gyermek nyugodtan alszik a KidsNest párnán" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-hu-2.webp' ); ?>" alt="Gyermek nyugodtan alszik a KidsNest párnán" loading="lazy" onerror="this.style.display='none'"></div>
   </div>
 </section>
 
@@ -92,7 +92,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 6) Kvaliteta materijala — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-detalj.webp' ); ?>" alt="KidsNest — 3 zónás szerkezet és lélegző anyag közelről" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-hu-6.webp' ); ?>" alt="KidsNest — 3 zónás szerkezet és lélegző anyag közelről" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Minőség, amely érezhető — éjszakáról éjszakára.</h2>
       <p>A sűrű, lélegző kötött anyag és a gondosan formázott felület nem a látvány kedvéért van — <strong>minden zónának megvan a maga szerepe</strong>. A középső rész gyengéden befogadja a fejet, a szélek alátámasztják a nyakat, a szerkezet pedig hónapokig tartó mindennapi használat után is megtartja formáját.</p>
