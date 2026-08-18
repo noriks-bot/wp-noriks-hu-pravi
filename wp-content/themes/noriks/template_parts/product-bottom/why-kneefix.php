@@ -31,7 +31,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
 <!-- ============ 1) Amikor minden lépés kellemetlenné válik ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('13_stepenice.jpg','Térdfájdalom lépcsőn lefelé menet'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-hu-3.webp','Térdfájdalom lépcsőn lefelé menet'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Amikor minden lépés kellemetlenné válik</h2>
       <p class="kfx-lead">Eleinte ez gyakran csak enyhe húzó érzés.</p>
@@ -133,14 +133,14 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       <p>A NORIKS KneeFix azért készült, hogy a mindennapi mozdulatok kellemesebbek legyenek — felesleges korlátozás nélkül. A rugalmas anyag jobban alkalmazkodik a napjához, és ott támasztja a térdet, ahol arra szükség van.</p>
       <a class="kfx-cta" href="#bundle-selector">Válassza ki a méretét →</a>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('05_lifestyle_HU.webp','KneeFix a mindennapokban — séta, kerékpár, edzés'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-hu-1.webp','KneeFix a mindennapokban — séta, kerékpár, edzés'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Ajánlott a térd mindennapi támogatására ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('06_orvos_HU.webp','Ajánlott a térd mindennapi támogatására'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-hu-2.webp','Ajánlott a térd mindennapi támogatására'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Ajánlott a térd mindennapi támogatására</h2>
       <ul class="kfx-check">
