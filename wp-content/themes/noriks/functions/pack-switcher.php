@@ -206,7 +206,7 @@ function noriks_render_pack_switcher() {
                        href="<?php echo esc_url( $is_cur ? get_permalink( $id ) : $t['url'] ); ?>"
                        <?php echo $is_cur ? 'aria-current="true"' : ''; ?>>
                         <span class="npk-size-n"><?php echo (int) $s; ?> <?php esc_html_e( 'db', 'noriks' ); ?></span>
-                        <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?><span class="npk-size-u"><?php esc_html_e( 'darabonként', 'noriks' ); ?></span></span>
+                        <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?><span class="npk-size-u"><?php esc_html_e( '/ db', 'noriks' ); ?></span></span>
                     </a>
                 <?php endforeach; ?>
             </div>
