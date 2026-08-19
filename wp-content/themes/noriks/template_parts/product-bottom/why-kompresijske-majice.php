@@ -76,7 +76,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
       </ul>
       <a class="kmf-cta" href="#bundle-selector">Válaszd ki a méreted →</a>
     </div>
-    <div class="kmf-media"><img src="<?php echo esc_url( $km.'elotte-utana-hu.webp' ); ?>" alt="A NORIKS FIT előtt és után" loading="lazy"></div>
+    <div class="kmf-media"><img src="<?php echo esc_url( $km.'ks-hu-04.webp' ); ?>" alt="A NORIKS FIT előtt és után" loading="lazy"></div>
   </div>
 </section>
 
