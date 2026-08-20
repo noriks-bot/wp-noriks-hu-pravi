@@ -780,6 +780,12 @@ function get_wc_product_pool(
         $args['category'] = [ 'kompreszios-zokni', 'kompresziós-zokni', 'orto-kompresziós-zokni', 'orto-kompreszios-zokni' ];
     } elseif ( $is_bokserice ) {
         $args['category'] = [ 'bokserice' ];
+    } elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $product_id) ) {
+        $args['category'] = [ 'orto-kneefix' ];
+    } elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $product_id) ) {
+        $args['category'] = [ 'orto-leak-boxers', 'leak-boxers' ];
+    } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $product_id) ) {
+        $args['category'] = [ 'orto-kompresijske-majice', 'kompresijske-majice' ];
     } else {
           // Stranice majica: bazen SAMO iz kategorije majica (s podkategorijama).
           // Prije je uzimao sve osim bokserica, pa su recenzije o majicama
