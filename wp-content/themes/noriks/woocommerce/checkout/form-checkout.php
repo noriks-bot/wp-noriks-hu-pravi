@@ -91,7 +91,7 @@ if ( WC()->cart->is_empty() ) return;
     <img decoding="async" src="https://images.vigo-shop.com/general/guarantee_money_back/satisfaction_icon_hu.png">
   </div>
   <div class="flex__item--autosize f--m checkout-warranty__text">
-    <strong>Vásároljon gondtalanul </strong><br>Pénzvisszafizetés 90 napon belül
+    <strong>Vásároljon gondtalanul </strong><br>Pénzvisszafizetés 14 napon belül
   </div>
 </div>
 

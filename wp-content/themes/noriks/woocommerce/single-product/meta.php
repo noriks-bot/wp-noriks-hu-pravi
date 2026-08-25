@@ -80,7 +80,7 @@ global $product;
         
         <div class="feature">
       <img src="https://noriks.com/hr/wp-content/uploads/2025/07/footer_icon1-1.png" alt="Shirt Icon" class="feature__icon info-icon">
-          <p class="feature__text">Próbáld ki 30 napig, kockázat nélkül</p>
+          <p class="feature__text">Próbáld ki 14 napig, kockázat nélkül</p>
         </div>
         
         
@@ -746,7 +746,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
   <p></p>
   
   
-Úgy gondoljuk, annyira szeretni fogja a NORIKS-ot, hogy <b data-stringify-type="bold">30 nap</b> áll rendelkezésére, hogy ingyenesen visszaküldje vagy kicserélje.
+Úgy gondoljuk, annyira szeretni fogja a NORIKS-ot, hogy <b data-stringify-type="bold">14 nap</b> áll rendelkezésére, hogy ingyenesen visszaküldje vagy kicserélje.
 Nincs papírmunka, nincs stressz – néhány kattintással megoldjuk.
   
   

@@ -1695,7 +1695,7 @@ function gck_render_bundle_selector() {
                     <?php endif; /* $gck_shgifts vs SHBOX/normal render */ ?>
 
                     <?php if ( ! $gck_no_attrs ) : ?>
-                    <small style="display: block; line-height: 1;"><?php esc_html_e( '30 napos pénzvisszafizetést vagy ingyenes cserét kínálunk – gondtalan vásárlás!', 'gift-card-kompetentnost' ); ?></small>
+                    <small style="display: block; line-height: 1;"><?php esc_html_e( '14 napos pénzvisszafizetést vagy ingyenes cserét kínálunk – gondtalan vásárlás!', 'gift-card-kompetentnost' ); ?></small>
                     <?php endif; ?>
                 </div>
             </label>

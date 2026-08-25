@@ -142,15 +142,15 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="marquee">
     <div class="marquee-content">
       <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>14 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
 
       <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>14 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
 
        <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/hu/shop"><?php echo $mq_ico_truck; ?>Ingyenes szállítás 25.000 Ft feletti rendelésnél</a></span>
-      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>30 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
+      <span><a href="/hu/shop"><?php echo $mq_ico_shield; ?>14 napos kockázatmentes – próbálja ki aggodalom nélkül</a></span>
     </div>
   </div>
 </div>
