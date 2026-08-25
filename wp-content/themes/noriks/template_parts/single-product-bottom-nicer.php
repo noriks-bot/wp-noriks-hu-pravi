@@ -1613,7 +1613,7 @@ $ortopas_faq = array(
   array( 'questioon' => 'Viselhetem az övet alvás közben is?', 'answer' => 'Igen, az övet éjszaka is viselheti. A viselés időtartama nincs korlátozva, és a hosszabb viselésnek nincs negatív hatása.' ),
   array( 'questioon' => 'Mennyire szorosan kell felhelyezni?', 'answer' => 'Az övnek szorosan kell illeszkednie, de nem túl feszesen, hogy elkerülje a kellemetlenséget. Gond nélkül tudnia kell mozogni anélkül, hogy az öv bevágna vagy elcsúszna. A feszesség a rugalmas pántokkal könnyen állítható.' ),
   array( 'questioon' => 'Kinek ajánljuk?', 'answer' => 'Mindenkinek, aki derékfájással, isiásszal, izomfeszüléssel, porckorongsérvvel, csípő- vagy medencefájdalommal, illetve SI-ízületi problémákkal küzd. Kortól, nemtől, magasságtól és testsúlytól függetlenül.' ),
-  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Elégedettségi garanciát kínálunk! Ha nem elégedett a NORIKS övvel, vegye fel velünk a kapcsolatot az info@noriks.com címen a visszaküldés és visszatérítés érdekében 14 napon belül. A határidő az öv kézhezvételétől számít.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Elégedettségi garanciát kínálunk! Ha nem elégedett a NORIKS övvel, vegye fel velünk a kapcsolatot az info@noriks.com címen a visszaküldés és visszatérítés érdekében 30 napon belül. A határidő az öv kézhezvételétől számít.' ),
 );
 
 // FisioRest product FAQ (Hungarian, NORIKS).
@@ -1625,7 +1625,7 @@ $fisiorest_faq = array(
   array( 'questioon' => 'Vezeték nélküli a FisioRest?', 'answer' => 'Igen! A NORIKS FisioRest teljesen vezeték nélküli és újratölthető a mindennapi használathoz.' ),
   array( 'questioon' => 'Hogyan tisztítsam a FisioRestet?', 'answer' => 'Az anyaga olaj- és porálló, de javasoljuk, hogy használat után törölje át a FisioRestet fertőtlenítő kendővel, mivel a párna huzata nem mosható.' ),
   array( 'questioon' => 'Mindenki számára biztonságos a használata?', 'answer' => 'A NORIKS FisioRestet úgy terveztük, hogy kortól és nemtől függetlenül mindenki igényeihez alkalmazkodjon. Minden helyzet más azonban. Az Ön igényeire szabott részletes útmutatásért javasoljuk, hogy konzultáljon orvosával.' ),
-  array( 'questioon' => 'Visszaküldhetem, ha nem látok eredményt?', 'answer' => 'Természetesen! Teljes pénzvisszafizetési garanciát nyújtunk a kézhezvételtől számított 14 napon belül, ha nem elégedett a termékkel. Írjon nekünk az info@noriks.com címre, és az üzenet kézhezvételétől számított 12 órán belül válaszolunk!' ),
+  array( 'questioon' => 'Visszaküldhetem, ha nem látok eredményt?', 'answer' => 'Természetesen! Teljes pénzvisszafizetési garanciát nyújtunk a kézhezvételtől számított 30 napon belül, ha nem elégedett a termékkel. Írjon nekünk az info@noriks.com címre, és az üzenet kézhezvételétől számított 12 órán belül válaszolunk!' ),
 );
 
 // NORIKS HERS (szilikon kollagén csíkok ráncokra) — termék GYIK (magyar, NORIKS HERS).
@@ -1640,7 +1640,7 @@ $norikshers_faq = array(
   array( 'questioon' => 'A helyén marad, amíg alszom?', 'answer' => 'Igen! A NORIKS HERS bőrbarát, tartós ragasztóval készült, amely követi a mozdulatait. Lélegző, és a helyén marad, még oldalt alvóknál is.' ),
   array( 'questioon' => 'Milyen területeken használhatom?', 'answer' => 'Bárhol! A legtöbb vásárló a NORIKS HERS-t a következőkön használja: homlokráncok, szemöldökközti ráncok, mosolyráncok, nyakráncok, pattanás utáni nyomok, császármetszés hegei, striák, sebészeti vagy sérülési hegek.' ),
   array( 'questioon' => 'Miben jobb a NORIKS HERS az olcsó online tapaszoknál?', 'answer' => 'Sok online árult tapasz gyenge minőségű, vékony vagy rossz ragasztót használ. A NORIKS HERS prémium szilikont használ, laboratóriumban tesztelt a biztonságra és tartósságra, és egész éjjel a helyén marad. Emellett dedikált ügyfélszolgálatot és gyorsabb cserét kínálunk, ha segítségre van szüksége.' ),
-  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, 14 napos kockázatmentes garanciát kínálunk. Ha nem elégedett, csak vegye fel velünk a kapcsolatot, és rendezzük.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, 30 napos kockázatmentes garanciát kínálunk. Ha nem elégedett, csak vegye fel velünk a kapcsolatot, és rendezzük.' ),
 );
 
 // NORIKS FIT (kompressziós/alakformáló póló) — termék GYIK, csak a

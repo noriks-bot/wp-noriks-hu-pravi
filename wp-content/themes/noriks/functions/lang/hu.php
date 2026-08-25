@@ -145,11 +145,11 @@ function noriks_hu_translations() {
         // Header marquee
         'Doprava zdarma pro objednávky nad 1700 Kč' => 'Ingyenes szállítás 70 € feletti rendelésnél',
         'Doprava zdarma při objednávkách nad 1700 Kč' => 'Ingyenes szállítás 70 € feletti rendelésnél',
-        '14 dní bez rizika – vyzkoušej bez obav' => '14 napos kockázatmentes – próbálja ki aggodalom nélkül',
+        '30 dní bez rizika – vyzkoušej bez obav' => '30 napos kockázatmentes – próbálja ki aggodalom nélkül',
         
         // Product page features
         'Platba na dobírku' => 'Utánvétes fizetés',
-        'Vyzkoušejte 14 dní, bez rizika' => 'Próbálja ki 14 napig, kockázatmentesen',
+        'Vyzkoušejte 30 dní, bez rizika' => 'Próbálja ki 30 napig, kockázatmentesen',
         
         // Shipping/delivery
         'Objednejte během následujících' => 'Rendeljen a következő időn belül',

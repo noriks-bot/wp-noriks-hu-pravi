@@ -128,7 +128,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-media"><img src="<?php echo esc_url( $nh.'12.png' ); ?>" alt="NORIKS HERS eredmények" loading="lazy"></div>
     <div class="nhs-res-copy">
-      <h2 class="nhs-h2">Lásson eredményt 14 nap alatt vagy <em>visszakapja a pénzét!</em></h2>
+      <h2 class="nhs-h2">Lásson eredményt 30 nap alatt vagy <em>visszakapja a pénzét!</em></h2>
       <?php
       $nhs_stats = array(
         array( 'p' => '98', 'dash' => '172.4', 't' => '<strong>Simább bőrt</strong> és csökkent finom vonalakat tapasztalt már az <strong>első héten</strong>.' ),
@@ -145,7 +145,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
           <p><?php echo wp_kses_post($s['t']); ?></p>
         </div>
       <?php endforeach; ?>
-      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki kockázat nélkül 14 napig</a>
+      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Próbálja ki kockázat nélkül 30 napig</a>
       <p class="nhs-cta-note"><em>Nincs elragadtatva? Teljes visszatérítés!</em></p>
     </div>
   </div>

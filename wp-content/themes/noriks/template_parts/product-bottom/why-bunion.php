@@ -25,7 +25,7 @@ $bun_results = array(
 
 // Zašto odabrati nas — usporedba (isti stil kao knc-table na čarapama sa zatvaračem)
 $bun_cmp = array(
-    '14 napos pénzvisszafizetési garancia',
+    '30 napos pénzvisszafizetési garancia',
     'Enyhíti a kellemetlen érzést',
     'Megakadályozza a bütyök növekedését',
     'Idővel javítja a bütyök állapotát',
@@ -116,7 +116,7 @@ $bun_steps = array(
         <li><strong>Állítható</strong> nyújtási erősség</li>
         <li><strong>Orvosi szakemberek</strong> által kifejlesztve és ajánlva</li>
         <li><strong>Egyszerű használat</strong> és hordozható</li>
-        <li><strong>14 napos pénzvisszafizetési garancia</strong> („eredmény vagy teljes visszatérítés"), mert annyira biztosak vagyunk a termékünkben, és tudjuk, hogy segíteni fog Önnek</li>
+        <li><strong>30 napos pénzvisszafizetési garancia</strong> („eredmény vagy teljes visszatérítés"), mert annyira biztosak vagyunk a termékünkben, és tudjuk, hogy segíteni fog Önnek</li>
       </ul>
     </div>
     <div class="bun-col bun-media">
