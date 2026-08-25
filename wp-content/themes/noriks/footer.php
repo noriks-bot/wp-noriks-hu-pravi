@@ -103,9 +103,8 @@
 			<div class="nf-wrap nf-main-grid">
 
 				<div class="nf-brand-col">
-					<p class="nf-brand-tagline">Ruházat az erősebb testalkatra, úgy szabva, hogy valóban jól álljon.</p>
 					<p class="nf-brand-desc"><?php echo esc_html( $nf_brand ); ?></p>
-					<a class="nf-btn nf-btn-outline" href="/hu/shop">Nézd meg a kollekciót</a>
+					<a class="nf-btn nf-btn-outline" href="/hu/shop">Vásárolj most</a>
 				</div>
 
 				<nav class="nf-links">
