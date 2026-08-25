@@ -45,7 +45,7 @@ $opz_cmp_rows = array(
     array( 'Kedvező árú',                    true,  false ),
     array( 'Azonnali ellazulás',             true,  false ),
     array( 'Várakozás nélkül',               true,  false ),
-    array( '60 napos pénzvisszafizetési garancia', true, false ),
+    array( '30 napos pénzvisszafizetési garancia', true, false ),
     array( 'Hosszú távú költségek',          false, true  ),
 );
 /* Recenzije sa slikom — 8) sekcija */

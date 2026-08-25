@@ -83,7 +83,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-trustbar" aria-hidden="true">
     <div class="oj-trustbar-track">
-      <?php $oj_trust = array('120.000+ VÁSÁRLÓ','4,8/5 ÉRTÉKELÉS','OEKO-TEX®','ORVOSOK AJÁNLÁSÁVAL','60 NAP GARANCIA','ORTOPÉD KIALAKÍTÁS');
+      <?php $oj_trust = array('120.000+ VÁSÁRLÓ','4,8/5 ÉRTÉKELÉS','OEKO-TEX®','ORVOSOK AJÁNLÁSÁVAL','30 NAP GARANCIA','ORTOPÉD KIALAKÍTÁS');
       for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span><span class="oj-trust-dot">•</span>'; } } ?>
     </div>
   </div>
@@ -177,10 +177,10 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-guar-sec">
   <div class="oj-wrap">
   <div class="oj-guarantee oj-row2">
-    <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_60_dana_HR.png','60 napos pénzvisszafizetési garancia'); ?></div>
+    <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_30_dana.png','30 napos pénzvisszafizetési garancia'); ?></div>
     <div class="oj-guar-copy">
       <h2 class="oj-h2 oj-h2-light">Próbálja ki <em class="oj-pink-i">60 napig</em>, kockázat nélkül</h2>
-      <p>Megtalálni a megfelelő párnát nem könnyű — sok ellaposodik, vagy egyszerűen nem hoz igazi enyhülést. Ezért minden NORIKS <strong>ErgoSit</strong> a <strong>60 napos kényelmi garanciánkkal</strong> érkezik.</p>
+      <p>Megtalálni a megfelelő párnát nem könnyű — sok ellaposodik, vagy egyszerűen nem hoz igazi enyhülést. Ezért minden NORIKS <strong>ErgoSit</strong> a <strong>30 napos kényelmi garanciánkkal</strong> érkezik.</p>
       <p>Vigye magával az irodába, az autóba vagy a hosszú otthoni órákra. Ha nem érez kevesebb fájdalmat és több kényelmet a mindennapi ülés során, csapatunk gondoskodik róla, hogy minden rendben legyen.</p>
       <p>Mert amikor az egészségéről és a kényelméről van szó, hisszük, hogy a különbséget <strong>éreznie</strong> kell, nem csak remélnie.</p>
     </div>

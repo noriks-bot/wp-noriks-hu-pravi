@@ -69,7 +69,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
           <tr><td>Megerősített cipzár, sosem akad be</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Lélegző anyag</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Egész napos kényelem (+12 óra)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>60 napos pénzvisszafizetési garancia</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>30 napos pénzvisszafizetési garancia</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr class="knc-price"><td>Ár páronként</td><td>34.000 Ft-tól</td><td>~6.000 Ft</td><td class="us">9.330 Ft-tól</td></tr>
         </tbody>
       </table>
@@ -1747,7 +1747,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Mosható a huzat?', 'answer' => 'Igen. A huzat levehető és mosógépben mosható, így a párna friss és tiszta marad. Az anyag lélegző, hipoallergén és OEKO-TEX® tanúsítvánnyal rendelkezik.' ),
   array( 'questioon' => 'Illik a székemhez vagy az ülésemhez?', 'answer' => 'Az ErgoSit univerzális formájú, és a legtöbb autóüléshez, irodai és konyhai székhez, valamint kerekesszékhez illik. Nincsenek méretek — egy modell mindenkinek megfelel.' ),
   array( 'questioon' => 'Mennyi idő alatt érzem a különbséget?', 'answer' => 'A legtöbb felhasználó már az első naptól kevesebb nyomást érez a farokcsontján és kényelmesebben ül. A jobb testtartás és a kisebb hátfájás hatása a rendszeres használattal tovább erősödik.' ),
-  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, minden NORIKS ErgoSit 60 napos kényelmi garanciával érkezik. Ha nem érez kevesebb fájdalmat és több kényelmet, vegye fel velünk a kapcsolatot, és rendezzük.' ),
+  array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, minden NORIKS ErgoSit 30 napos kényelmi garanciával érkezik. Ha nem érez kevesebb fájdalmat és több kényelmet, vegye fel velünk a kapcsolatot, és rendezzük.' ),
 );
 
 $faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
