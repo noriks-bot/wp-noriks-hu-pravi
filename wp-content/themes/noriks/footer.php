@@ -61,7 +61,7 @@
 	$nf_col4_c  = get_field( 'footer_midle_col4_content', 'option' );
 	$nf_brand   = get_field( 'footer_brand_desc', 'option' );
 	if ( ! $nf_brand ) {
-		$nf_brand = 'A NORIKS időtálló darabokat tervez az erősebb testalkatra — hosszabb, kényelmesebb és átgondoltan kidolgozott ott, ahol a legfontosabb.';
+		$nf_brand = 'A NORIKS európai márka, amely mindennapi használatra készít termékeket. A minőségre, a kényelemre és a tisztességes árakra összpontosítunk — már több mint 120 000 vásárló bízik bennünk.';
 	}
 	$nf_bg      = get_field( 'footer_bg_image', 'option' ); // background photo behind the brand band
 	$nf_legal   = get_field( 'footer_legal_text', 'option' );
