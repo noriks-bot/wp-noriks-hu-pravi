@@ -460,7 +460,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
       <div class="accordion-content">
         <p>A tanács, amit hallott, csak félig igaz. Igen, a felső szájpadlás 9 éves kor körül megszilárdul. De az arc 20 éves korig fejlődik, az alsó állkapocs 17 éves korig nő, a légutak pedig folyamatosan alkalmazkodnak.</p>
         <p>Ezért a 9. életév utáni minden szájon át lélegzett éjszaka új károsodást rak a régire: fogcsikorgatás, fejfájás, nem pihentető alvás, romló koncentráció — és a fáradtság, amit mindenki lustaságnak néz. A tinédzsere nem lusta. Alig kap levegőt hat órán át minden éjjel.</p>
-        <p>A KidsNest <strong>9–18 éves</strong> mérete idősebb fejre, nyakra és vállra készült. Más kontúr, más magasság, más alátámasztás. Ugyanaz az alapmechanizmus: a fej, a nyak és az állkapocs megfelelő vonalban tartása, egész éjjel, egy még növekedésben lévő testen.</p>
+        <p>A KidsNest <strong>9–14 éves</strong> mérete idősebb fejre, nyakra és vállra készült. Más kontúr, más magasság, más alátámasztás. Ugyanaz az alapmechanizmus: a fej, a nyak és az állkapocs megfelelő vonalban tartása, egész éjjel, egy még növekedésben lévő testen.</p>
         <p>Amit a szülők észrevesznek: a horkolás 7–14 éjszaka alatt elcsendesedik, visszatér az igazi reggeli energia, a fejfájások halványulnak, a fókusz visszatér.</p>
         <p>A legjobb időablak továbbra is a 3. és 9. életév közötti. Az erős időablak a 8. és 18. közötti. Egyik sincs teljesen bezárva — de minden várakozással töltött éjszaka újabb terhet rak a testre, amely megpróbál regenerálódni.</p>
         <p><strong>A tegnap elmúlt. A ma este még az Öné.</strong></p>
@@ -510,7 +510,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
           
          <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
 
-                A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző, mosható huzattal, amely egyszerűen levehető.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–18 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
+                A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző, mosható huzattal, amely egyszerűen levehető.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–14 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
 
