@@ -739,7 +739,7 @@
 
         <div class="noriks-sc-guarantee">
           <span class="noriks-sc-check">&#10003;</span>
-          <span>Nem vagy biztos benne? Ingyenes méretcsere 30 napon belül.</span>
+          <span>Nem vagy biztos benne? Méretcsere 30 napon belül.</span>
         </div>
       </div>
 

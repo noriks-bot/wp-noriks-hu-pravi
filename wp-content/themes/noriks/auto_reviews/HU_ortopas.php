@@ -4,7 +4,7 @@
 $auto_reviews_en = array(
     array("name" => "Horváth Máté", "text" => "Szkeptikus voltam – azt hittem, a gyógytorna elég. Egy hét Noriks után érezhető javulást tapasztalok ülés és járás közben. Könnyű gyakorlatokkal kombinálva most már az első választásom. A szállítás 7 napon belül megérkezett, kiváló minőség."),
     array("name" => "Kovács Dániel", "text" => "Szakiparosként sokat mozgok – az öv stabil marad és tartja a helyzetét. Jó beállítási lehetőségek. A szállítási határidő a megadott szerint."),
-    array("name" => "Nagy Zsolt", "text" => "Nem voltam biztos a csípőbőség miatt, az ajánlás szerint kisebb méretet vettem – tökéletesen illeszkedik. Az ingyenes csere jól jönne, ha esetleg szükség lenne rá."),
+    array("name" => "Nagy Zsolt", "text" => "Nem voltam biztos a csípőbőség miatt, az ajánlás szerint kisebb méretet vettem – tökéletesen illeszkedik. A méretcsere jól jönne, ha esetleg szükség lenne rá."),
     array("name" => "Szabó Gábor", "text" => "Az ár tisztességes a minőséghez és a funkcióhoz képest. A 30 napos pénzvisszafizetési garancia bizalmat adott."),
     array("name" => "Tóth Sándor", "text" => "Kételkedtem, most már meggyőződtem: szilárdan áll, alig mozdul el, a fájdalmak pedig enyhébbek. Jó ár-érték arány."),
     array("name" => "Varga Balázs", "text" => "Már az első óra után érezhetően jobb. 2 hét napi viselés után jóval kevesebb fájdalom. Ha nem megfelelő, a visszaküldés gond nélkül megy."),

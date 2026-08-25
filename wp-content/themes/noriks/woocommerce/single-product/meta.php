@@ -746,7 +746,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
   <p></p>
   
   
-Úgy gondoljuk, annyira szeretni fogja a NORIKS-ot, hogy <b data-stringify-type="bold">30 nap</b> áll rendelkezésére, hogy ingyenesen visszaküldje vagy kicserélje.
+Úgy gondoljuk, annyira szeretni fogja a NORIKS-ot, hogy <b data-stringify-type="bold">30 nap</b> áll rendelkezésére, hogy visszaküldje vagy kicserélje.
 Nincs papírmunka, nincs stressz – néhány kattintással megoldjuk.
   
   

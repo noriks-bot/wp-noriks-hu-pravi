@@ -173,13 +173,13 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 11) Isprobajte 60 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
+<!-- ============ 11) Isprobajte 30 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
 <section class="oj-sec oj-guar-sec">
   <div class="oj-wrap">
   <div class="oj-guarantee oj-row2">
     <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_30_dana.png','30 napos pénzvisszafizetési garancia'); ?></div>
     <div class="oj-guar-copy">
-      <h2 class="oj-h2 oj-h2-light">Próbálja ki <em class="oj-pink-i">60 napig</em>, kockázat nélkül</h2>
+      <h2 class="oj-h2 oj-h2-light">Próbálja ki <em class="oj-pink-i">30 napig</em>, kockázat nélkül</h2>
       <p>Megtalálni a megfelelő párnát nem könnyű — sok ellaposodik, vagy egyszerűen nem hoz igazi enyhülést. Ezért minden NORIKS <strong>ErgoSit</strong> a <strong>30 napos kényelmi garanciánkkal</strong> érkezik.</p>
       <p>Vigye magával az irodába, az autóba vagy a hosszú otthoni órákra. Ha nem érez kevesebb fájdalmat és több kényelmet a mindennapi ülés során, csapatunk gondoskodik róla, hogy minden rendben legyen.</p>
       <p>Mert amikor az egészségéről és a kényelméről van szó, hisszük, hogy a különbséget <strong>éreznie</strong> kell, nem csak remélnie.</p>
