@@ -279,7 +279,7 @@ Próbálja ki a NORIKS-t kedvezőbben.
     <!-- Card 5 - Zoknik (compression socks) -->
     <a class="collection-card" href="/hu/product-category/zoknik/">
       <div class="collection-card__media">
-        <img src="https://devhr.noriks.com/wp-content/uploads/2025/11/stumfi_beli-crni_10paket-683x1024.jpg" alt="Zoknik" />
+        <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2025/11/stumfi_beli-crni_10paket-683x1024.jpg' ) ); ?>" alt="Zoknik" />
       </div>
       <div class="collection-card__body">
         <div class="collection-card__text">
