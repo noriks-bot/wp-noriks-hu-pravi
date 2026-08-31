@@ -358,12 +358,12 @@ if ( is_shop() ) {
 
 
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /bokserice + ALL CHILD CATEGORIES (CZ: boxerky, GR: mpoxerakia/boxerakia)
 } elseif ( is_product_category_or_child('boxerek') || is_product_category_or_child('mpoxerakia') || is_product_category_or_child('boxerakia') || is_product_category_or_child('boxers') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY GROUP (starter packs)
 } elseif (
@@ -374,27 +374,27 @@ if ( is_shop() ) {
     is_product_category_or_child('starter-pack')
 ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /majice + children (CZ: tricka, GR: mplouzoakia/blouzakia)
 } elseif ( is_product_category_or_child('polok') || is_product_category_or_child('mplouzoakia') || is_product_category_or_child('blouzakia') || is_product_category_or_child('t-shirts') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /kompleti + children (CZ: sady, GR: set/seta)
 } elseif ( is_product_category_or_child('szettek') || is_product_category_or_child('set') || is_product_category_or_child('seta') || is_product_category_or_child('bundles') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /carape + children (CZ: ponozky, GR: kaltses)
 } elseif ( is_product_category_or_child('zoknik') || is_product_category_or_child('kaltses') || is_product_category_or_child('socks') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2"]');
+    noriks_shop_filter_links();
 
 // FALLBACK for any other product category
 } elseif ( is_product_category() ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-3"]');
+    noriks_shop_filter_links();
 }
 ?>
         </div>
