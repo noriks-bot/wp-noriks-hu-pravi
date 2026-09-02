@@ -17,6 +17,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kompresijske-majice' );
     } elseif ( noriks_is_type( 'kneefix' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kneefix' );
+    } elseif ( noriks_is_type( 'controlpro' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-controlpro' );
     } elseif ( noriks_is_type( 'kidsnest' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
     } elseif ( noriks_is_type( 'ortopedski-jastuk' ) ) {
@@ -537,11 +539,13 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
                 Nem Ön az egyetlen, aki élesebb sziluettet és jobb testtartást keres.
             <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>
                 Nem Ön az egyetlen, aki fájdalommentes ülésre vágyik.
-            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Nem ön az egyetlen, akinek a Kegel-gyakorlatok nem hoztak eredményt.
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>
 
              Nem Ön az egyetlen, aki stabilabb térdet keres.
 
-            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>Több ezer vásárló hordja már a NORIKS KneeFix rögzítőt a stabilabb térdért – lépcsőn, sétán és hosszú állás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
+            <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Férfiak ezrei használják már a NORIKS ControlProt — valódi ellenállás az üresbe szorítás helyett.
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>Több ezer vásárló hordja már a NORIKS KneeFix rögzítőt a stabilabb térdért – lépcsőn, sétán és hosszú állás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
                 Nem Ön az egyetlen, aki nyugodt gyermekálmot keres.
             <?php elseif ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket', 'boxerky', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) ): ?>
                 <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
@@ -635,9 +639,12 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
                    : ( $is_bunion_page ? 'NORIKS | Bütyökkorrigáló'
                    : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
                    : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) ) ) ) ) ) ) );
+  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro medencefenék tréner'; }
 
 // Include review pools (own pool per product group)
-if ( $is_jastuk_page ) {
+if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_controlpro.php';
+} elseif ( $is_jastuk_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_ortopedski_jastuk.php';
 } elseif ( $is_kneefix_page ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_kneefix.php';
@@ -790,6 +797,8 @@ function get_wc_product_pool(
         $args['category'] = [ 'bokserice' ];
     } elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $product_id) ) {
         $args['category'] = [ 'orto-kneefix' ];
+      } elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro', $product_id) ) {
+        $args['category'] = [ 'orto-controlpro' ];
     } elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $product_id) ) {
         $args['category'] = [ 'orto-leak-boxers', 'leak-boxers' ];
     } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $product_id) ) {
@@ -1561,6 +1570,7 @@ $faq_list2 = get_field('faq_list_2', 'option');
 $faq_list3 = get_field('faq_list_3', 'option');
 
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
+$is_controlpro_faq = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
 $is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') );
 $is_kompmajice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') );
 $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') );
@@ -1750,11 +1760,24 @@ $jastuk_faq = array(
   array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, minden NORIKS ErgoSit 30 napos kényelmi garanciával érkezik. Ha nem érez kevesebb fájdalmat és több kényelmet, vegye fel velünk a kapcsolatot, és rendezzük.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$controlpro_faq = array(
+  array( 'questioon' => 'Hogyan kell használni?', 'answer' => 'Üljön le egy székre, helyezze az eszközt <strong>a térdei közé</strong>, és szorítsa ellenállással szemben. Ajánlott <strong>napi 3 sorozat, 10 ismétlés</strong>, ez körülbelül öt perc.' ),
+  array( 'questioon' => 'Kell bármit behelyezni?', 'answer' => 'Nem. Nincs szonda, nincs behelyezés. Az eszköz <strong>a testen kívül</strong> működik.' ),
+  array( 'questioon' => 'Mikor várhatók eredmények?', 'answer' => 'A legtöbb felhasználó <strong>3–6 hét</strong> rendszeres gyakorlás után számol be az első változásokról.' ),
+  array( 'questioon' => 'Kell hozzá elem vagy alkalmazás?', 'answer' => 'Nem. Az eszköz teljesen mechanikus — elem, kábel és alkalmazás nélkül. Csak <strong>ismétlésszámlálót</strong> tartalmaz.' ),
+  array( 'questioon' => 'Miben különbözik az EMS készülékektől?', 'answer' => 'Az EMS készülékek ön helyett húzzák össze az izmot. A ControlPro azt kívánja, hogy <strong>a munkát ön végezze</strong> valódi ellenállással szemben.' ),
+  array( 'questioon' => 'Alkalmas prosztataműtét után?', 'answer' => 'Igen, sokan éppen prosztataműtét után használják. Ha lábadozik, előbb kérdezze meg kezelőorvosát.' ),
+  array( 'questioon' => 'Hogyan kell tisztítani?', 'answer' => 'Törölje át nedves ruhával és enyhe tisztítószerrel. Ne merítse vízbe.' ),
+  array( 'questioon' => 'Milyen a kiszállítás?', 'answer' => 'A kiszállítás <strong>diszkrét</strong>, semleges dobozban, a tartalom feltüntetése nélkül.' ),
+  array( 'questioon' => 'Visszaküldhetem?', 'answer' => 'Igen, <strong>30 nap</strong> áll rendelkezésére a pénz visszatérítéséhez. Elég egy e-mail, űrlap nélkül.' ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_jastuk && $is_info ) {
     return $jastuk_faq;
   }
+  if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
   if ( $is_kneefix_faq && $is_info ) { return $kneefix_faq; }
   if ( $is_kidsnest && $is_info ) {
     return $kidsnest_faq;
