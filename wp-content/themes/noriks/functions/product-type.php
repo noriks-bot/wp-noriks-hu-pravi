@@ -47,6 +47,8 @@ function noriks_product_type_map() : array {
         // Bunion corrector (korektor čukljeva / halux valgus).
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // ControlPro trener dna zdjelice (bez atributa).
+        'controlpro'              => array( 'orto-controlpro', 'controlpro' ),
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
