@@ -66,6 +66,12 @@ function noriks_product_type_map() : array {
         'majice-1-komad'          => array( '1-komad-majice' ),
         'majice-bokserice-paketi' => array( 'majice-i-bokserice-paketi', 'szettek' ),
         'black-friday'            => array( 'black-friday' ),
+        // Polar NORIKS Cloth — krpa za ciscenje (bez atributa)
+        'cloath'                  => array( 'orto-cloath' ),
+        // NORIKS Cloud — ortopedski jastuk za koljena (bez atributa)
+        'cloud'                   => array( 'orto-cloud' ),
+        // NORIKS HYD — boca za vodikovu vodu (bez atributa)
+        'hyd'                     => array( 'orto-hyd' ),
         'orto'                    => array( 'orto' ),
     );
 }

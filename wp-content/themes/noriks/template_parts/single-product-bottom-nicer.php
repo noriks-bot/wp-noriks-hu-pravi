@@ -23,6 +23,12 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
     } elseif ( noriks_is_type( 'ortopedski-jastuk' ) ) {
         get_template_part( 'template_parts/product-bottom/why-ortopedski-jastuk' );
+    } elseif ( noriks_is_type( 'cloath' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloath' );
+    } elseif ( noriks_is_type( 'cloud' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloud' );
+    } elseif ( noriks_is_type( 'hyd' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-hyd' );
     }
 }
 ?>
@@ -640,9 +646,18 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
                    : ( $is_ortopas_page ? 'NORIKS | Ortopédiai hátöv'
                    : ( $is_nogavice_page ? 'Kompressziós zokni cipzárral' : 'Egy Szürke Póló' ) ) ) ) ) ) ) ) );
   if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro medencefenék tréner'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
 
 // Include review pools (own pool per product group)
-if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_hyd.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_cloud.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) {
+    include get_stylesheet_directory() . '/auto_reviews/HU_cloath.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_controlpro.php';
 } elseif ( $is_jastuk_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_ortopedski_jastuk.php';
@@ -1772,8 +1787,45 @@ $controlpro_faq = array(
   array( 'questioon' => 'Visszaküldhetem?', 'answer' => 'Igen, <strong>30 nap</strong> áll rendelkezésére a pénz visszatérítéséhez. Elég egy e-mail, űrlap nélkül.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_cloath_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloath') );
+$cloath_faq = array(
+  array(
+    'questioon' => 'Mi van, ha nem vagyok elégedett a vásárlással?',
+    'answer'    => '30 napja van, hogy kockázat nélkül kipróbálja a kendőt. Ha nem elégedett az eredménnyel, írjon ügyfélszolgálatunknak és visszaadjuk a pénzét — papírmunka és magyarázkodás nélkül.',
+  ),
+  array(
+    'questioon' => 'Miből készül a kendő?',
+    'answer'    => 'Sűrű mikroszálas szövetből, kétoldalas kialakítással: a bolyhos oldal felszedi a szennyeződést és a vizet, a hálós oldal fényesre políroz. A szélét puha szegély erősíti, ami nem karcol.',
+  ),
+  array(
+    'questioon' => 'Miért drágább a hétköznapi kendőknél?',
+    'answer'    => 'Mert sűrűbb és nehezebb a szokásos mikroszálnál — sokszorosan több vizet szív fel, nem szöszöl és több száz mosást bír. Egy kendő kivált egy egész sor olcsót, amelyek néhány mosás után foszlani kezdenek.',
+  ),
+  array(
+    'questioon' => 'Meddig bírja a hétköznapi kendőkhöz képest?',
+    'answer'    => 'Megfelelő ápolással több száz használatot bír. A bolti kendők általában 20 mosás után veszítik el a sűrűségüket és kezdenek csíkot hagyni.',
+  ),
+  array(
+    'questioon' => 'Hagy csíkot vagy foltot?',
+    'answer'    => 'Nem. A sűrűség és a kétoldalas kialakítás miatt a víz felszívódik ahelyett, hogy szétkenődne, így az üveg és a tükör csíkmentes marad — szösz nélkül.',
+  ),
+  array(
+    'questioon' => 'Hogyan mossuk a legjobban?',
+    'answer'    => 'Gépben 40 °C-on, öblítő nélküli mosószerrel (az öblítő eltömíti a szálakat és rontja a nedvszívást). Ne használjon fehérítőt és ne tegye szárítógépbe — szárítsa levegőn.',
+  ),
+  array(
+    'questioon' => 'Miért tűnik a kendő egyes felvételeken sötétebbnek?',
+    'answer'    => 'A megvilágítás miatt. A kendő sötétszürke, fekete szegéllyel; erős fényben világosabbnak, beltérben sötétebbnek hat.',
+  ),
+  array(
+    'questioon' => 'Jó ajándéknak?',
+    'answer'    => 'Igen — a 3+3 és a 8+4 csomag a leggyakoribb beköltözési és ünnepi ajándékok közé tartozik. A kendő szépen összehajtva, ajándékozásra készen érkezik.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_jastuk && $is_info ) {
     return $jastuk_faq;
   }
