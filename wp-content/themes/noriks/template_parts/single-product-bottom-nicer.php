@@ -1823,8 +1823,82 @@ $cloath_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_cloud_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloud') );
+$cloud_faq = array(
+  array(
+    'questioon' => 'Mi van, ha nem felel meg a párna?',
+    'answer'    => '60 éjszakája van kipróbálni. Ha nem elégedett, írjon ügyfélszolgálatunknak és a teljes összeget visszatérítjük — feltételek és papírmunka nélkül.',
+  ),
+  array(
+    'questioon' => 'Hogyan kell helyesen használni?',
+    'answer'    => 'Feküdjön az oldalára, tegye a párnát a térdei közé és húzza a pántot a felső lábára. A csípő, a medence és a gerinc legyen egy vonalban. A pánt levehető, és a párna használható a bokák vagy a nyak alatt is.',
+  ),
+  array(
+    'questioon' => 'Tényleg a helyén marad, ha megfordulok?',
+    'answer'    => 'Igen. Az állítható, patentos pánt a láb köré megy és a térdnél tartja a párnát, így nem esik ki, mint a hétköznapi párna. A pántnak két szorossági állása van, a láb kerülete szerint.',
+  ),
+  array(
+    'questioon' => 'Miből készül a párna?',
+    'answer'    => 'A magja orvosi minőségű memóriahab perforációkkal, amelyek biztosítják a levegő áramlását. A huzat szellőző anyagból készül, levehető és mosható. Az anyagok OEKO-TEX® STANDARD 100 és CertiPUR-EU tanúsítvánnyal rendelkeznek.',
+  ),
+  array(
+    'questioon' => 'Túl kemény vagy túl puha?',
+    'answer'    => 'Közepesen kemény — elég ahhoz, hogy egész éjjel tartsa a lábak távolságát, de nyomás alatt alkalmazkodik a térd formájához. Nem lapul le, és felkelés után visszanyeri a formáját.',
+  ),
+  array(
+    'questioon' => 'Hogyan kell mosni?',
+    'answer'    => 'A huzatot vegye le és mossa gépben 40 °C-on, öblítő és fehérítő nélkül, majd szárítsa levegőn. A habot ne mossa gépben — szükség esetén törölje át nedves ronggyal és hagyja megszáradni.',
+  ),
+  array(
+    'questioon' => 'Mennyi idő megszokni?',
+    'answer'    => 'A legtöbb használó már az első vagy második éjjel érzi a különbséget. Ha megszokta az összezárt térddel alvást, az első pár éjszaka szokatlan lehet a távolság — a test általában egy héten belül alkalmazkodik.',
+  ),
+  array(
+    'questioon' => 'Alkalmas terhesség idején?',
+    'answer'    => 'Igen. Terhességben a bal oldalon alvás az ajánlott, a térdek közti párna pedig tehermentesíti a csípőt és a derekat. Egészségügyi szövődmény esetén használat előtt kérdezze meg kezelőorvosát.',
+  ),
+);
+
+$is_hyd_faq = ( function_exists('noriks_is_type') && noriks_is_type('hyd') );
+$hyd_faq = array(
+  array(
+    'questioon' => 'Mi az a hidrogénes víz?',
+    'answer'    => 'Közönséges ivóvíz, amelyben molekuláris hidrogén (H₂) van feloldva. A hidrogén a legkisebb molekula, és a kutatások szelektív antioxidáns hatással hozzák összefüggésbe.',
+  ),
+  array(
+    'questioon' => 'Meddig tart egy ciklus?',
+    'answer'    => 'A rövid ciklus 3 perc és körülbelül 1 600 ppb hidrogént ad, a hosszú 10 perc és akár 3 000 ppb-t. A ciklust gombnyomással választja ki.',
+  ),
+  array(
+    'questioon' => 'Érintkezik a víz műanyaggal?',
+    'answer'    => 'Nem. A palack boroszilikát üvegből készül, rozsdamentes acél alappal, így a vízben nincs műanyagíz és nincsenek részecskék.',
+  ),
+  array(
+    'questioon' => 'Milyen vizet használhatok?',
+    'answer'    => 'Bármilyen ivóvizet — csapvizet, szűrtet, palackozottat vagy desztilláltat. A PEM/SPE membránnak köszönhetően a készüléknek nincs szüksége ásványi anyagokra.',
+  ),
+  array(
+    'questioon' => 'Kell szűrőt cserélni?',
+    'answer'    => 'Nem. A generátornak tartós szűrője van, így nincs fogyóeszköz és nincs többletköltség.',
+  ),
+  array(
+    'questioon' => 'Hogyan tölthető?',
+    'answer'    => 'USB-kábellel; a teljes töltés 30–60 percig tart és több ciklusra elég. Ne töltse a palackot, amíg víz van benne.',
+  ),
+  array(
+    'questioon' => 'Mikor igyam meg a vizet?',
+    'answer'    => 'Legjobb rögtön a ciklus után, körülbelül 30 percen belül, mert a hidrogén koncentrációja idővel csökken.',
+  ),
+  array(
+    'questioon' => 'Mi van, ha nem vagyok elégedett?',
+    'answer'    => '30 nap áll rendelkezésére a pénzvisszatérítéshez. Ezen felül a készülékre 1 év garanciát adunk.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
+  if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_jastuk && $is_info ) {
     return $jastuk_faq;
