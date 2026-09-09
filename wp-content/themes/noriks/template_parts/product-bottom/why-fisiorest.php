@@ -18,7 +18,7 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero.mp4';
+$fis_hero_video = $fis_v . 'hero-v2.mp4';
 
 // 3) Szakértők ajánlják
 $fis_experts = array(
@@ -151,7 +151,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Mérnökök tervezték. Gyógytornász-szabvány szerint.</h2>
       <p>Több mint 50 000 €-t és 2 évnyi fejlesztést fektettünk abba, hogy a NORIKS ne csak egy nyakmasszírozó legyen. Ez egy komplett nyakterápiás eszköz, amely valóban a kiváltó okot kezeli. Minden rendelés részletes minőségellenőrzésen megy át, hogy tökéletes állapotban érkezzen meg.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
