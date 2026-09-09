@@ -30,8 +30,8 @@ $fis_experts = array(
 $fis_ugc = array(
     array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Végre hosszú idő után fájdalommentes vagyok…"' ),
     array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„A NORIKS párna a mindennapjaim új nélkülözhetetlen kelléke…"' ),
-    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Nagyon sokat segít a nyak és váll feszültségének oldásában."' ),
-    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Ha friss anyuka vagy, lehet, hogy pont erre van szükséged…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Ha friss anyuka vagy, lehet, hogy pont erre van szükséged…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Nagyon sokat segít a nyak és váll feszültségének oldásában."' ),
 );
 // 5) ThermoTrac 3 az 1-ben
 $fis_thermo = array(
