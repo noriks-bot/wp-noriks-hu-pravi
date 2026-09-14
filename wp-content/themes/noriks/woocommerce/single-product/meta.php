@@ -508,7 +508,23 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
       </div>
       <div class="accordion-content">
           
-         <?php if( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
+                  <?php if( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ): ?>
+
+                <strong>NORIKS Snug</strong> egésztest párna S betű alakban. A legtöbb testpárna egyenes — az Ön teste nem. Ezért a Snug követi a test vonalát, és egyszerre támasztja meg a vállat, a csípőt és a térdet.<br><br>Ha támasz nélkül alszik az oldalán, a váll viseli az egész súlyt, a csípő besüpped, a gerinc pedig megcsavarodik. Három támaszpont osztja el a súlyt, így egyetlen pont sem viseli a teljes terhelést.<br><br>Mérete 105 cm hosszú és 30 cm széles — elég ahhoz, hogy a válltól a térdig támasszon, de nem foglalja el az egész ágyat. A töltet több ezer finom, rugalmas szálból áll, amelyek visszatérnek a formájukba, és hónapok használat után sem lapulnak le.<br><br>A hűsítő huzat levehető és mosógépben mosható 40 °C-on, az anyag pedig egész éjjel átengedi a levegőt. Hat színben kapható: kék, rózsaszín, szürke, zöld, lila és sötétkék.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+                <strong>NORIKS FIT Woman</strong> formázó póló, amelyben a mintázat magába az anyagba van szőve, nem rányomtatva. A széles pánt a hason és a csípőn halad át, egy másik pedig a háton.<br><br>A kompresszió szélességében oszlik el, nem egy pontba szorítva, ezért semmi nem vág be. A has sima marad, a derék keskenyebb, a hát pedig olyan támaszt kap, amely segít egyenesebben állni.<br><br>A kötés varrás nélküli, vékony és matt — eltűnik ing, zakó vagy testhezálló ruha alatt. Napközben nem tekeredik fel, és nem rajzolódik ki a ruha alatt.<br><br>Mossa gépben 30 °C-on, fehérítő, vasalás és szárítógép nélkül. Három színben (fekete, sötétszürke, rózsaszín) és S-től 3XL-ig kapható. Ha két méret között van, vegye a nagyobbat.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ): ?>
+
+                <strong>NORIKS Pal</strong> sétabot, amelyet egyetlen probléma köré terveztek: a felállás köré. A felső fogantyú mellett van egy második, alacsonyabb fogantyú is, amelyet akkor fog meg, amikor felkel a fotelből, az ágyból vagy egy alacsony székről — előredőlés nélkül és mások segítsége nélkül.<br><br>Négy gumiláb tartja a botot egyenesen, amikor elengedi. Nem esik a földre, így nem kell lehajolnia érte. A talp csúszásgátló, és stabil marad csempén, parkettán és egyenetlen terepen is.<br><br>A fogantyúba lámpa van építve, amely megvilágítja az utat maga előtt — éjszakai fürdőszobázáshoz vagy alkonyati sétához. Mellette hangjelző riasztó is van, amely figyelmezteti a háziakat, ha elesik vagy segítségre van szüksége.<br><br>A bot összecsukható, elfér egy táskában vagy az autó kesztyűtartójában, a magassága pedig néhány másodperc alatt beállítható, szerszám nélkül, minden testmagassághoz.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) ): ?>
+
+                <strong>NORIKS RedRelief</strong> csuklópánt, amely a vörösfény-terápia két legkutatottabb hullámhosszát egyesíti: a 660 nm-es vörös fény a felszíni gyulladást csillapítja, a 850 nm-es infravörös pedig mélyebbre jut, a median ideg körüli szövetekhez.<br><br>A fény a szövetben sejtenergiává (ATP) alakul, és serkenti a helyi vérkeringést — két folyamat, amely a test természetes regenerációjának része. Ezért használják alagút-szindróma, ínhüvelygyulladás, ízületi gyulladás, valamint kéz- és csuklófájdalom esetén.<br><br>A pántba 48 dupla LED van beépítve, a teljes belső felületen elosztva, így a fény az egész csuklót lefedi, nem csak egy pontot. 4 üzemmód és 3 teljesítményszint áll rendelkezésre.<br><br>A készülék vezeték nélküli, és USB-C kábellel tölthető — egy töltés akár 4 kezelésre elegendő. Mindössze 126 g, hüvelykujj-nyílással és állítható szíjjal, így a bal és a jobb kézre is jó. Naponta egy 15 perces kezelés ajánlott; a készülék a kezelés végén magától kikapcsol.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
 
                 A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző, mosható huzattal, amely egyszerűen levehető.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–14 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
 
@@ -575,7 +591,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
      
      <?php endif; // /hide details accordion on back belt ?>
 
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers + ortopedski jastuk ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) )) : // hide size/wash accordions on belt + bunion + fisiorest + norikshers + ortopedski jastuk ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -681,7 +697,55 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
                   
-    <?php elseif(  $is_mixed_bundle ): ?>
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+          <div class="kwm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">A méretet a <strong>mellbőség</strong> alapján válassza — az határozza meg, hogyan ül a póló a mellen és a vállon. Ha két méret között van, vegye a <strong>nagyobbat</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8536b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Méret</th>
+                  <th style="padding:9px 10px;text-align:left;">Mellbőség</th>
+                  <th style="padding:9px 10px;text-align:left;">Derékbőség</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">S<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 0–4</span></td>
+                    <td style="padding:9px 10px;">78 – 83 cm</td>
+                    <td style="padding:9px 10px;">65 – 71 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">M<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 6–8</span></td>
+                    <td style="padding:9px 10px;">83 – 89 cm</td>
+                    <td style="padding:9px 10px;">71 – 77 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">L<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 10–12</span></td>
+                    <td style="padding:9px 10px;">89 – 95 cm</td>
+                    <td style="padding:9px 10px;">77 – 83 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 14</span></td>
+                    <td style="padding:9px 10px;">95 – 102 cm</td>
+                    <td style="padding:9px 10px;">83 – 88 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">2XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 16–18</span></td>
+                    <td style="padding:9px 10px;">102 – 108 cm</td>
+                    <td style="padding:9px 10px;">88 – 94 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">3XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 20</span></td>
+                    <td style="padding:9px 10px;">108 – 115 cm</td>
+                    <td style="padding:9px 10px;">94 – 100 cm</td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Hogyan mérjen:</strong> a mellbőséget a legszélesebb ponton, a derekat a legkeskenyebb helyen. Fehérnemű felett mérjen, a szalag simuljon, de ne szorítson.</p>
+          </div>
+
+        <?php elseif(  $is_mixed_bundle ): ?>
     
      <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         

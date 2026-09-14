@@ -29,6 +29,14 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-cloud' );
     } elseif ( noriks_is_type( 'hyd' ) ) {
         get_template_part( 'template_parts/product-bottom/why-hyd' );
+    } elseif ( noriks_is_type( 'snug' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-snug' );
+    } elseif ( noriks_is_type( 'kompwom' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'pal' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-pal' );
+    } elseif ( noriks_is_type( 'red' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-red' );
     }
 }
 ?>
@@ -649,8 +657,21 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
   if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug egésztest párna'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formázó póló'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal sétabot'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief vörösfény-terápia'; }
 
 // Include review pools (own pool per product group)
+if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_snug.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_kompwom.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_pal.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_red.php';
+} else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_hyd.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
@@ -1073,7 +1094,11 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
         noriks_is_type('bra') ||
         noriks_is_type('hyd') ||
         noriks_is_type('snore') ||
-        noriks_is_type('cloud')
+        noriks_is_type('cloud') ||
+        noriks_is_type('snug') ||
+        noriks_is_type('kompwom') ||
+        noriks_is_type('pal') ||
+        noriks_is_type('red')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -1895,8 +1920,160 @@ $hyd_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_snug = ( function_exists('noriks_is_type') && noriks_is_type('snug') );
+$snug_faq = array(
+  array(
+    'questioon' => 'Milyen méretű a párna?',
+    'answer'    => 'Egy méret: <strong>105 cm hosszú és 30 cm széles</strong>. A válltól a térdig támasztja, de nem foglalja el az egész ágyat — ezért könnyű fogni és könnyű vele megfordulni.',
+  ),
+  array(
+    'questioon' => 'Lelapul idővel?',
+    'answer'    => 'Nem. A töltet több ezer finom, rugalmas szálból áll, amelyek visszatérnek a formájukba. Az a támasz, amit az első éjjel érez, kilencven éjszaka után is ugyanaz.',
+  ),
+  array(
+    'questioon' => 'Mivel van töltve?',
+    'answer'    => 'Nagy rugalmasságú szálas töltettel — kívül puha és kellemes, belül feszes és tartó. Memóriahab nélkül, ami felmelegszik.',
+  ),
+  array(
+    'questioon' => 'Hogyan kell mosni?',
+    'answer'    => 'A huzat levehető és mosógépben mosható 40 °C-on. Magát a párnát ne mossa gépben — szükség esetén szellőztesse és szárítsa levegőn.',
+  ),
+  array(
+    'questioon' => 'Alkalmas terhesség alatt?',
+    'answer'    => 'Igen. Az S-forma elöl a hasat, hátul a hátat támasztja, a terhesség alatt ajánlott pozíció pedig a bal oldalon alvás. Egészségügyi szövődmények esetén kérje orvosa tanácsát.',
+  ),
+  array(
+    'questioon' => 'Mennyi idő megszokni?',
+    'answer'    => 'A legtöbb felhasználó a második éjszakára megtalálja a pozícióját. Az S-forma más, mint egy egyenes párna, ezért az első pár éjjel a test tanulja, hova helyezkedjen.',
+  ),
+  array(
+    'questioon' => 'Milyen színek elérhetők?',
+    'answer'    => 'Hat szín: kék, rózsaszín, szürke, zöld, lila és sötétkék. A színt ezen az oldalon választja ki, a kosárba tétel előtt.',
+  ),
+  array(
+    'questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 nap</strong> áll rendelkezésére pénzvisszatérítésre vagy cserére. Elég egy e-mail, űrlapok nélkül.',
+  ),
+);
+
+$is_kompwom = ( function_exists('noriks_is_type') && noriks_is_type('kompwom') );
+$kompwom_faq = array(
+  array(
+    'questioon' => 'Hogyan válasszak méretet?',
+    'answer'    => 'A mellbőség alapján — az határozza meg, hogyan ül a póló a mellen és a vállon. Ha két méret között van, vegye a <strong>nagyobbat</strong>. S-től 3XL-ig elérhető.',
+  ),
+  array(
+    'questioon' => 'Látszik a ruha alatt?',
+    'answer'    => 'Nem. A kötés varrás nélküli, vékony és matt, ezért eltűnik ing, zakó vagy testhezálló ruha alatt. Nincs szegély, ami kirajzolódna.',
+  ),
+  array(
+    'questioon' => 'Feltekeredik napközben?',
+    'answer'    => 'Nem. A kompresszió szélességében oszlik el, nem egy pontban szorít, ezért a póló egész nap a helyén marad.',
+  ),
+  array(
+    'questioon' => 'A 3D vonalak nyomottak?',
+    'answer'    => 'Nem. A mintázat <strong>magába az anyagba van szőve</strong>, ezért semmi nem reped és semmi nem pattogzik le az idővel, bárhányszor mossa.',
+  ),
+  array(
+    'questioon' => 'Mennyire szorít?',
+    'answer'    => 'Határozottan, de soha nem szűken. Normálisan kell tudnia lélegezni és enni, anélkül hogy a pólóra gondolna. Ha a nyom a bőrön húsz perccel a levétel után is látszik, a méret túl kicsi.',
+  ),
+  array(
+    'questioon' => 'Hogyan kell mosni?',
+    'answer'    => 'Gépben <strong>30 °C-on</strong>. Fehérítő nélkül, vasalás nélkül és szárítógép nélkül — levegőn szárítsa.',
+  ),
+  array(
+    'questioon' => 'Milyen színek elérhetők?',
+    'answer'    => 'Három szín: fekete, sötétszürke és rózsaszín. A színt és a méretet ezen az oldalon választja ki, a kosárba tétel előtt.',
+  ),
+  array(
+    'questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 nap</strong> áll rendelkezésére pénzvisszatérítésre vagy méretcserére. Elég egy e-mail, űrlapok nélkül.',
+  ),
+);
+
+$is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
+$pal_faq = array(
+  array(
+    'questioon' => 'Mire szolgál a második fogantyú?',
+    'answer'    => 'A <strong>felállásra</strong>. Az alsó fogantyút akkor fogja meg, amikor felkel a fotelből, az ágyból vagy egy alacsony székről — a nyomás függőlegesen lefelé megy, így nem kell előredőlnie, és nem kell más segítségét kérnie.',
+  ),
+  array(
+    'questioon' => 'Tényleg magától megáll?',
+    'answer'    => 'Igen. A talp <strong>négy gumilábbal</strong> rendelkezik, amelyek egyenesen tartják a botot, amikor elengedi. Nem esik a földre, így nem kell lehajolnia érte.',
+  ),
+  array(
+    'questioon' => 'Csúszik sima padlón?',
+    'answer'    => 'Nem. A lábak csúszásgátló gumiból készültek, és megtartanak csempén, parkettán és laminált padlón. A talp a szabadban az egyenetlen talajhoz is alkalmazkodik.',
+  ),
+  array(
+    'questioon' => 'Hogyan működik a lámpa?',
+    'answer'    => 'A lámpa a fogantyúba van építve, és gombbal kapcsolható be. Megvilágítja az utat maga előtt — éjszakai fürdőszobázáshoz vagy alkonyati sétához.',
+  ),
+  array(
+    'questioon' => 'Mit csinál a riasztó?',
+    'answer'    => 'A gomb megnyomására <strong>hangos hangjelzés</strong> szólal meg, amely figyelmezteti a háziakat, ha elesik vagy segítségre van szüksége.',
+  ),
+  array(
+    'questioon' => 'Állítható a magassága?',
+    'answer'    => 'Igen. A magasság néhány másodperc alatt beállítható, szerszám nélkül, így a bot minden testmagassághoz megfelel.',
+  ),
+  array(
+    'questioon' => 'Összecsukható?',
+    'answer'    => 'Igen. Több részre csukható össze, és elfér a táskában vagy az autó kesztyűtartójában — praktikus utazáshoz és orvosi látogatásokhoz.',
+  ),
+  array(
+    'questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 nap</strong> áll rendelkezésére pénzvisszatérítésre vagy cserére. Elég egy e-mail, űrlapok nélkül.',
+  ),
+);
+
+$is_red = ( function_exists('noriks_is_type') && noriks_is_type('red') );
+$red_faq = array(
+  array(
+    'questioon' => 'Hogyan segít a vörösfény-terápia alagút-szindróma esetén?',
+    'answer'    => 'A vörös és infravörös fény behatol a szövetbe és serkenti a <strong>sejtenergia (ATP) termelését</strong>, ami segít csillapítani a median ideg körüli gyulladást, javítani a keringést és támogatni a természetes gyógyulást.',
+  ),
+  array(
+    'questioon' => 'Mennyi idő az első eredményekig?',
+    'answer'    => 'A legtöbb felhasználó <strong>1 – 2 héten</strong> belül kevesebb éjszakai bizsergést érez. A szorítóerőben mutatkozó érzékelhető változás általában a negyedik hét körül jön. Legalább nyolc hét rendszeres, napi használatot javaslunk.',
+  ),
+  array(
+    'questioon' => 'Biztonságos mindennap használni?',
+    'answer'    => 'Igen. A készülék <strong>napi 15 perces kezelésekre</strong> készült. A fény ezeken az adagokon nem melegíti fel a szövetet. A készülék a kezelés végén magától kikapcsol.',
+  ),
+  array(
+    'questioon' => 'Mindkét kézre jó?',
+    'answer'    => 'Igen, a pánt <strong>a bal és a jobb kézre</strong> egyaránt felhelyezhető. Ha mindkét keze érintett, végezzen két egymást követő 15 perces kezelést, vagy válassza a két készüléket tartalmazó csomagot.',
+  ),
+  array(
+    'questioon' => 'Milyen kézméretekre jó?',
+    'answer'    => 'A rugalmas pánt állítható szíjjal <strong>a legtöbb felnőtt kézméretre</strong> jó, a nagyobbakra is. A hüvelykujj-nyílás a kezelés teljes ideje alatt a helyén tartja a készüléket.',
+  ),
+  array(
+    'questioon' => 'Mi van a csomagban?',
+    'answer'    => '1× NORIKS RED pánt, <strong>1× USB-C töltőkábel</strong> és útmutató az ajánlott kezelési protokollal.',
+  ),
+  array(
+    'questioon' => 'Meddig bírja az akkumulátor?',
+    'answer'    => 'Egy töltés <strong>akár 4 kezelésre</strong> elegendő. A készülék USB-C kábellel tölthető, így telefontöltőről vagy laptopról is tölthető.',
+  ),
+  array(
+    'questioon' => 'Helyettesíti az orvost?',
+    'answer'    => 'Nem. A NORIKS RED otthoni használatra készült készülék, és <strong>nem helyettesíti az orvosi vizsgálatot</strong> vagy az előírt kezelést. Tartós vagy erős panaszok esetén forduljon orvoshoz.',
+  ),
+  array(
+    'questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 nap</strong> áll rendelkezésére pénzvisszatérítésre vagy cserére. Elég egy e-mail, űrlapok nélkül.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
+  if ( $is_snug && $is_info ) { return $snug_faq; }
+  if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_pal && $is_info ) { return $pal_faq; }
+  if ( $is_red && $is_info ) { return $red_faq; }
   if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
   if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
