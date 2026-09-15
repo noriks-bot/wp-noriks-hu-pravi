@@ -15,7 +15,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 1) Trust marquee (plava traka, vrti se) ============ -->
 <div class="kn-marquee" aria-hidden="true">
   <div class="kn-marquee-track">
-    <?php $kn_ticker = array('GYERMEKORVOSOK AJÁNLÁSÁVAL','OEKO-TEX® MEMÓRIAHAB','3 ZÓNÁS SZERKEZET','90 ÉJSZAKÁS PRÓBAIDŐ','HIPOALLERGÉN','MOSHATÓ HUZAT');
+    <?php $kn_ticker = array('GYERMEKORVOSOK AJÁNLÁSÁVAL','OEKO-TEX® MEMÓRIAHAB','3 ZÓNÁS SZERKEZET','90 ÉJSZAKÁS PRÓBAIDŐ','HIPOALLERGÉN','LÉLEGZŐ KÖTÖTT ANYAG');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $kn_ticker as $t ) { echo '<span class="kn-tick">'.esc_html($t).'</span><span class="kn-dot">•</span>'; } } ?>
   </div>
 </div>
@@ -96,7 +96,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Minőség, amely érezhető — éjszakáról éjszakára.</h2>
       <p>A sűrű, lélegző kötött anyag és a gondosan formázott felület nem a látvány kedvéért van — <strong>minden zónának megvan a maga szerepe</strong>. A középső rész gyengéden befogadja a fejet, a szélek alátámasztják a nyakat, a szerkezet pedig hónapokig tartó mindennapi használat után is megtartja formáját.</p>
-      <p>A huzat levehető és mosógépben mosható, a hab <strong>hipoallergén és atkaálló</strong> — így a párna friss, tiszta és minden éjszakára készen áll. Nincs benyomódás, nincs ellaposodás, nincs kompromisszum.</p>
+      <p>A kötött anyag lélegző, a hab pedig <strong>hipoallergén és atkaálló</strong> — így a párna friss, tiszta és minden éjszakára készen áll. Nincs benyomódás, nincs ellaposodás, nincs kompromisszum.</p>
       <p><strong>Egy párna, amely egy év után is úgy néz ki — és úgy támaszt —, mint az első napon.</strong></p>
     </div>
   </div>
