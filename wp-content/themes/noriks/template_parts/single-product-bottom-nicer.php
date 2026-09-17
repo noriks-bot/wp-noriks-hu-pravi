@@ -37,6 +37,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-pal' );
     } elseif ( noriks_is_type( 'red' ) ) {
         get_template_part( 'template_parts/product-bottom/why-red' );
+    } elseif ( noriks_is_type( 'kneeheat' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kneeheat' );
     }
 }
 ?>
@@ -661,6 +663,7 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formázó póló'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal sétabot'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief vörösfény-terápia'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat térdmelegítő és masszírozó'; }
 
 // Include review pools (own pool per product group)
 if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
@@ -671,6 +674,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_pal.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_red.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_kneeheat.php';
 } else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_hyd.php';
@@ -1098,7 +1103,8 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
         noriks_is_type('snug') ||
         noriks_is_type('kompwom') ||
         noriks_is_type('pal') ||
-        noriks_is_type('red')
+        noriks_is_type('red') ||
+        noriks_is_type('kneeheat')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -2068,12 +2074,49 @@ $red_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_kneeheat = ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') );
+$kneeheat_faq = array(
+  array(
+    'questioon' => 'Hogyan működik valójában a készülék?',
+    'answer'    => 'Az akár <strong>42 °C-os</strong> meleg kitágítja az ereket és segíti a vér eljutását a mélyebb szövetekbe. A ritmikus légkompresszió kiszorítja a felgyűlt folyadékot és friss vért juttat a szövetbe, a <strong>60 Hz-es</strong> vibráció pedig oldja az ízület körüli merevséget. Mindhárom terápia egyszerre működik.',
+  ),
+  array(
+    'questioon' => 'Milyen panaszokra való?',
+    'answer'    => 'Krónikus, fokozatosan kialakult panaszokra — merev, fájó vagy duzzadt térdre, amely az évekkel és a terheléssel jelentkezik. Friss sérülés, nemrégi műtét vagy keringési zavar esetén előbb konzultáljon orvosával.',
+  ),
+  array(
+    'questioon' => 'Mennyi ideig tart egy kezelés?',
+    'answer'    => '<strong>12 percig.</strong> A készülék egy gombbal indul, és a kezelés végén magától leáll.',
+  ),
+  array(
+    'questioon' => 'Mikor érezhető a különbség?',
+    'answer'    => 'Sokan már az első kezelés után érzik, hogy a térd lazább. Érezhetőbb változás általában <strong>7–14 nap</strong> napi használat után jön.',
+  ),
+  array(
+    'questioon' => 'Használhatom mindkét térdemre?',
+    'answer'    => 'Igen. A pánt a bal és a jobb lábra is jó — ha mindkettő panaszos, indítson kezelést mindkettőn.',
+  ),
+  array(
+    'questioon' => 'Miben különbözik a TENS készüléktől vagy a melegítőpárnától?',
+    'answer'    => 'A TENS elfedi a fájdalomjelet, a melegítőpárna pedig csak a felszínt melegíti, és néhány perc alatt kihűl. A KneeHeat tartós meleget, kompressziót és vibrációt egyesít, hogy a mélyebb szövetekre hasson.',
+  ),
+  array(
+    'questioon' => 'Kell tölteni?',
+    'answer'    => 'Igen, a készülék vezeték nélküli, és a mellékelt USB-C kábellel tölthető. Egy töltés több kezelésre elég.',
+  ),
+  array(
+    'questioon' => 'Minden lábméretre jó?',
+    'answer'    => 'A pántok állíthatók, és a csomagban hosszabbító pánt is van nagyobb lábméretekhez.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
   if ( $is_red && $is_info ) { return $red_faq; }
+  if ( $is_kneeheat && $is_info ) { return $kneeheat_faq; }
   if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
   if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
