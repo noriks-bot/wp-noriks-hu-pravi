@@ -1209,7 +1209,7 @@ $ship_count = count($auto_reviews_ship);
             <?php if (!empty($initial_ship)) : foreach ($initial_ship as $review) :
                 $name   = $review['name'] ?? 'Névtelen';
                 $text   = $review['text'] ?? '';
-                $title  = !empty($review['product_title']) ? $review['product_title'] : 'Egy szürke póló';
+                $title  = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
                 $url    = !empty($review['product_url'])   ? $review['product_url']   : '#';
                 $stars  = '★★★★★';
                 $date_display = $review['assigned_date'] ?? '';
