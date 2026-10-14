@@ -39,7 +39,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 <!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
 <section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_vid('cld-vid-razlika.mp4','cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-razlika.mp4','cld-bez-s-noriksom.webp','Alvás párna nélkül és NORIKS Cloud párnával'); ?></div>
     <div class="ncd-copy">
       <h2 class="ncd-h2">A különbség, amit már az első éjjel érez</h2>
       <p><strong>Párna nélkül:</strong> a felső láb ráesik az alsóra, a medence elcsavarodik, a nyomás pedig a derékba és a térdekbe kerül.</p>
@@ -56,10 +56,10 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 <!-- ============ B) Koraci — pocnite bolje spavati vec veceras ============ -->
 <?php
 $cd_steps = array(
-  array( 'cld-korak1.webp', 'Otkopčajte traku i postavite jastuk', 'Pritisnite druker da oslobodite traku i stavite jastuk između koljena.' ),
-  array( 'cld-korak2.webp', 'Prilagodite traku svojoj nozi',       'Zategnite traku oko noge u jedan od dva položaja — čvrsto, ali bez pritiska.' ),
-  array( 'cld-korak3.webp', 'Spavajte s pravilnim poravnanjem',    'Jastuk drži razmak nogu, kralježnica ostaje poravnata, a pritisak popušta.' ),
-  array( 'cld-korak4.webp', 'Probudite se bez ukočenosti',         'Bez okretanja pola noći i bez traženja položaja koji ne boli.' ),
+  array( 'cld-korak1.webp', 'Pattintsa ki a pántot és helyezze be a párnát', 'Nyomja meg a patentot, oldja ki a pántot és tegye a párnát a térdei közé.' ),
+  array( 'cld-korak2.webp', 'Állítsa a pántot a lábához',       'Húzza a pántot a lába köré a két állás egyikében — stabilan, de nyomás nélkül.' ),
+  array( 'cld-korak3.webp', 'Aludjon helyes testtartásban',    'A párna tartja a lábak távolságát, a gerinc egyenes marad, a nyomás pedig enged.' ),
+  array( 'cld-korak4.webp', 'Ébredjen merevség nélkül',         'Nincs több fél éjszakás forgolódás és fájdalommentes pozíció keresése.' ),
 );
 ?>
 <section class="ncd-sec">
@@ -86,10 +86,10 @@ $cd_steps = array(
 <!-- ============ A) Recenzije kupaca — vrtuljak (kao prva sekcija na referenci) ============ -->
 <?php
 $cd_revs = array(
-  array( 5, 'Konačno spavam kroz noć',      'Spavam na boku cijeli život i uvijek sam se budila s ukočenim leđima. Prvo jutro nakon jastuka — ništa. Nisam vjerovala da je tako jednostavno.', 'Marina T.' ),
-  array( 5, 'Traka je ono što ga razlikuje', 'Prije mi je obični jastuk ispadao nakon pola sata. Ovaj ostaje između koljena do jutra, i kad se okrenem na drugu stranu.', 'Davor K.' ),
-  array( 5, 'Spas u trudnoći',               'Kupila sam ga u sedmom mjesecu. Konačno mogu ležati na lijevoj strani bez pritiska u kuku i bez vrpoljenja pola noći.', 'Ivana P.' ),
-  array( 5, 'Kukovi me više ne bole ujutro', 'Bila sam skeptična jer je to ipak samo jastuk. Razlika je stvarna — ustajem bez one ukočenosti u zdjelici.', 'Lucija H.' ),
+  array( 5, 'Végre átalszom az éjszakát',      'Egész életemben oldalt alszom, és mindig merev háttal ébredtem. Az első reggel a párnával — semmi. Nem hittem, hogy ilyen egyszerű.', 'Mária T.' ),
+  array( 5, 'A pánt az, ami megkülönbözteti', 'Korábban a sima párna fél óra után kiesett. Ez reggelig a térdeim között marad, akkor is, ha a másik oldalamra fordulok.', 'Dávid K.' ),
+  array( 5, 'Megváltás a terhesség alatt',               'A hetedik hónapban vettem. Végre tudok a bal oldalamon feküdni csípőfájás nélkül, és nem forgolódom fél éjszakát.', 'Ivett P.' ),
+  array( 5, 'Reggel már nem fáj a csípőm', 'Szkeptikus voltam, hiszen ez csak egy párna. A különbség viszont valódi — merevség nélkül kelek fel.', 'Luca H.' ),
 );
 ?>
 <section class="ncd-sec ncd-dark">
@@ -125,10 +125,10 @@ $cd_revs = array(
       <p class="ncd-eyebrow">Oldalt alvás</p>
       <h2 class="ncd-h2">Kapja vissza a reggeleket, amelyeket már elveszettnek hitt</h2>
       <p>Ismeri az érzést: merev testtel ébred, egész éjjel keresi a fájdalommentes pozíciót, vagy többször felébred minden ok nélkül.</p>
-      <p>Problem niste vi. Kad spavate na boku bez oslonca između koljena, kukovi se uvijaju, donji dio leđa ostaje napet, a mišići cijelu noć rade da vas stabiliziraju.</p>
-      <p class="ncd-strong">NORIKS Cloud drži noge razmaknute točno koliko treba — kralježnica ostaje poravnata, a tijelo se konačno opusti.</p>
+      <p>Nem Ön a probléma. Ha oldalt alszik térdtámasz nélkül, a csípő elcsavarodik, a derék feszes marad, az izmok pedig egész éjjel azon dolgoznak, hogy stabilizálják.</p>
+      <p class="ncd-strong">A NORIKS Cloud pontosan annyira tartja távol a lábakat, amennyire kell — a gerinc egyenes marad, a test pedig végre ellazul.</p>
     </div>
-    <div class="ncd-media"><?php echo $cd_vid('cld-vid-jutra.mp4','cld-jutra.webp','Jutro bez bolova u leđima'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-jutra.mp4','cld-jutra.webp','Reggel hátfájás nélkül'); ?></div>
   </div>
 </section>
 
@@ -137,26 +137,26 @@ $cd_revs = array(
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Az a beállítás, amit reggel érez</h2>
-      <p>Kad je razmak nogu pravilan, kralježnica prestaje biti iskrivljena, zdjelica se poravna, a koljena se više ne stišću jedno o drugo.</p>
+      <p>Ha a lábak távolsága megfelelő, a gerinc nem csavarodik meg, a medence kiegyenesedik, a térdek pedig nem nyomódnak egymáshoz.</p>
       <ul class="ncd-check">
         <li>Egyenes gerinc a csavarodott helyett</li>
         <li>Egyenes medence csavarodás nélkül</li>
         <li>Szétválasztott térdek, nyomás nélkül</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-prije-poslije.webp','Prije i poslije — poravnanje kralježnice'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-prije-poslije.webp','Előtte és utána — a gerinc kiegyenesedése'); ?></div>
   </div>
 </section>
 
 <!-- ============ 4) Za koga je — krugovi s naslovom i tekstom (kao na referenci) ============ -->
 <?php
 $cd_cases = array(
-  array( 'cld-case-bok.webp',       'Oldalt alvás', 'Prilagođeno vašem prirodnom položaju.' ),
-  array( 'cld-case-ledja.webp',     'Bol u leđima',     'Sprječava uvijanje donjeg dijela leđa noću.' ),
-  array( 'cld-case-kukovi.webp',    'Bol u kukovima',   'Drži kukove poravnate umjesto iskrivljene.' ),
-  array( 'cld-case-koljena.webp',   'Bol u koljenima',  'Kraj pritisku koljena o koljeno.' ),
-  array( 'cld-case-trudnoca.webp',  'Trudnoća',         'Podupire kukove i trbuh tijekom trudnoće.' ),
-  array( 'cld-case-operacija.webp', 'Nakon operacije',  'Štedi kuk i koljeno tijekom oporavka.' ),
+  array( 'cld-case-bok.webp',       'Oldalt alvás', 'A természetes alvási pozíciójához igazítva.' ),
+  array( 'cld-case-ledja.webp',     'Hátfájás',     'Megakadályozza a derék éjszakai elcsavarodását.' ),
+  array( 'cld-case-kukovi.webp',    'Csípőfájás',   'Egy vonalban tartja a csípőt, nem elcsavarodva.' ),
+  array( 'cld-case-koljena.webp',   'Térdfájás',  'Vége a térd a térdhez nyomódásnak.' ),
+  array( 'cld-case-trudnoca.webp',  'Terhesség',         'Megtámasztja a csípőt és a hasat a terhesség alatt.' ),
+  array( 'cld-case-operacija.webp', 'Műtét után',  'Kíméli a csípőt és a térdet a felépülés alatt.' ),
 );
 ?>
 <section class="ncd-sec">
@@ -189,14 +189,14 @@ $cd_cases = array(
         <li><strong>Megtartja a formáját</strong> évekig, nem lapul le</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-pjena.webp','Prozračna memorijska pjena s perforacijama'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-pjena.webp','Lélegző memóriahab perforációval'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Usporedba ============ -->
 <section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','NORIKS Cloud u usporedbi s običnim jastucima'); ?></div>
+    <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','A NORIKS Cloud a hagyományos párnákhoz képest'); ?></div>
     <div class="ncd-copy">
       <h2 class="ncd-h2">Nem minden térdpárna egyforma</h2>
       <ul class="ncd-vs">
