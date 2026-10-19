@@ -33,6 +33,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-snug' );
     } elseif ( noriks_is_type( 'kompwom' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'bowl' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-bowl' );
     } elseif ( noriks_is_type( 'pal' ) ) {
         get_template_part( 'template_parts/product-bottom/why-pal' );
     } elseif ( noriks_is_type( 'red' ) ) {
@@ -662,6 +664,7 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
   if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug egésztest párna'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formázó póló'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal sétabot'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) { $rv_fallback_title = 'NORIKS Bowl ortopéd kutyatál'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief vörösfény-terápia'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat térdmelegítő és masszírozó'; }
 
@@ -670,6 +673,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_snug.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_kompwom.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('bowl') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_bowl.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_pal.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
@@ -1102,6 +1107,7 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
         noriks_is_type('cloud') ||
         noriks_is_type('snug') ||
         noriks_is_type('kompwom') ||
+        noriks_is_type('bowl') ||
         noriks_is_type('pal') ||
         noriks_is_type('red') ||
         noriks_is_type('kneeheat')
@@ -1114,7 +1120,7 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
   // Izdelki z lastnim imenom v karticah mnenj ne smejo dobiti nakljucnega izdelka iz kataloga.
   $rv_own_name = ( function_exists('noriks_is_type') && (
       noriks_is_type('cloud') || noriks_is_type('cloath') || noriks_is_type('hyd') || noriks_is_type('snug')
-   || noriks_is_type('kompwom') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat')
+   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat')
    || noriks_is_type('controlpro') || noriks_is_type('kidsnest') || noriks_is_type('ortopedski-jastuk')
    || noriks_is_type('bunion') || noriks_is_type('fisiorest') || noriks_is_type('ortopas')
    || noriks_is_type('norikshers') || noriks_is_type('kompresijske-nogavice') ) );
@@ -2005,6 +2011,24 @@ $kompwom_faq = array(
   ),
 );
 
+$is_bowl = ( function_exists('noriks_is_type') && noriks_is_type('bowl') );
+$bowl_faq = array(
+  array('questioon' => 'Mely kutyáknak való a tál?',
+    'answer'    => '<strong>Kis fajtáknak</strong> — tacskó, francia bulldog, schnauzer, mopsz, máltai selyemkutya és hasonlók. A tál átmérője 15 cm, űrtartalma kb. 430 ml.'),
+  array('questioon' => 'Mire jó a 15°-os dőlés?',
+    'answer'    => 'A tál a kutya felé dől, így az eledel felé csúszik, a fej és a nyak pedig természetesebb helyzetben van. A kutyának nem kell az orrát a tál sarkába nyomnia, sem a nyakát a padlóig hajlítania.'),
+  array('questioon' => 'Miért emelt?',
+    'answer'    => 'A 11 cm-es állvány a kutya magasságához közelebb emeli a tálat, így állva eszik, kevesebb nyak- és háthajlítással. Ez különösen kíméletes az idős kutyáknak.'),
+  array('questioon' => 'Használhatom víznek is?',
+    'answer'    => 'Igen. A tál rozsdamentes acélból készült, és eledelhez és vízhez egyaránt alkalmas. Sokan kettőt rendelnek — egyet eledelnek, egyet víznek.'),
+  array('questioon' => 'Hogyan kell tisztítani?',
+    'answer'    => 'Öblítse le a tálat meleg vízzel és mosogatószerrel. A sima acél nem szívja magába a szagokat és nem tartja meg az ételmaradékot úgy, mint a műanyag.'),
+  array('questioon' => 'Csúszik a padlón?',
+    'answer'    => 'Az állvány stabil, és nem borul fel, amikor a kutya eszik. Nagyon sima padlón alátétet ajánlunk az állvány alá.'),
+  array('questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 nap</strong> pénzvisszafizetési garancia jár hozzá. Elég egy e-mail, űrlap nélkül.'),
+);
+
 $is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
 $pal_faq = array(
   array(
@@ -2117,10 +2141,11 @@ $kneeheat_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_bowl && $is_info ) { return $bowl_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
   if ( $is_red && $is_info ) { return $red_faq; }
   if ( $is_kneeheat && $is_info ) { return $kneeheat_faq; }
