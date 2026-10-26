@@ -4,13 +4,13 @@
  * Sekcije i redoslijed preslikani s referentne stranice, tekst na HR,
  * slike su NORIKS kreative iz img/kneefix/. Svaka sekcija ima sliku s jedne
  * i tekst s druge strane (naizmjenično) — nema sekcija koje su samo slika.
- *   1. Amikor minden lépés kellemetlenné válik   slika lijevo   13_stepenice
+ *   1. Amikor minden lépés kellemetlenné válik   slika lijevo   kf-hu-3
  *   2. Talán nem csak kopásról van szó   slika desno    14_zglob
  *   3. Támasz az aktív térdeknek         slika lijevo   08_aktivno
  *   4. 4 funkció. Stabilabb érzés.    slika desno    03_funkcije
  *   5. Kényelmes támasz 3 lépésben          slika lijevo   04_koraki
- *   6. Több kényelem a mindennapokban      slika desno    05_lifestyle
- *   7. Preporučeno za potporu koljena     slika lijevo   06_zdravnik
+ *   6. Több kényelem a mindennapokban      slika desno    kf-hu-1
+ *   7. Preporučeno za potporu koljena     slika lijevo   kf-hu-2
  *   8. A különbség érezhető                  slika desno    07_vs
  *   9. Mit mondanak vásárlóink                3 kartice      10/11/12
  * Recenzije i FAQ renderira zajednički reviews.php (ne ovdje).
