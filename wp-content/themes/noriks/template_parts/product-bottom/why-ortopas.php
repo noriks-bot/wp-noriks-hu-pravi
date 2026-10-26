@@ -53,19 +53,19 @@ $opz_cmp_rows = array(
 /* Recenzije sa slikom — 8) sekcija */
 $opz_reviews = array(
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp?v=20261026',
         'title' => 'Nagy segítség a derékfájás ellen',
         'text'  => 'A NORIKS öv valóban rengeteget könnyített az életemen. Pontosan azt teszi, amit ígér. Újra le tudok hajolni fájdalom nélkül.',
         'name'  => 'Erzsébet M.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.jpg',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.webp?v=20261026',
         'title' => 'Puha és kényelmes',
         'text'  => 'A gyógytornászom ajánlotta a hátfájás elleni övet. Korábban más öveket is kipróbáltam, de ez sokkal kényelmesebb ülés és lehajlás közben. Mégis kiváló támogatást nyújt!',
         'name'  => 'Júlia U.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp?v=20261026',
         'title' => 'Csúcs!',
         'text'  => 'Segít egyenesen ülnöm, és úgy érzem, egyenesebben is járok. A fájdalmak sokszorosukra csökkentek, és végre fájdalom nélkül tudok felállni hosszabb ülés után is. Naponta körülbelül 2-3 órát viselem az övet – főleg a munkában.',
         'name'  => 'Iván D.',
@@ -186,7 +186,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
           <tr>
             <th class="opz-th-feat"></th>
             <th class="opz-th-brand">NORIKS</th>
-            <th class="opz-th-alt">Physio</th>
+            <th class="opz-th-alt">Fizioterápia</th>
           </tr>
         </thead>
         <tbody>
