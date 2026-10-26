@@ -13,26 +13,28 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * relativno preko get_template_directory_uri() — /img/ortopas-videos/.
  * ------------------------------------------------------------------ */
 $opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
+// Videi se zamenjajo pod istim imenom, zato jim dodamo verzijo - brez tega brskalnik vrti staro datoteko iz predpomnilnika.
+$opz_vid_v        = '?v=20261026';
 $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/10/ortopas-hr-9.webp'; // TODO: HU verzió szükséges (HR nyelvű kép)
-$opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodno oslobađanje (video)
-$opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) pravi uzrok (video)
+$opz_video_relief = $opz_vid_dir . 'relief.mp4' . $opz_vid_v;                                          // 2) prirodno oslobađanje (video)
+$opz_video_cause  = $opz_vid_dir . 'cause.mp4' . $opz_vid_v;                                           // 3) pravi uzrok (video)
 $opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.png'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // TODO: HU verzió szükséges (HR nyelvű kép)
-$opz_video_feat   = $opz_vid_dir . 'features.mp4';                                        // 6) inovativne značajke (video)
+$opz_video_feat   = $opz_vid_dir . 'features.mp4' . $opz_vid_v;                                        // 6) inovativne značajke (video)
 
 /* Kartice (kružni videi) — 4) sekcija s 3 kartice */
 $opz_cards = array(
     array(
-        'video' => $opz_vid_dir . 'card-1.mp4',
+        'video' => $opz_vid_dir . 'card-1.mp4' . $opz_vid_v,
         'title' => 'Enyhíti a panaszokat',
         'text'  => 'Gyors megkönnyebbülést nyújthat isiász és hátfájás esetén',
     ),
     array(
-        'video' => $opz_vid_dir . 'card-2.mp4',
+        'video' => $opz_vid_dir . 'card-2.mp4' . $opz_vid_v,
         'title' => 'Az ágyéki gerinc tehermentesítése',
         'text'  => 'Stabilizálja és beigazítja a derék alsó részét',
     ),
     array(
-        'video' => $opz_vid_dir . 'card-3.mp4',
+        'video' => $opz_vid_dir . 'card-3.mp4' . $opz_vid_v,
         'title' => 'Bevált módszer',
         'text'  => 'Célzott kompressziós technológián alapul',
     ),
