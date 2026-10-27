@@ -18,7 +18,7 @@ $opz_vid_v        = '?v=20261026';
 $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/10/ortopas-hr-9.webp'; // TODO: HU verzió szükséges (HR nyelvű kép)
 $opz_video_relief = $opz_vid_dir . 'relief.mp4' . $opz_vid_v;                                          // 2) prirodno oslobađanje (video)
 $opz_video_cause  = $opz_vid_dir . 'cause.mp4' . $opz_vid_v;                                           // 3) pravi uzrok (video)
-$opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.png'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // TODO: HU verzió szükséges (HR nyelvű kép)
+$opz_img_indik    = get_template_directory_uri() . '/img/ortopas/ortopas-indikacije.webp?v=20261027'; // lokalizirana grafika indikacij // lokalizirana grafika indikacij // TODO: HU verzió szükséges (HR nyelvű kép)
 $opz_video_feat   = $opz_vid_dir . 'features.mp4' . $opz_vid_v;                                        // 6) inovativne značajke (video)
 
 /* Kartice (kružni videi) — 4) sekcija s 3 kartice */
