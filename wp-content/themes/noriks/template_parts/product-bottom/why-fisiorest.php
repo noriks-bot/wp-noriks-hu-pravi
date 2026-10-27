@@ -18,7 +18,8 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero-v2.mp4';
+$fis_ver = '?v=20261027';
+$fis_hero_video = $fis_v . 'hero-v2.mp4' . $fis_ver;
 
 // 3) Szakértők ajánlják
 $fis_experts = array(
@@ -35,16 +36,16 @@ $fis_ugc = array(
 );
 // 5) ThermoTrac 3 az 1-ben
 $fis_thermo = array(
-    array( 'vid' => $fis_v.'v10.mp4', 'title' => 'Trakciós terápia' ),
-    array( 'vid' => $fis_v.'v07.mp4', 'title' => 'Vibrációs terápia' ),
-    array( 'vid' => $fis_v.'v05.mp4', 'title' => 'Hőterápia' ),
+    array( 'vid' => $fis_v.'v10.mp4' . $fis_ver, 'title' => 'Trakciós terápia' ),
+    array( 'vid' => $fis_v.'v07.mp4' . $fis_ver, 'title' => 'Vibrációs terápia' ),
+    array( 'vid' => $fis_v.'v05.mp4' . $fis_ver, 'title' => 'Hőterápia' ),
 );
 // 6) Négy fejlesztés
 $fis_upgrades = array(
-    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' , 'ico' => 'battery-v2.png' ),
-    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' , 'ico' => 'silk-v2.png' ),
-    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' , 'ico' => 'timer-v2.png' ),
-    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' , 'ico' => 'heat-v2.png' ),
+    array( 't' => 'Újratölthető akkumulátor', 'd' => 'Vidd magaddal bárhová — a 2500 mAh-s akkumulátor akár 2 óráig bírja.' , 'ico' => 'battery-v2.png?v=20261027' ),
+    array( 't' => 'Eperfa selyem huzat',       'd' => 'Hűsítő selyembe burkolva a puha, luxus érzésért.' , 'ico' => 'silk-v2.png?v=20261027' ),
+    array( 't' => '30 perces kikapcsolás',     'd' => 'Négy 30 perces munkamenet egy töltéssel, gondtalanul.' , 'ico' => 'timer-v2.png?v=20261027' ),
+    array( 't' => 'Szabályozott melegítés',    'd' => '50 °C-os melegítés fejlett ThermoTrac technológiával.' , 'ico' => 'heat-v2.png?v=20261027' ),
 );
 ?>
 
@@ -151,14 +152,14 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Mérnökök tervezték. Gyógytornász-szabvány szerint.</h2>
       <p>Több mint 50 000 €-t és 2 évnyi fejlesztést fektettünk abba, hogy a NORIKS ne csak egy nyakmasszírozó legyen. Ez egy komplett nyakterápiás eszköz, amely valóban a kiváltó okot kezeli. Minden rendelés részletes minőségellenőrzésen megy át, hogy tökéletes állapotban érkezzen meg.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' . $fis_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
 <!-- ============ 8) 14× olcsóbb ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' ); ?>" alt="NORIKS FisioRest" loading="lazy"></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS FisioRest" loading="lazy"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">BIZTONSÁGOS ÉS PIHENTETŐ TERÁPIA</p>
       <h2 class="fis-h2">14× olcsóbb, mint a heti kezelések</h2>
