@@ -105,13 +105,14 @@ $mj_col = get_template_directory_uri() . '/img/majica-barve/';
 <section class="nk-cmp"><div class="fis-wrap"><h2 class="fis-h2 fis-center">NORIKS vs. más márkák</h2><p class="nk-cmp-sub">Nem minden póló egyforma. Ezért éri meg a miénk.</p>
 <div class="nk-cmp-card">
 <div class="nk-cmp-row nk-cmp-head"><div></div><div><div class="nk-cmp-brand">NORIKS</div><div class="nk-cmp-price">4.165–6.245 Ft</div><div class="nk-cmp-note">darabonként, csomagtól függően</div></div><div><div class="nk-cmp-brand">Más márkák</div><div class="nk-cmp-price">10.000–14.000 Ft</div><div class="nk-cmp-note">darabonként</div></div></div>
-<div class="nk-cmp-row"><div>Szabás, ami kiemeli a mellkast és a karokat</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>Egységes méretek S-től 4XL-ig</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>Hosszabb fazon, a has takarva marad</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>Puha, könnyű és szellős anyag</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>Mosás után is megtartja formáját és színét</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>Nincs szúró címke a nyakban</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-<div class="nk-cmp-row"><div>30 nap ingyenes méretcsere</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Hízelgő szabás a mellkasra és karokra</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Következetes méretek S-től 4XL-ig</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Extra hossz, hogy a has fedve maradjon</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Szuper puha anyag - könnyű, légáteresztő és hihetetlenül kényelmes</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Megtartja alakját, még sok mosás után is</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Elegáns, stílusos és időtlen dizájn</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Irritáló, viszkető címkék nélkül a nyakon</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+<div class="nk-cmp-row"><div>Tökéletes illeszkedés garanciája</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
 </div>
 <p class="nk-cmp-foot">A legalacsonyabb ár 4.165 Ft/db a 3+3 GRATIS csomagban.</p>
 </div></section>
