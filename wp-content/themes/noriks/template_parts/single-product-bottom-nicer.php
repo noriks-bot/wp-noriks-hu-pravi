@@ -314,199 +314,16 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 <?php endif; ?>
 
 <?php if ( has_term( array( 'polok', 'orto-polok', 'szettek', 't-shirts', 'blouzakia', 'orto-majica-darila' ), 'product_cat', get_the_id() ) || has_term( array('sady', 'set', 'seta', 'bundles'), 'product_cat', get_the_id() )) : ?>
-<section class="why-section">
-    <div class="container why-container">
-        <!-- Left Video -->
-        <div class="why-col">
-            <div class="video-wrapper">
-                <video autoplay muted loop playsinline class="why-video">
-                    <source src="https://noriks.com/wp-content/uploads/2025/09/noriks_gif_en_2-1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-        <!-- Right Content -->
-        <div class="why-col why-content">
-            <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-                <?php echo get_field( 'singlepp_content_part_h1', 'options' ); ?>
-            </h2>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong><?php echo get_field( 'singlepp_content_part_t_1', 'options' ); ?></strong></p>
-                <p class="description"><?php echo get_field( 'singlepp_content_part_t_2', 'options' ); ?></p>
-            </div>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong><?php echo get_field( 'singlepp_content_part_t_3', 'options' ); ?></strong></p>
-                <p class="description"><?php echo get_field( 'singlepp_content_part_t_4', 'options' ); ?></p>
-            </div>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong><?php echo get_field( 'singlepp_content_part_t_5', 'options' ); ?></strong></p>
-                <p class="description"><?php echo get_field( 'singlepp_content_part_t_6', 'options' ); ?></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- table section -->
-<section class="comparison-section" style="padding-top: 30px;" >
-    <div class="comparison-intro">
-        <!-- <h4 class="highlight"><?php echo get_field("_comp_table_t1", "options"); ?></h4>-->
-        <h1 style="color:white;"><?php echo get_field("_comp_table_t2", "options"); ?></h1>
-        <p style=" opacity: 0.6;" class="note"><?php echo get_field("_comp_table_t3", "options"); ?></p>
-    </div>
-</section>
-
-<section class="comparison-table-section">
-    <div class="comparison-container">
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th class="brand-column">
-                        <?php echo get_field("_comp_table_inside_1", "options"); ?><br>
-                        <div class="price"><?php echo get_field("_comp_table_inside_3", "options"); ?></div>
-                    </th>
-                    <th class="other-brand"><?php echo get_field("_comp_table_inside_2", "options"); ?><br><span><?php echo get_field("_comp_table_inside_4", "options"); ?></span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $_comp_table_fieldlines = get_field("_comp_table_fieldlines","options"); ?>
-                <?php if ($_comp_table_fieldlines): ?>
-                    <?php foreach ($_comp_table_fieldlines as $item): ?>
-                        <tr>
-                            <td><?php echo $item['text']; ?></td>
-                            <td class="bg-best"><span style="background: #496d8f;" class="checkmark">✔</span></td>
-                            <td class="bg-bad"><span class="crossmark">✖</span></td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
-        <p style=" opacity: 0.6;" class="small-note">
-            <?php echo get_field("_comp_table_bottom_text", "options"); ?>
-        </p>
-    </div>
-</section>
-
-<section class="why-section">
-    <div class="container why-container">
-        <!-- Left Video -->
-        <div class="why-col">
-            <div class="video-wrapper">
-                <img style="width: 100%; aspect-ratio: 1/1; object-fit: cover; " src="<?php echo get_template_directory_uri(); ?>/img/majice-3 (1).jpeg">
-            </div>
-        </div>
-        <!-- Right Content -->
-        <div class="why-col why-content">
-            <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-                MIÉRT LESZ EZ A PÓLÓ A STANDARDOD?
-            </h2>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>Valódi életre tervezve</strong></p>
-                <p class="description">Ez a póló egész napos viselésre készült - reggeltől estig. Nem igényel beállítást vagy gondolkodást, egyszerűen jól áll minden helyzetben.</p>
-            </div>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>Szabás, amely érti a testet</strong></p>
-                <p class="description">A szabást úgy fejlesztették, hogy kövesse a test vonalát szorítás nélkül, és kiemelje a megfelelő részeket. Az eredmény egy ápolt, magabiztos megjelenés kényelmetlenség nélkül.</p>
-            </div>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>A különbséget már az első felöltésnél érzed</strong></p>
-                <p class="description">Az anyag puha, könnyű és légáteresztő a bőrön. Már az első viselés után világos, miért válik ez a póló azzá, amiért leggyakrabban nyúlsz.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- table section -->
+    <?php // Nove sekcije (2026-10-28). Prejsnje why bloke in primerjalno tabelo
+    //     zamenja why-majice.php; pogoj ostaja nespremenjen.
+    include get_template_directory() . '/template_parts/product-bottom/why-majice.php'; ?>
 <?php endif; ?>
 
 <!-- here we include new file BOXERIRICE-->
 <?php if ( has_term( array( 'boxerek', 'orto-boxeralsok', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() ) && !has_term( 'black-friday', 'product_cat', get_the_ID() ) ): ?>
-<style>
-    .why-container {
-        max-width: 1440px !important;
-    }
-</style>
-
-<?php if( get_the_ID() == 39181 ): ?>
-    <!-- invlude video views here -->
-<?php endif; ?>
-
-<!-- 1 boksarica -->
-<section class="why-section">
-    <div class="container why-container">
-        <!-- Left Video -->
-        <div class="why-col">
-            <img src="https://noriks.com/hu/wp-content/uploads/2026/04/2026-04-24-09.28.40-1.jpg">
-        </div>
-        <!-- Right Content -->
-        <div class="why-col why-content">
-            <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-                Rugalmas fazon erősebb combokhoz
-            </h2>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>Egész napos kényelem</strong></p>
-                <p class="description">Kifejezetten erősebb combú férfiaknak tervezve. A rugalmas és hajlékony anyag maximális kényelmet biztosít szorítás vagy kellemetlen nyomás nélkül a derék körül. Az alsónemű a helyén marad és nem csúszik fel, így egész nap szabadon mozoghatsz.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* your styles */
-</style>
-
-<!-- 2 boksarica -->
-<section style="background: white;" class="why-section">
-    <div class="container why-container">
-        <!-- Left Video -->
-        <div class="why-col">
-            <img src="https://noriks.com/hu/wp-content/uploads/2026/04/hu-1.jpg">
-        </div>
-        <!-- Right Content -->
-        <div class="why-col why-content">
-            <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-                Kevesebb kopás és sérülés
-            </h2>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>Szuper tartós 💪</strong></p>
-                <p class="description">"Felejtsd el a gyorsan szakadó alsóneműt. A NORIKS boxeralsók tartósabb anyagból készülnek - tovább tartanak és megspórolják a felesleges boltlátogatásokat."</p>
-            </div>
-            <div style="margin-left: 20px;" class="why-point">
-                <p class="description">
-                    ✅ Kevesebb szakadás<br/>
-                    ✅ Kevesebb izzadás<br/>
-                    ✅ Egész napos kényelem<br/>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* your styles */
-</style>
-
-<!-- 3 boksarica -->
-<section class="why-section">
-    <div class="container why-container">
-        <!-- Left Video -->
-        <div class="why-col">
-            <img style="width: 100%; aspect-ratio: 1/1; object-fit: cover; " src="https://noriks.com/hu/wp-content/uploads/2026/04/2026-04-24-09.28.49-1.jpg">
-        </div>
-        <!-- Right Content -->
-        <div class="why-col why-content">
-            <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-                Elegendő hely mindennek
-            </h2>
-            <div style="margin-left: 20px;" class="why-point">
-                <p><strong>Uraim, hagyjátok, hogy a területetek szabadon lélegezzen!</strong></p>A NORIKS alsónemű egész napos tartást biztosít anélkül, hogy elveszítené formáját. A mennyeien puha modal anyag nyúlik és tökéletesen illeszkedik ott, ahol kell. A "felszerelésednek" szánt hely tágasabb és rugalmasabb, így nem érzed magad beszorítva.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* your styles */
-</style>
+    <?php // Nove sekcije (2026-10-28). Prejsnje why bloke in primerjalno tabelo
+    //     zamenja why-bokserice.php; pogoj ostaja nespremenjen.
+    include get_template_directory() . '/template_parts/product-bottom/why-bokserice.php'; ?>
 <?php endif; ?>
 <!-- end BOXERICE -->
 
@@ -1112,6 +929,11 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
         noriks_is_type('red') ||
         noriks_is_type('kneeheat')
   );
+  // MAJICE i BOKSERICE: recenzije BEZ fotografija - isti uvjet kao nove why sekcije.
+  $noriks_no_photos = $noriks_no_photos
+    || has_term( array( 'polok', 'orto-polok', 'szettek', 't-shirts', 'blouzakia', 'orto-majica-darila' ), 'product_cat', get_the_ID() )
+    || has_term( array( 'sady', 'set', 'seta', 'bundles' ), 'product_cat', get_the_ID() )
+    || has_term( array( 'boxerek', 'orto-boxeralsok', 'mpoxerakia', 'boxers', 'boxerakia' ), 'product_cat', get_the_ID() );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
 
