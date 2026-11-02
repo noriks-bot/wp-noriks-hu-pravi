@@ -44,7 +44,7 @@ $nwc_testimonials = array(
   array( 'Remek dolog', 'Remek dolog, egyenletesen hűt, és kiloccsanás nélkül tölt.', 'Emma Molenaar' ),
   array( 'Praktikus', 'Praktikus, hogy a dugó le is zárja az üveget; egy csepp sem kerül a terítőre.', 'Lars van Dam' ),
   array( 'Használom', 'Főleg roséhoz használom — az utolsó pohárig friss marad.', 'Julian Rietveld' ),
-  array( 'Jobban hűt', 'Jobban hűt, mint a külön hűtőbetétek, amelyek eddig voltak. ✨', 'Nina Mulder' ),
+  array( 'Jobban hűt', 'Jobban hűt, mint a külön hűtőbetétek, amelyeket eddig használtam. ✨', 'Nina Mulder' ),
   array( 'Gyorsan hat', 'Gyorsan hat; tíz perc alatt érezhetően hidegebb.', 'Sara Smits' ),
   array( 'Strapabíró', 'Praktikus és strapabíró, pont ilyet kerestem.', 'Jesse de Bruin' ),
 );

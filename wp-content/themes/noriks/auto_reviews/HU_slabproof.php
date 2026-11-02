@@ -10,11 +10,11 @@ $auto_reviews_en = array(
     array("name" => "Tamás N.", "text" => "Azt hittem, a cipőmmel van a baj. Kiderült, hogy csak jó zokni kellett."),
     array("name" => "Sándor B.", "text" => "A sarok alatti párnázás zseniális. Az első naptól érezni a betonon."),
     array("name" => "József V.", "text" => "Már nem izzadok a bakancsban. Ezek a zoknik tényleg szellőznek."),
-    array("name" => "Ferenc Z.", "text" => "Két párat vettem, rendeltem még négyet. Másra nincs szükségem."),
+    array("name" => "Ferenc Z.", "text" => "Két párt vettem, rendeltem még négyet. Másra nincs szükségem."),
     array("name" => "Csaba F.", "text" => "Végre egy zokni, ami nem megy tönkre egy hónap után. A megerősített sarok tényleg működik."),
     array("name" => "Balázs H.", "text" => "18 éve vagyok villamos műszerész, ezek a legjobb zoknik, amiket valaha hordtam."),
     array("name" => "Róbert R.", "text" => "Megerősített sarok és orr, párna a sarok alatt. Komoly munkazokni."),
     array("name" => "Gergely D.", "text" => "Kényelmes viselet, nem szorít, nem csúszik. Minden, ami kell."),
-    array("name" => "Norbert J.", "text" => "Öt csillag. Rögtön három párat rendeltem, miután kipróbáltam az elsőt."),
+    array("name" => "Norbert J.", "text" => "Öt csillag. Rögtön három párt rendeltem, miután kipróbáltam az elsőt."),
     array("name" => "Tibor G.", "text" => "Egész nap betonon dolgozom. Végre egy zokni, ami a műszak végéig kényelmes."),
 );

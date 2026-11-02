@@ -7,7 +7,7 @@ $auto_reviews_en = array(
     array("name" => "Zoltán R.", "text" => "Nagyon izzad a lábam a védőcipőben. Ezekkel a nap végére sokkal szárazabb, és nincs kellemetlen szag."),
     array("name" => "Attila B.", "text" => "A boltozat alatti pánt érezhető – a zokni a helyén marad, és egész nap nem csúszik le."),
     array("name" => "Sándor Sz.", "text" => "Télen kint dolgozom az állványon. A lábam akkor is meleg, ha jéghideg a reggel."),
-    array("name" => "Ferenc L.", "text" => "3 párat vettem, most rendelek még. A legjobb munkazokni, ami valaha volt."),
+    array("name" => "Ferenc L.", "text" => "3 párt vettem, most rendelek még. A legjobb munkazokni, ami valaha volt."),
     array("name" => "József V.", "text" => "A mandzsetta erős, de nem szorít. Nem kell folyton felhúzogatnom."),
     array("name" => "Tibor H.", "text" => "Szerelőként egész nap betonon vagyok. Óriási a különbség kényelemben."),
     array("name" => "Tamás G.", "text" => "Az L méret tökéletes a 44-es lábamra. A sarok és az orr meg van erősítve, nincs lyuk."),
