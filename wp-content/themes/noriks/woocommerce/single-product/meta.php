@@ -516,6 +516,10 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
                 <strong>NORIKS FIT Woman</strong> formázó póló, amelyben a mintázat magába az anyagba van szőve, nem rányomtatva. A széles pánt a hason és a csípőn halad át, egy másik pedig a háton.<br><br>A kompresszió szélességében oszlik el, nem egy pontba szorítva, ezért semmi nem vág be. A has sima marad, a derék keskenyebb, a hát pedig olyan támaszt kap, amely segít egyenesebben állni.<br><br>A kötés varrás nélküli, vékony és matt — eltűnik ing, zakó vagy testhezálló ruha alatt. Napközben nem tekeredik fel, és nem rajzolódik ki a ruha alatt.<br><br>Mossa gépben 30 °C-on, fehérítő, vasalás és szárítógép nélkül. Három színben (fekete, sötétszürke, rózsaszín) és S-től 3XL-ig kapható. Ha két méret között van, vegye a nagyobbat.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
+
+                A NORIKS Tradesman vastag bambusz munkazokni mindenkinek, aki egész nap munkabakancsban áll és jár – építkezésen, raktárban, műhelyben vagy télen a szabadban. A puha párnázás tompít minden lépést a betonon és a fagyos talajon, a megerősített sarok és orr kibírja a merev bakancsot, a boltozatpánt és a dupla mandzsetta pedig egész műszakban a helyén tartja a zoknit.<br><br><strong>Összetétel:</strong> 56 % bambusz liocell, 38 % nejlon, 6 % elasztán – természetesen ellenáll a kellemetlen szagoknak, elvezeti a nedvességet, és nagyon puha a bőrön. <strong>Kialakítás:</strong> 360°-os bokatámasz, boltozatpánt, párnázás, hálós szellőzés, dupla mandzsetta húzófüllel, megerősített sarok. Magasság: klasszikus (crew), kb. 18 cm a saroktól a peremig.<br><br><strong>Méretek (EU cipőméret):</strong> M 39–42, L 42,5–46, XL 46,5–49,5. Színek: fekete és fehér. <strong>Ápolás:</strong> mossa hidegen, szárítsa levegőn.<br><br>A NORIKS-nál 30 napja van a pénz visszakérésére, 25.000 Ft felett ingyenes a szállítás, és utánvéttel fizethet.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
 
                 A <strong>NORIKS SlabProof</strong> munkazokni azoknak készült, akik egész nap betonon állnak. A munkabakancs védi a lábat, de nem tompít — a beton semmit sem nyel el, így minden lépés a sarokba, a térdbe és a hátba megy. Az egyetlen, ami ezt az ütést tompíthatja, a zokni.<br><br>Ezért kapott <strong>zónás párnázást</strong>: sűrű párnák a sarok és az elülső talprész alatt, pontosan ott, ahol a beton üt, mindenhol máshol pedig vékony kötés, így a bakancs nem lesz szűk. A sarok és az orr dupla kötésű nejlonnal van megerősítve, azon a két helyen, ahol a zoknik először adják meg magukat.<br><br>A lábfej tetején lévő szellős háló és az izzadságot elvezető kötés az egész műszak alatt szárazon tartja a lábat. Az anyag gyapjúmentes, így semmi sem szúr, és a láb nem melegszik túl.<br><br>A széles, bordázott szegély fent tartja a zoknit anélkül, hogy szorítaná a vádlit, a füles, mély sarokzseb nem engedi, hogy lecsússzon a bakancsba, a boltozatpánt pedig megtartja a lábat, hogy ne csússzon.<br><br>Fekete színben kapható, M (EU 39–42), L (EU 43–45) és XL (EU 46–49) méretben. <strong>30 napja van a pénz visszaigénylésére</strong>, a szállítás pedig ingyenes 25.000 Ft feletti rendelésnél.
@@ -709,6 +713,35 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
                   
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">A méretet a <strong>cipőmérete (EU)</strong> alapján válassza ki.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Méret</th>
+                  <th style="padding:9px 8px;text-align:left;">Cipőméret (EU) – férfi</th>
+                  <th style="padding:9px 8px;text-align:left;">Cipőméret (EU) – női</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ( noriks_tradesman_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fdf8f5' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <?php foreach ( $r as $j => $c ) : ?>
+                    <td style="padding:9px 8px;<?php echo $j ? '' : 'font-weight:700;white-space:nowrap;'; ?>"><?php echo esc_html( $c ); ?></td>
+                    <?php endforeach; ?>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:12px 0 0;line-height:1.6;">Két méret között van? Válassza a nagyobbat.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ha a méret nem megfelelő, 30 napja van a visszaküldésre vagy cserére.</p>
+          </div>
+
     <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
 
           <div class="noriks-size">
@@ -801,7 +834,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
 
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na kidsnest -->
-    <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : ?>
+    <?php if ( ( ! ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
