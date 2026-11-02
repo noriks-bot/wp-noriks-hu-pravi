@@ -516,6 +516,10 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
                 <strong>NORIKS FIT Woman</strong> formázó póló, amelyben a mintázat magába az anyagba van szőve, nem rányomtatva. A széles pánt a hason és a csípőn halad át, egy másik pedig a háton.<br><br>A kompresszió szélességében oszlik el, nem egy pontba szorítva, ezért semmi nem vág be. A has sima marad, a derék keskenyebb, a hát pedig olyan támaszt kap, amely segít egyenesebben állni.<br><br>A kötés varrás nélküli, vékony és matt — eltűnik ing, zakó vagy testhezálló ruha alatt. Napközben nem tekeredik fel, és nem rajzolódik ki a ruha alatt.<br><br>Mossa gépben 30 °C-on, fehérítő, vasalás és szárítógép nélkül. Három színben (fekete, sötétszürke, rózsaszín) és S-től 3XL-ig kapható. Ha két méret között van, vegye a nagyobbat.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+                A <strong>NORIKS SlabProof</strong> munkazokni azoknak készült, akik egész nap betonon állnak. A munkabakancs védi a lábat, de nem tompít — a beton semmit sem nyel el, így minden lépés a sarokba, a térdbe és a hátba megy. Az egyetlen, ami ezt az ütést tompíthatja, a zokni.<br><br>Ezért kapott <strong>zónás párnázást</strong>: sűrű párnák a sarok és az elülső talprész alatt, pontosan ott, ahol a beton üt, mindenhol máshol pedig vékony kötés, így a bakancs nem lesz szűk. A sarok és az orr dupla kötésű nejlonnal van megerősítve, azon a két helyen, ahol a zoknik először adják meg magukat.<br><br>A lábfej tetején lévő szellős háló és az izzadságot elvezető kötés az egész műszak alatt szárazon tartja a lábat. Az anyag gyapjúmentes, így semmi sem szúr, és a láb nem melegszik túl.<br><br>A széles, bordázott szegély fent tartja a zoknit anélkül, hogy szorítaná a vádlit, a füles, mély sarokzseb nem engedi, hogy lecsússzon a bakancsba, a boltozatpánt pedig megtartja a lábat, hogy ne csússzon.<br><br>Fekete színben kapható, M (EU 39–42), L (EU 43–45) és XL (EU 46–49) méretben. <strong>30 napja van a pénz visszaigénylésére</strong>, a szállítás pedig ingyenes 25.000 Ft feletti rendelésnél.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bowl', $current_product_id) ): ?>
 
                 <strong>NORIKS Bowl</strong> emelt etető- és itatótál kis testű kutyáknak. A tál 11 cm magas acélállványon áll és 15°-ban megdöntött, így a kutya állva, természetesebb fejtartással eszik ahelyett, hogy a nyakát a padlóig hajlítaná.<br><br>A tál sekély (5 cm), ezért a bajusz nem ütközik a peremnek, és az eledel sem tolódik kifelé. Az átmérő 15 cm, az űrtartalom kb. 430 ml — elég egy adag eledelhez vagy vízhez kis kutya számára.<br><br>A tál és az állvány is rozsdamentes acélból készült. A sima felület nem szívja magába a szagokat és nem tartja meg az ételmaradékot úgy, mint a műanyag; elég meleg vízzel és mosogatószerrel leöblíteni.<br><br>Kis fajtáknak ajánljuk, például tacskónak, francia bulldognak, schnauzernek, mopsznak és máltai selyemkutyának.
@@ -705,6 +709,31 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
                   
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Rendelje a <strong>szokásos cipőméretét</strong>. A kötött anyag nyúlik, így minden méret több cipőméretet is lefed.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#d2632e;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Méret</th>
+                  <th style="padding:9px 10px;text-align:left;">EU cipőméret</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slabproof_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#faf7f0' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Két méret között van?</strong> Válassza a nagyobbat — a sarokpárna és a boltozatpánt csak akkor kerül a helyére, ha a zokni nem túl kicsi.</p>
+          </div>
+
     <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
 
           <div class="kwm-size">
@@ -779,7 +808,11 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) ): ?>
+             <?php if( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
+
+                Gépi mosás hidegen, a munkaruhával együtt. Szárítógépben szárítható alacsony hőfokon. Kézi mosás, kötélen szárítás és speciális mosószer nélkül.
+
+             <?php elseif( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $current_product_id) ): ?>
 
                 Mossa 30–40 °C-on, kímélő programon. Öblítő és fehérítő nélkül. Levegőn szárítsa. Több száz mosáson keresztül megőrzik nedvszívó képességüket.
 
