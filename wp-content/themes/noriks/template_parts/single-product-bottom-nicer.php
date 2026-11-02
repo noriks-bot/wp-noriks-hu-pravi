@@ -45,6 +45,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-slabproof' );
     } elseif ( noriks_is_type( 'tradesman' ) ) {
         get_template_part( 'template_parts/product-bottom/why-tradesman' );
+    } elseif ( noriks_is_type( 'slim' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-slim' );
     }
 }
 ?>
@@ -358,7 +360,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
         <div style="background: #f9f9f9;padding: 0;padding-left: 10px; padding-right: 10px;" class="comparison-intro comparison-intro-gray ">
             <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
             <h1 style="color:black; margin-bottom: 4px;">
-            <?php if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Nem csak Ön várja, hogy egy egész műszak után végre kivehesse a lábát a munkabakancsból.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Nem csak Önnek ég a lába egy betonon töltött műszak után.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>
+            <?php if ( function_exists('noriks_is_type') && noriks_is_type('slim') ): ?>Nem csak Ön keres sima vonalat a ruha alatt.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Nem csak Ön várja, hogy egy egész műszak után végre kivehesse a lábát a munkabakancsból.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Nem csak Önnek ég a lába egy betonon töltött műszak után.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>
             
             Nem csak te keresed a ráncmentes, sima bőrt.
             <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>
@@ -392,7 +394,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
                 Nem vagy egyedül a tökéletes boxeralsó keresésében.
             <?php endif; ?>
             </h1>
-            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Szakik ezrei dolgoznak már NORIKS Tradesman zokniban – puha párnázás, megerősített sarok és boltozatpánt.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Szakik ezrei dolgoznak már NORIKS SlabProof zokniban – zónás párnázás ott, ahol a beton üt, megerősített sarok és orr, és száraz láb az egész műszak alatt.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Több ezer nő használja már a NORIKS HERS szilikonos kollagén tapaszokat a simább, feszesebb bőrért.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>Több ezer férfi hordja már a NORIKS boxert – kényelem, ami egész nap kitart.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Emberek ezrei használják már a NORIKS FisioRestet a kisebb nyakfájdalomért és feszültségért – trakció, rezgés és meleg egy eszközben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Emberek ezrei használják már a NORIKS bütyökkorrigálót a kisebb fájdalomért és a nagylábujj helyesebb tartásáért – otthon, tévénézés vagy alvás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Emberek ezrei viselik már a NORIKS ortopédiai hátövet a kisebb fájdalomért és stabilabb hátért – munka közben, teheremelésnél és hosszú ülés során.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Több ezer férfi hordja már a NORIKS nedvszívó boxeralsót a szárazságért és az önbizalomért – betétek és pelenkák nélkül.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós pólót a kisimított hasért, a jobb testtartásért és a több önbizalomért.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Vásárlók ezrei használják már a NORIKS ErgoSit ortopéd ülőpárnát a farokcsont-, hát- és csípőfájdalom nélküli ülésért – az autóban, az irodában és otthon.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Több ezer szülő cserélte már le a hagyományos párnát a NORIKS KidsNestre – csendesebb éjszakák, orron át légzés és valóban pihentető alvás.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
+            <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('slim') ): ?>Nők ezrei hordják már a NORIKS Slim-et – alakformáló fehérneműt, amely lesimítja a vonalat, és a helyén marad.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ): ?>Szakik ezrei dolgoznak már NORIKS Tradesman zokniban – puha párnázás, megerősített sarok és boltozatpánt.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ): ?>Szakik ezrei dolgoznak már NORIKS SlabProof zokniban – zónás párnázás ott, ahol a beton üt, megerősített sarok és orr, és száraz láb az egész műszak alatt.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Több ezer nő használja már a NORIKS HERS szilikonos kollagén tapaszokat a simább, feszesebb bőrért.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>Több ezer férfi hordja már a NORIKS boxert – kényelem, ami egész nap kitart.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Emberek ezrei használják már a NORIKS FisioRestet a kisebb nyakfájdalomért és feszültségért – trakció, rezgés és meleg egy eszközben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Emberek ezrei használják már a NORIKS bütyökkorrigálót a kisebb fájdalomért és a nagylábujj helyesebb tartásáért – otthon, tévénézés vagy alvás közben.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Emberek ezrei viselik már a NORIKS ortopédiai hátövet a kisebb fájdalomért és stabilabb hátért – munka közben, teheremelésnél és hosszú ülés során.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós zoknit a könnyebb, pihentebb lábakért – munkában, utazás közben és edzésen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Több ezer férfi hordja már a NORIKS nedvszívó boxeralsót a szárazságért és az önbizalomért – betétek és pelenkák nélkül.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Több ezer férfi hordja már a NORIKS kompressziós pólót a kisimított hasért, a jobb testtartásért és a több önbizalomért.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Vásárlók ezrei használják már a NORIKS ErgoSit ortopéd ülőpárnát a farokcsont-, hát- és csípőfájdalom nélküli ülésért – az autóban, az irodában és otthon.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Több ezer szülő cserélte már le a hagyományos párnát a NORIKS KidsNestre – csendesebb éjszakák, orron át légzés és valóban pihentető alvás.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
         </div>
     </section>
 </div>
@@ -490,6 +492,7 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
   if ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') ) { $rv_fallback_title = 'NORIKS KneeHeat térdmelegítő és masszírozó'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('slabproof') ) { $rv_fallback_title = 'NORIKS SlabProof™ munkazokni'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ) { $rv_fallback_title = 'NORIKS Tradesman munkazokni'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('slim') ) { $rv_fallback_title = 'NORIKS Slim alakformáló bugyi'; }
 
 // Include review pools (own pool per product group)
 if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
@@ -508,6 +511,8 @@ if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_slabproof.php';
 } elseif ( function_exists('noriks_is_type') && noriks_is_type('tradesman') ) {
   include get_stylesheet_directory() . '/auto_reviews/HU_tradesman.php';
+} elseif ( function_exists('noriks_is_type') && noriks_is_type('slim') ) {
+  include get_stylesheet_directory() . '/auto_reviews/HU_slim.php';
 } else
 if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
     include get_stylesheet_directory() . '/auto_reviews/HU_hyd.php';
@@ -939,7 +944,8 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
         noriks_is_type('red') ||
         noriks_is_type('kneeheat') ||
         noriks_is_type('slabproof') ||
-        noriks_is_type('tradesman')
+        noriks_is_type('tradesman') ||
+        noriks_is_type('slim')
   );
   // MAJICE i BOKSERICE: recenzije BEZ fotografija - isti uvjet kao nove why sekcije.
   $noriks_no_photos = $noriks_no_photos
@@ -954,7 +960,7 @@ $noriks_no_photos = function_exists('noriks_is_type') && (
   // Izdelki z lastnim imenom v karticah mnenj ne smejo dobiti nakljucnega izdelka iz kataloga.
   $rv_own_name = ( function_exists('noriks_is_type') && (
       noriks_is_type('cloud') || noriks_is_type('cloath') || noriks_is_type('hyd') || noriks_is_type('snug')
-   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof') || noriks_is_type('tradesman')
+   || noriks_is_type('kompwom') || noriks_is_type('bowl') || noriks_is_type('pal') || noriks_is_type('red') || noriks_is_type('kneeheat') || noriks_is_type('slabproof') || noriks_is_type('tradesman') || noriks_is_type('slim')
    || noriks_is_type('controlpro') || noriks_is_type('kidsnest') || noriks_is_type('ortopedski-jastuk')
    || noriks_is_type('bunion') || noriks_is_type('fisiorest') || noriks_is_type('ortopas')
    || noriks_is_type('norikshers') || noriks_is_type('kompresijske-nogavice') ) );
@@ -1845,6 +1851,28 @@ $kompwom_faq = array(
   ),
 );
 
+$is_slim = ( function_exists('noriks_is_type') && noriks_is_type('slim') );
+$slim_faq = array(
+  array('questioon' => 'Hogyan válasszam ki a méretet?',
+    'answer'    => 'Mérje meg a <strong>derékbőségét</strong> a törzs legkeskenyebb részén, kicsivel a köldök fölött, és vesse össze a mérettáblázattal (XS-től 5XL-ig). Ha két méret között van, válassza a <strong>nagyobbat</strong>.'),
+  array('questioon' => 'Legördül?',
+    'answer'    => 'Nem. A széles, keresztezett pánt az egész derekat körbeöleli — elöl, oldalt és hátul —, így a nyomás eloszlik, ahelyett, hogy egy vonalban szorítana. A bugyi akkor is a helyén marad, amikor ül.'),
+  array('questioon' => 'Látszik a ruha alatt?',
+    'answer'    => 'Nem. A kötés vékony és sima, vastag varrások nélkül, így eltűnik testhezálló ruha, farmer és leggings alatt.'),
+  array('questioon' => 'Bugyi helyett vagy fölötte kell hordani?',
+    'answer'    => 'Ahogy Önnek kényelmesebb. A legtöbben önmagában hordják, hagyományos fehérneműként, de vékony bugyi fölött is viselhető.'),
+  array('questioon' => 'Hordhatom szülés után?',
+    'answer'    => 'Sok anyuka hordja szülés után, mert puha és szellős. Császármetszés után, vagy ha bizonytalan, viselés előtt konzultáljon orvosával.'),
+  array('questioon' => 'Mennyire szorít?',
+    'answer'    => 'Szilárdan, de nem szorosan. Normálisan kell tudnia lélegezni és ülni. Ha valahol dörzsöl vagy mély nyomot hagy, válassza a nagyobb méretet.'),
+  array('questioon' => 'Hogyan kell mosni?',
+    'answer'    => 'Kézzel vagy gépben <strong>30 °C-on</strong>, mosózsákban. Fehérítő, vasalás és szárítógép nélkül — levegőn szárítsa.'),
+  array('questioon' => 'Milyen színekben kapható?',
+    'answer'    => 'Hat színben: fekete, bézs, sötétkék, lila, fukszia és szilva. A színt és a méretet ezen az oldalon választja ki, mielőtt a kosárba teszi.'),
+  array('questioon' => 'Visszaküldhetem?',
+    'answer'    => 'Igen, <strong>30 napja</strong> van a pénz visszakérésére vagy a méret cseréjére. Elég egy e-mail, űrlapok nélkül.'),
+);
+
 $is_tradesman = ( function_exists('noriks_is_type') && noriks_is_type('tradesman') );
 $tradesman_faq = array(
   array('questioon' => 'Miből készül?',
@@ -2015,11 +2043,12 @@ $kneeheat_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_tradesman, $tradesman_faq, $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_slim, $slim_faq, $is_tradesman, $tradesman_faq, $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
   if ( $is_tradesman && $is_info ) { return $tradesman_faq; }
+  if ( $is_slim && $is_info ) { return $slim_faq; }
   if ( $is_slabproof && $is_info ) { return $slabproof_faq; }
   if ( $is_bowl && $is_info ) { return $bowl_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }

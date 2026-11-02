@@ -516,6 +516,10 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
                 <strong>NORIKS FIT Woman</strong> formázó póló, amelyben a mintázat magába az anyagba van szőve, nem rányomtatva. A széles pánt a hason és a csípőn halad át, egy másik pedig a háton.<br><br>A kompresszió szélességében oszlik el, nem egy pontba szorítva, ezért semmi nem vág be. A has sima marad, a derék keskenyebb, a hát pedig olyan támaszt kap, amely segít egyenesebben állni.<br><br>A kötés varrás nélküli, vékony és matt — eltűnik ing, zakó vagy testhezálló ruha alatt. Napközben nem tekeredik fel, és nem rajzolódik ki a ruha alatt.<br><br>Mossa gépben 30 °C-on, fehérítő, vasalás és szárítógép nélkül. Három színben (fekete, sötétszürke, rózsaszín) és S-től 3XL-ig kapható. Ha két méret között van, vegye a nagyobbat.
 
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slim', $current_product_id) ): ?>
+
+                A <strong>NORIKS Slim</strong> magas derekú alakformáló bugyi. A széles pánt keresztben fut át a hason, és folytatódik a csípőn és a háton, így a kompresszió az egész derék körül oszlik el, nem egyetlen vonalba szorítva.<br><br>A has lesimul, a derék keskenyebbnek látszik, a ruha pedig egyenesebben áll — nincs redő a nadrág fölött, és nem rajzolódik ki perem a ruha alatt.<br><br>A kötés vékony, puha és szellős, rugalmas hálós betétekkel és pamut betéttel. A bugyi nem gördül le és nem csúszik napközben, így reggel felveszi, és estig megfeledkezik róla.<br><br>Hat színben (fekete, bézs, sötétkék, lila, fukszia és szilva) és XS-től 5XL-ig kapható. A méretet a derékbőség alapján válassza; ha két méret között van, válassza a nagyobbat.
+
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
                 A NORIKS Tradesman vastag bambusz munkazokni mindenkinek, aki egész nap munkabakancsban áll és jár – építkezésen, raktárban, műhelyben vagy télen a szabadban. A puha párnázás tompít minden lépést a betonon és a fagyos talajon, a megerősített sarok és orr kibírja a merev bakancsot, a boltozatpánt és a dupla mandzsetta pedig egész műszakban a helyén tartja a zoknit.<br><br><strong>Összetétel:</strong> 56 % bambusz liocell, 38 % nejlon, 6 % elasztán – természetesen ellenáll a kellemetlen szagoknak, elvezeti a nedvességet, és nagyon puha a bőrön. <strong>Kialakítás:</strong> 360°-os bokatámasz, boltozatpánt, párnázás, hálós szellőzés, dupla mandzsetta húzófüllel, megerősített sarok. Magasság: klasszikus (crew), kb. 18 cm a saroktól a peremig.<br><br><strong>Méretek (EU cipőméret):</strong> M 39–42, L 42,5–46, XL 46,5–49,5. Színek: fekete és fehér. <strong>Ápolás:</strong> mossa hidegen, szárítsa levegőn.<br><br>A NORIKS-nál 30 napja van a pénz visszakérésére, 25.000 Ft felett ingyenes a szállítás, és utánvéttel fizethet.
@@ -713,6 +717,33 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
         
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/hu/wp-content/uploads/2026/02/Nogavice_tabela_velikosti_hu.png">
                   
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slim', $current_product_id) ): ?>
+
+          <div class="slm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">A méretet a <strong>derékbőség</strong> alapján válassza, ne a megszokott ruhaméret szerint. Ha két méret között van, válassza a <strong>nagyobbat</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a3336b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Méret</th>
+                  <th style="padding:9px 10px;text-align:left;">EU méret</th>
+                  <th style="padding:9px 10px;text-align:left;">Derékbőség</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slim_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf2f6' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #f1e3ea;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Hogyan mérjen:</strong> tekerje a mérőszalagot a törzs legkeskenyebb része köré, kicsivel a köldök fölött. A szalag legyen vízszintes és simuljon, de ne szorítson.</p>
+          </div>
+
     <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
           <div class="noriks-size">
