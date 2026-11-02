@@ -522,7 +522,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('tradesman', $current_product_id) ): ?>
 
-                A NORIKS Tradesman vastag bambusz munkazokni mindenkinek, aki egész nap munkabakancsban áll és jár – építkezésen, raktárban, műhelyben vagy télen a szabadban. A puha párnázás tompít minden lépést a betonon és a fagyos talajon, a megerősített sarok és orr kibírja a merev bakancsot, a boltozatpánt és a dupla mandzsetta pedig egész műszakban a helyén tartja a zoknit.<br><br><strong>Összetétel:</strong> 56 % bambusz liocell, 38 % nejlon, 6 % elasztán – természetesen ellenáll a kellemetlen szagoknak, elvezeti a nedvességet, és nagyon puha a bőrön. <strong>Kialakítás:</strong> 360°-os bokatámasz, boltozatpánt, párnázás, hálós szellőzés, dupla mandzsetta húzófüllel, megerősített sarok. Magasság: klasszikus (crew), kb. 18 cm a saroktól a peremig.<br><br><strong>Méretek (EU cipőméret):</strong> M 39–42, L 42,5–46, XL 46,5–49,5. Színek: fekete és fehér. <strong>Ápolás:</strong> mossa hidegen, szárítsa levegőn.<br><br>A NORIKS-nál 30 napja van a pénz visszakérésére, 25.000 Ft felett ingyenes a szállítás, és utánvéttel fizethet.
+                A NORIKS Tradesman vastag bambusz munkazokni mindenkinek, aki egész nap munkabakancsban áll és jár – építkezésen, raktárban, műhelyben vagy télen a szabadban. A puha párnázás tompít minden lépést a betonon és a fagyos talajon, a megerősített sarok és orr kibírja a merev bakancsot, a boltozatpánt és a dupla mandzsetta pedig egész műszakban a helyén tartja a zoknit.<br><br><strong>Összetétel:</strong> 56 % bambusz liocell, 38 % nejlon, 6 % elasztán – természetesen ellenáll a kellemetlen szagoknak, elvezeti a nedvességet, és nagyon puha a bőrön. <strong>Kialakítás:</strong> 360°-os bokatámasz, boltozatpánt, párnázás, hálós szellőzés, dupla mandzsetta húzófüllel, megerősített sarok. Magasság: klasszikus (crew), kb. 18 cm a saroktól a peremig.<br><br><strong>Méretek (EU cipőméret):</strong> 39–42, 43–45, 46–49. Szín: fekete. <strong>Ápolás:</strong> mossa hidegen, szárítsa levegőn.<br><br>A NORIKS-nál 30 napja van a pénz visszakérésére, 25.000 Ft felett ingyenes a szállítás, és utánvéttel fizethet.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('slabproof', $current_product_id) ): ?>
 
@@ -756,9 +756,7 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
-                  <th style="padding:9px 8px;text-align:left;">Méret</th>
-                  <th style="padding:9px 8px;text-align:left;">Cipőméret (EU) – férfi</th>
-                  <th style="padding:9px 8px;text-align:left;">Cipőméret (EU) – női</th>
+                  <th style="padding:9px 8px;text-align:left;">Cipőméret (EU)</th>
                 </tr>
               </thead>
               <tbody>
@@ -784,7 +782,6 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#d2632e;color:#fff;">
-                  <th style="padding:9px 10px;text-align:left;">Méret</th>
                   <th style="padding:9px 10px;text-align:left;">EU cipőméret</th>
                 </tr>
               </thead>
@@ -794,7 +791,6 @@ A NORIKS boxeralsók 95% modál és 5% elasztán prémium keverékéből készü
                   $bg = ( $i % 2 ) ? '#faf7f0' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>

@@ -15,7 +15,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
         <h2 class="wslabproof__h2">Párnázott munkazokni, <em>boka alatti szabással</em></h2>
         <p class="wslabproof__p">A NORIKS SlabProof párnázott munkazokni betonra, boka alatti szabással. Munkacipőhöz, acélorrú védőcipőhöz és forró, rövidnadrágos napokra készült, amikor a magas zokni csak útban van.</p>
         <p class="wslabproof__p">A talp alatt ugyanaz a párnázás van, mint a magasabb modellnél: sűrű a sarok és az elülső talprész alatt, ahol a beton a legerősebben üt. A lábfej tetején hálós rész fut, a sarok és az orr meg van erősítve, a sarkon lévő megemelt fül pedig megakadályozza, hogy a cipő hátulja feltörje a bőrt.</p>
-        <p class="wslabproof__p">A zokni fekete, és három méretben kapható: M, L és XL. Gépben mosható hidegen, és szárítógépben szárítható alacsony hőfokon, a munkaruhával együtt — kézi mosás és speciális mosószer nélkül.</p>
+        <p class="wslabproof__p">A zokni fekete, és három méretben kapható: 39–42, 43–45 és 46–49. Gépben mosható hidegen, és szárítógépben szárítható alacsony hőfokon, a munkaruhával együtt — kézi mosás és speciális mosószer nélkül.</p>
         <p class="wslabproof__zak">Párna a betonhoz, alacsony munkacipőhöz szabva.</p>
       </div>
     </div>

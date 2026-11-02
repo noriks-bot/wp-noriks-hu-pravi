@@ -7,7 +7,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $noriks_st = array(
     'uvod'    => 'A méretet a <strong>cipőmérete (EU)</strong> alapján válassza ki.',
-    'glava'   => array( 'Méret', 'Cipőméret (EU) – férfi', 'Cipőméret (EU) – női' ),
+    'glava'   => array( 'Cipőméret (EU)' ),
     'vrstice' => function_exists( 'noriks_tradesman_sizes' ) ? noriks_tradesman_sizes() : array(),
     'opomba'  => 'Két méret között van? Válassza a nagyobbat.',
 );
