@@ -13,22 +13,22 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ALACSONY SZABÁS</div>
         <h2 class="wslabproof__h2">Párnázott munkazokni, <em>boka alatti szabással</em></h2>
-        <p class="wslabproof__p">A NORIKS SlabProof párnázott munkazokni betonra, boka alatti szabással. Munkacipőhöz, acélorrú védőcipőhöz és forró, rövidnadrágos napokra készült, amikor a magas zokni csak útban van.</p>
-        <p class="wslabproof__p">A talp alatt ugyanaz a párnázás van, mint a magasabb modellnél: sűrű a sarok és az elülső talprész alatt, ahol a beton a legerősebben üt. A lábfej tetején hálós rész fut, a sarok és az orr meg van erősítve, a sarkon lévő megemelt fül pedig megakadályozza, hogy a cipő hátulja feltörje a bőrt.</p>
+        <p class="wslabproof__p">A NORIKS SlabProof párnázott munkazokni egész napos talpon álláshoz, boka alatti szabással. Munkacipőhöz, acélorrú védőcipőhöz és forró, rövidnadrágos napokra készült, amikor a magas zokni csak útban van.</p>
+        <p class="wslabproof__p">A talp alatt ugyanaz a párnázás van, mint a magasabb modellnél: sűrű a sarok és az elülső talprész alatt, ahol a lépés a legerősebben üt. A lábfej tetején hálós rész fut, a sarok és az orr meg van erősítve, a sarkon lévő megemelt fül pedig megakadályozza, hogy a cipő hátulja feltörje a bőrt.</p>
         <p class="wslabproof__p">A zokni fekete, és három méretben kapható: 39–42, 43–45 és 46–49. Gépben mosható hidegen, és szárítógépben szárítható alacsony hőfokon, a munkaruhával együtt — kézi mosás és speciális mosószer nélkül.</p>
-        <p class="wslabproof__zak">Párna a betonhoz, alacsony munkacipőhöz szabva.</p>
+        <p class="wslabproof__zak">Párna minden munkanapra, alacsony munkacipőhöz szabva.</p>
       </div>
     </div>
   </section>
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Párnázás pontosan ott, ahol a beton a legerősebben üt" loading="eager" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Párnázás pontosan ott, ahol a lépés a legerősebben üt" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ZÓNÁS PÁRNÁZÁS</div>
-        <h2 class="wslabproof__h2">Párnázás pontosan ott, ahol <em>a beton a legerősebben üt</em></h2>
+        <h2 class="wslabproof__h2">Párnázás pontosan ott, ahol <em>a lépés a legerősebben üt</em></h2>
         <p class="wslabproof__p">A párnázást nem mi találtuk ki. De a NORIKS SlabProof olyan zokni, amelynek a párnázását arra a padlóra tervezték, amin egész nap áll: sűrű ott, ahol a sarok és az elülső talprész üt, mindenhol máshol vékony, hogy soha ne töltse ki a cipőt, és ne szorítsa a lábfejet.</p>
-        <p class="wslabproof__p">A sűrű párnák a sarok és az elülső talprész alatt vannak, pontosan ott, ahol a beton minden lépésnél a legjobban üt. A lábfej többi részén a zokni vékony, így tompítja a lépést anélkül, hogy a cipő szűknek tűnne. A párnák az ütési pontokhoz igazodnak, nem egyenletesen oszlanak el az egész talpon.</p>
+        <p class="wslabproof__p">A sűrű párnák a sarok és az elülső talprész alatt vannak, pontosan ott, ahol minden lépésnél a legnagyobb ütés éri a lábat. A lábfej többi részén a zokni vékony, így tompítja a lépést anélkül, hogy a cipő szűknek tűnne. A párnák az ütési pontokhoz igazodnak, nem egyenletesen oszlanak el az egész talpon.</p>
         <p class="wslabproof__p">A boka alatti alacsony szabás munkacipőhöz, acélorrú védőcipőhöz és forró, rövidnadrágos napokra készült. A talp alatt ugyanaz a zónás párnázás van, mint a magasabb modellnél, csak a zokni a boka alatt végződik. A sarkon lévő fül ráadásul védi a sarkat az alacsony cipő peremétől.</p>
         <p class="wslabproof__zak">Sűrű a sarok és az elülső talprész alatt, mindenhol máshol vékony.</p>
       </div>
@@ -69,10 +69,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NEM A CIPŐ A HIBÁS</div>
         <h2 class="wslabproof__h2">Sosem <em>a cipőn múlt</em></h2>
-        <p class="wslabproof__p">A védőcipő arra készült, hogy védje a lábujjakat, nem arra, hogy párnázza a lábat. Ez a dolga. De a beton egy millimétert sem enged, és minden lépésnek valahová mennie kell. Ahol a cipő már nem bírja, ott marad a zokni.</p>
-        <p class="wslabproof__p">Ugyanaz a cipő, ugyanaz a beton. Csak a zokni változott. A tizenkét órás műszak betonon olyan, mint lengéscsillapító nélkül teherautót vezetni — és az egyetlen, ami ezt az ütést tompíthatja, nagyjából két és fél centi zokni.</p>
+        <p class="wslabproof__p">A védőcipő arra készült, hogy védje a lábujjakat, nem arra, hogy párnázza a lábat. Ez a dolga. De a kemény padló egy millimétert sem enged, és minden lépésnek valahová mennie kell. Ahol a cipő már nem bírja, ott marad a zokni.</p>
+        <p class="wslabproof__p">Ugyanaz a cipő, ugyanaz a munka. Csak a zokni változott. A tizenkét órás műszak talpon olyan, mint lengéscsillapító nélkül teherautót vezetni — és az egyetlen, ami ezt az ütést tompíthatja, nagyjából két és fél centi zokni.</p>
         <p class="wslabproof__p">Ezért a NORIKS SlabProof úgy készült, hogy ez a két és fél centi pont olyan legyen, amilyennek lennie kell: sűrű párna a sarok és az elülső talprész alatt, a többi vékony és szellős.</p>
-        <p class="wslabproof__zak">Ugyanaz a cipő, ugyanaz a beton — csak más a zokni.</p>
+        <p class="wslabproof__zak">Ugyanaz a cipő, ugyanaz a munka — csak más a zokni.</p>
       </div>
     </div>
   </section>
@@ -97,10 +97,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ÖSSZEHASONLÍTÁS</div>
         <h2 class="wslabproof__h2">Nem minden munkazokni <em>készül egyformán</em></h2>
-        <p class="wslabproof__p">Olcsó multipack, drága gyapjúpár, vagy egy zokni, amit arra a betonra terveztek, amin ténylegesen áll. Azok alapján hasonlítottuk össze őket, ami a munkában számít: nincs lyuk egy év betonon után, párnázás ott, ahol a beton üt, frissesség a munkacipőben. Ezek mindegyike csak néhány hét munka után derül ki.</p>
+        <p class="wslabproof__p">Olcsó multipack, drága gyapjúpár, vagy egy zokni, amit arra a munkára terveztek, amit ténylegesen végez. Azok alapján hasonlítottuk össze őket, ami a munkában számít: nincs lyuk egy év munka után, párnázás ott, ahol a lépés üt, frissesség a munkacipőben. Ezek mindegyike csak néhány hét munka után derül ki.</p>
         <p class="wslabproof__p">Azt is néztük, hogy ne viszkessen a gyapjútól, ne melegedjen túl, és a cipő hátulja ne dörzsölje a sarkat. Az olcsó multipack olcsó, aztán újra meg kell venni; a gyapjú drágább; a NORIKS SlabProofot egyszer veszi meg, hosszú időre.</p>
         <p class="wslabproof__p">A jó gyapjú tartós, ezt elismerjük. De nyáron szúr, és a munkacipőben melegít. A NORIKS SlabProof arra a padlóra készült, amin áll, nem túraösvényre.</p>
-        <p class="wslabproof__zak">Betonra készült, nem hegyre.</p>
+        <p class="wslabproof__zak">Munkára készült, nem hegyre.</p>
       </div>
     </div>
   </section>
@@ -111,8 +111,8 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">KI KÉSZÍTI</div>
         <h2 class="wslabproof__h2">Nem egy zokniárus találta ki, hanem <em>egy villanyszerelő</em></h2>
-        <p class="wslabproof__p">E zokni mögött egy villanyszerelő áll, huszonkét év szakmai tapasztalattal, főleg nagy építkezéseken: kórházak, raktárak, logisztikai központok. Betonpadlók és tizenkét órás napok. Évekig dolgozott talpon, ugyanazon a betonon, mint Ön.</p>
-        <p class="wslabproof__p">Húszévesen ezt nem érzed. Negyvenöt évesen ebédre kivan a lábad, és havonta elhasználsz egy csomag zoknit — kilyukadt sarkak, délre átázott láb. A zoknik egyre vékonyabbak és rövidebbek lettek, egy hónap után tele voltak lyukkal, és senki sem készített zoknit annak, aki egész nap betonon áll.</p>
+        <p class="wslabproof__p">E zokni mögött egy villanyszerelő áll, huszonkét év szakmai tapasztalattal, főleg nagy építkezéseken: kórházak, raktárak, logisztikai központok. Kemény padlók és tizenkét órás napok. Évekig dolgozott talpon, pont úgy, mint Ön.</p>
+        <p class="wslabproof__p">Húszévesen ezt nem érzed. Negyvenöt évesen ebédre kivan a lábad, és havonta elhasználsz egy csomag zoknit — kilyukadt sarkak, délre átázott láb. A zoknik egyre vékonyabbak és rövidebbek lettek, egy hónap után tele voltak lyukkal, és senki sem készített zoknit annak, aki egész nap talpon dolgozik.</p>
         <p class="wslabproof__p">Ezért megcsinálta a sajátját: megerősítve ott, ahol mindig kiszakad, szárazat, és olyat, ami a helyén marad. Egy évig hordta a munkában, mielőtt készen állt volna mások számára.</p>
         <p class="wslabproof__zak">Szakitól, szakiknak.</p>
       </div>
