@@ -1,5 +1,5 @@
 <?php
-// Review pool for the NORIKS FisioRest neck therapy pillow.
+// Review pool for the NORIKS NeckRelax neck therapy pillow.
 // Text-only (no images), Hungarian — hand-written for this product.
 $auto_reviews_en = array(
     array("name" => "Tóth Anna",     "text" => "Egész nap a gép előtt ülök, és állandóan fájt a nyakam. Két hét esti használat után jelentősen enyhült a fájdalom, és a tartásom is jobb lett. Végre merevség nélkül alszom."),

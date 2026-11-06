@@ -48,7 +48,7 @@ function noriks_manuals_list() {
         array(
             'file'  => 'noriks-fisiorest.pdf',
             'sku'   => 'NORIKS-FISIOREST',
-            'title' => 'NORIKS FisioRest — nyakkészülék',
+            'title' => 'NORIKS NeckRelax — nyakkészülék',
             'sub'   => 'Nyújtás, meleg és vibrációs masszázs 15–30 perces kezelésben.',
         ),
         array(

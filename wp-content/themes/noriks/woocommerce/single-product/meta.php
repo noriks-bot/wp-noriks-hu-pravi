@@ -962,7 +962,7 @@ Nincs papírmunka, nincs stressz – néhány kattintással megoldjuk.
         'kidsnest' => array( 'noriks-kidsnest.pdf', 'NORIKS KidsNest — gyerek ortopéd párna' ),
         'kneefix' => array( 'noriks-kneefix.pdf', 'NORIKS KneeFix — ortopéd térdrögzítő' ),
         'ortopedski-jastuk' => array( 'noriks-ergosit.pdf', 'NORIKS ErgoSit — ortopéd ülőpárna' ),
-        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS FisioRest — nyakkészülék' ),
+        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — nyakkészülék' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — bütyökkorrektor' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopéd hátöv' ),
     );

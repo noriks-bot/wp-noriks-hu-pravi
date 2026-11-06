@@ -2,7 +2,7 @@
 /**
  * product-bottom: FISIOREST (orto-fisiorest)
  *
- * Dedicated bottom content for the NORIKS FisioRest product.
+ * Dedicated bottom content for the NORIKS NeckRelax product.
  * Shown via single-product-bottom-nicer.php when noriks_is_type('fisiorest').
  *
  * SCAFFOLD — szekciók a felhasználó utasításai szerint kerülnek hozzáadásra (média: img/fisiorest*).
@@ -159,7 +159,7 @@ $fis_upgrades = array(
 <!-- ============ 8) 14× olcsóbb ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS FisioRest" loading="lazy"></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS NeckRelax" loading="lazy"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">BIZTONSÁGOS ÉS PIHENTETŐ TERÁPIA</p>
       <h2 class="fis-h2">14× olcsóbb, mint a heti kezelések</h2>
@@ -251,7 +251,7 @@ $fis_upgrades = array(
     .fis-card { border-left: 0; padding-left: 0; }
   }
 
-  /* Nincs "Mérettáblázat" link a FisioRest-en (bunion-nal azonos). */
+  /* Nincs "Mérettáblázat" link a NeckRelax-en (bunion-nal azonos). */
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
 

@@ -50,7 +50,7 @@ function noriks_product_type_map() : array {
         // ControlPro trener dna zdjelice (bez atributa).
         'controlpro'              => array( 'orto-controlpro', 'controlpro' ),
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
-        // FisioRest (novi proizvod).
+        // NeckRelax (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
