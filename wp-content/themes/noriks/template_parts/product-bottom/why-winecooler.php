@@ -87,7 +87,7 @@ $nwc_testimonials = array(
 
 <section class="fis-eng"><div class="fis-wrap fis-row2"><div class="fis-row2-copy"><h2 class="fis-h2">Elegáns ajándék a bor szerelmeseinek</h2><p>A fekete NORIKS doboz ajándékozásra készen érkezik – karácsonyra, születésnapra vagy a vendéglátónak. Csak át kell adni.</p></div><div class="fis-row2-media nk-media nk-wide"><video src="<?php echo esc_url( $nwc ); ?>winecooler-gift.mp4" muted autoplay loop playsinline preload="metadata"></video></div></div></section>
 
-<section class="fis-cheaper"><div class="fis-wrap fis-row2"><div class="fis-row2-media nk-media"><img src="<?php echo esc_url( $nwc ); ?>winecooler-3-kusy.jpg" alt="NORIKS WineCooler" loading="lazy"></div><div class="fis-row2-copy"><p class="fis-eyebrow">OKOS VÁSÁRLÁS</p><h2 class="fis-h2">3 darab: egy neked, kettő ajándékba</h2><p>Egy WineCooler ára <span data-price="1">9.990 Ft</span>. A 3 darabos csomagért <span data-price="3">21.990 Ft</span>-ot fizetsz, vagyis darabonként csak <span data-price="3-unit">7.330 Ft</span>-ot. 30 napos pénzvisszafizetési garanciával.</p></div></div></section>
+<section class="fis-cheaper"><div class="fis-wrap fis-row2"><div class="fis-row2-media nk-media"><img src="<?php echo esc_url( $nwc ); ?>winecooler-3-kusy.jpg" alt="NORIKS WineCooler" loading="lazy"></div><div class="fis-row2-copy"><p class="fis-eyebrow">OKOS VÁSÁRLÁS</p><h2 class="fis-h2">3 darab: egy neked, kettő ajándékba</h2><p>Egy WineCooler ára <span data-price="1">11.990 Ft</span>. A 3 darabos csomagért <span data-price="3">21.990 Ft</span>-ot fizetsz, vagyis darabonként csak <span data-price="3-unit">7.330 Ft</span>-ot. 30 napos pénzvisszafizetési garanciával.</p></div></div></section>
 
 <!-- 5) ODLIČNO 4,8 / 5 -->
 <section class="nwc-sec nwc-tint">
