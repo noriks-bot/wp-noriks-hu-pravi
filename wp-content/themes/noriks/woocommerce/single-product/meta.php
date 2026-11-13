@@ -965,6 +965,20 @@ Nincs papírmunka, nincs stressz – néhány kattintással megoldjuk.
         'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — nyakkészülék' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — bütyökkorrektor' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopéd hátöv' ),
+        'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — alakformáló magas derekú alsó' ),
+        'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — vörösfény-terápia csuklóra' ),
+        'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — sétabot második fogantyúval' ),
+        'cloath' => array( 'noriks-polar-cloth.pdf', 'Polar NORIKS Cloth XXL — tisztítókendő csak vízzel' ),
+        'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — párnázott munkazokni' ),
+        'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — medencefenék-izom edző' ),
+        'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — párnázott munkazokni bolttartó pánttal' ),
+        'bowl' => array( 'noriks-bowl.pdf', 'NORIKS Bowl — ortopéd kutyatál 15°-os dőléssel' ),
+        'cloud' => array( 'noriks-cloud.pdf', 'NORIKS Cloud — ortopéd térdpárna' ),
+        'kneeheat' => array( 'noriks-kneeheat.pdf', 'NORIKS KneeHeat — térdmelegítés, kompresszió és masszázs' ),
+        'mamafit' => array( 'noriks-mamafit.pdf', 'NORIKS MamaFit — szülés utáni kompressziós alsó 360°' ),
+        'snug' => array( 'noriks-snug.pdf', 'NORIKS Snug — S alakú egésztest párna' ),
+        'hyd' => array( 'noriks-hyd.pdf', 'NORIKS HYD — hidrogénvizes palack PEM elektrolízissel' ),
+        'winecooler' => array( 'noriks-winecooler.pdf', 'NORIKS WineCooler — borhűtő rúd kiöntővel' ),
     );
     $noriks_manual = null;
     if ( function_exists('noriks_is_type') ) {
