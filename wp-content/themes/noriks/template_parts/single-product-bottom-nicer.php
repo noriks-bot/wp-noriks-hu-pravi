@@ -2071,7 +2071,28 @@ $winecooler_faq = array(
     'answer'    => '30 napos visszaküldési jog. Ha nem teljesen elégedett a vásárlással, a rendelés kézhezvételétől számított 30 napon belül vegye fel velünk a kapcsolatot, és szívesen segítünk a termék visszaküldésében vagy a pénz visszatérítésében.'),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_winecooler, $winecooler_faq, $is_slim, $slim_faq, $is_tradesman, $tradesman_faq, $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
+// NORIKS MamaBelt: pogosta vprasanja (kot HR auto_reviews/FAQ_HR_mamabelt.php).
+$is_mamabelt = ( function_exists('noriks_is_type') && noriks_is_type('mamabelt') );
+$mamabelt_faq = array(
+  array('questioon' => 'Hogyan kell felszerelni az adaptert?',
+    'answer'    => 'Négy lépésben: az adapter hevederét húzza át az ülés és a háttámla között, vezesse át az ülés alatt (ne legyen megcsavarodva), a végét fűzze át a csat felső és alsó nyílásán, majd húzza lefelé, hogy az adapter szorosan rögzüljön.'),
+  array('questioon' => 'Hogyan kell utána becsatolni az övet?',
+    'answer'    => 'Ugyanúgy, mint máskor – csak a biztonsági öv alsó szárát becsatolás előtt húzza át az adapter kampóján. Így az öv alsó szára alacsonyan, a combokon marad.'),
+  array('questioon' => 'Meglazul az ülésen?',
+    'answer'    => 'Az adapter hevederének hossza állítható, és megfeszítés után szorosan tart. Az adapter belső rétege acélból, a külső hőre lágyuló gumiból készült.'),
+  array('questioon' => 'Megfelel az autómhoz?',
+    'answer'    => 'Az adaptert az ülésre kell felhelyezni, a heveder hossza pedig állítható, így a legtöbb szabványos autóüléshez illik.'),
+  array('questioon' => 'Használhatom a várandósság után is?',
+    'answer'    => 'Igen. Bár a várandósság idejére tervezték, mindenkinek megfelel, akit zavar az öv alsó szára a hasán.'),
+  array('questioon' => 'Milyen színekben kapható?',
+    'answer'    => 'Fekete és rózsaszín.'),
+  array('questioon' => 'Van kedvezmény több darabra?',
+    'answer'    => 'Igen – 2 vagy 3 darab vásárlásakor a darabár alacsonyabb. Az ajánlatokat a rendelés gomb felett találja.'),
+  array('questioon' => 'Mi van, ha nem válik be?',
+    'answer'    => '30 napja van a pénz visszakérésére. 25.000 Ft feletti rendelésnél ingyenes a szállítás, és utánvéttel fizet, amikor a csomag megérkezik.'),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_mamabelt, $mamabelt_faq, $is_winecooler, $winecooler_faq, $is_slim, $slim_faq, $is_tradesman, $tradesman_faq, $is_slabproof, $slabproof_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_kneeheat, $kneeheat_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_knc, $knc_faq, $is_bunion_page, $bunion_faq, $is_ortopas_page, $ortopas_faq, $is_fisiorest_page, $fisiorest_faq, $is_norikshers_page, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_kidsnest, $kidsnest_faq, $is_jastuk, $jastuk_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Termék Információ' ) !== false );
   if ( $is_snug && $is_info ) { return $snug_faq; }
   if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
@@ -2079,6 +2100,7 @@ $faq_pick = function( $title, $list ) use ( $is_winecooler, $winecooler_faq, $is
   if ( $is_slim && $is_info ) { return $slim_faq; }
   if ( $is_slabproof && $is_info ) { return $slabproof_faq; }
   if ( $is_bowl && $is_info ) { return $bowl_faq; }
+  if ( $is_mamabelt && $is_info ) { return $mamabelt_faq; }
   if ( $is_winecooler && $is_info ) { return $winecooler_faq; }
   if ( $is_pal && $is_info ) { return $pal_faq; }
   if ( $is_red && $is_info ) { return $red_faq; }
