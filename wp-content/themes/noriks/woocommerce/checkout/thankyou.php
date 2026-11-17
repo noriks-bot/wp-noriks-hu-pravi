@@ -20,7 +20,7 @@ $upsell_is_majice = true;
 
 $upsell_product_id = 250; // Crna majica (variable)
 $upsell_name       = 'Fekete pólók';
-$upsell_qty_prices = array( 1 => 4690, 3 => 10990, 6 => 14590 );
+$upsell_qty_prices = array( 1 => 2890, 3 => 7190, 6 => 12590 );
 $upsell_qty_names  = array( 1 => '1x Fekete póló', 3 => '3x Fekete póló', 6 => '6x Fekete póló' );
 $upsell_qty_images = array(
     1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',

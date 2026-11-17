@@ -341,7 +341,7 @@ function noriks_handle_add_upsell() {
     if ( ! $variation_id || (int) wp_get_post_parent_id( $variation_id ) !== $product_id ) {
         wp_send_json_error( 'Érvénytelen változat' );
     }
-    $qty_prices = array( 1 => 4690, 3 => 10990, 6 => 14590 );
+    $qty_prices = array( 1 => 2890, 3 => 7190, 6 => 12590 );
     if ( ! isset( $qty_prices[ $quantity ] ) ) {
         wp_send_json_error( 'Érvénytelen mennyiség' );
     }
