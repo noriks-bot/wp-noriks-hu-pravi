@@ -22,6 +22,7 @@ function noriks_ty2_default_unit_prices() {
     return array(
         'NORIKS-SHIRTS-ORTO' => 2890,
         'NORIKS-KOMPSFIT'    => 3990,
+        'NORIKS-SLIM'        => 5990,   // +1 Slim v koraku 1: priblizno 50 % akcijske cene
         // priblizno 50 % akcijske cene, zaokrozeno navzdol
         'NORIKS-KIDSNEST'    => 7990,
         'NORIKS-KNEEFIX'     => 7990,
@@ -315,6 +316,12 @@ function noriks_ty2_step1_products() {
             'imena' => array( 1 => '1x FIT kompressziós póló', 2 => '2x FIT kompressziós póló', 3 => '3x FIT kompressziós póló' ),
             'img'   => '',
         ),
+        // Slim: kupec izbere barvo IN velikost (privzeto barva kupljenega kosa)
+        'NORIKS-SLIM' => array(
+            'imena' => array( 1 => '1x Slim alakformáló bugyi', 2 => '2x Slim alakformáló bugyi', 3 => '3x Slim alakformáló bugyi' ),
+            'img'   => '',
+            'izbira_barve' => true,
+        ),
     );
 }
 
@@ -343,7 +350,11 @@ function noriks_ty2_step1_cards( $order ) {
         $ven   = array();
         foreach ( $seznam[ $sku ]['imena'] as $q => $ime ) {
             $card = noriks_ty2_card( $kljuc . $q, $p, $q, '', $ime, $unit > 0 ? round( $unit * $q, 2 ) : '', $barva, $seznam[ $sku ]['img'] );
-            if ( $card ) { $ven[ (int) $q ] = $card; }
+            if ( $card ) {
+                // barvo izbere kupec (strezni del jo preveri proti barvam izdelka)
+                $card['pick_color'] = ! empty( $seznam[ $sku ]['izbira_barve'] ) && count( (array) $card['colors'] ) > 1;
+                $ven[ (int) $q ] = $card;
+            }
         }
         if ( $ven ) { return $ven; }
     }
