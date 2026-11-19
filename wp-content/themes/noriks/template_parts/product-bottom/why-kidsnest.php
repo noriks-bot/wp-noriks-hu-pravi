@@ -15,7 +15,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 1) Trust marquee (plava traka, vrti se) ============ -->
 <div class="kn-marquee" aria-hidden="true">
   <div class="kn-marquee-track">
-    <?php $kn_ticker = array('GYERMEKORVOSOK AJÁNLÁSÁVAL','OEKO-TEX® MEMÓRIAHAB','3 ZÓNÁS SZERKEZET','90 ÉJSZAKÁS PRÓBAIDŐ','HIPOALLERGÉN','LÉLEGZŐ KÖTÖTT ANYAG');
+    <?php $kn_ticker = array('GYERMEKORVOSOK AJÁNLÁSÁVAL','MEMÓRIAHAB','3 ZÓNÁS SZERKEZET','90 ÉJSZAKÁS PRÓBAIDŐ','HIPOALLERGÉN','LÉLEGZŐ KÖTÖTT ANYAG');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $kn_ticker as $t ) { echo '<span class="kn-tick">'.esc_html($t).'</span><span class="kn-dot">•</span>'; } } ?>
   </div>
 </div>

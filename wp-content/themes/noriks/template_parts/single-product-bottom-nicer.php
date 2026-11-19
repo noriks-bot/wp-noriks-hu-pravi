@@ -1596,7 +1596,7 @@ $kompmajice_faq = array(
 $leakboxers_faq = array(
   array(
     'questioon' => 'Miért választotta több mint 123.000 férfi a NORIKS-ot?',
-    'answer'    => 'A NORIKS a legjobban szívó, mosható boxeralsó a férfi vizeletszivárgásra: akár 300 ml-t megtart, Oeko-Tex® tanúsítvánnyal rendelkezik és káros anyagoktól mentes, mosható és újrahasználható (környezetbarát alternatíva az eldobható betétekkel szemben), egész napos kényelemre és önbizalomra tervezve. A vásárlók 87%-a újra rendel az első vásárlás után.'
+    'answer'    => 'A NORIKS a legjobban szívó, mosható boxeralsó a férfi vizeletszivárgásra: akár 300 ml-t megtart, káros anyagoktól mentes, mosható és újrahasználható (környezetbarát alternatíva az eldobható betétekkel szemben), egész napos kényelemre és önbizalomra tervezve. A vásárlók 87%-a újra rendel az első vásárlás után.'
   ),
   array(
     'questioon' => 'Mennyit szívnak fel?',
@@ -1656,7 +1656,7 @@ $kneefix_faq = array(
 $kidsnest_faq = array(
   array( 'questioon' => 'Milyen gyorsan látom, hogy a szájon át légzés megszűnik?', 'answer' => 'A legtöbb szülő az első 5–7 éjszakán belül csendesebb légzést és kevesebb nyitott szájjal történő ébredést tapasztal. A 14. éjszakára a legtöbb gyermeknél a horkolás elcsendesedik, és az ajkak csukva maradnak. A teljes különbséget — láthatóan jobb testhelyzet és nyugodtabb alvás — a szülők leggyakrabban a 21–30. nap környékén írják le. Használja minden éjjel.' ),
   array( 'questioon' => 'Milyen korosztálynak készült a KidsNest?', 'answer' => 'A KidsNest három méretben kapható: 1–3, 3–9 és 9–14 éves korig. A legfontosabb időablak a 3. és 9. életév közé esik, amikor a szájpadlás és az állkapocs a legintenzívebben fejlődik — de minden életkornak megvan a maga mérete és a maga haszna.' ),
-  array( 'questioon' => 'Biztonságos? Mi van benne?', 'answer' => 'A KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül. Atkaálló és lélegző, a huzat pedig levehető és mosógépben mosható.' ),
+  array( 'questioon' => 'Biztonságos? Mi van benne?', 'answer' => 'A KidsNest hipoallergén memóriahabból készült — formaldehid, nehézfémek és BPA nélkül. Atkaálló és lélegző, a huzat pedig levehető és mosógépben mosható.' ),
   array( 'questioon' => 'Tényleg használni fogja a gyermekem?', 'answer' => 'Igen. Az ergonomikus forma támogatásnak érződik, nem valami furcsaságnak — a legtöbb gyermek 1–2 éjszaka alatt megszokja. A szülők gyakran jelzik, hogy az első hét után a gyerekek nem akarnak nélküle aludni. A 3 zónás szerkezet természetesen fogadja be a fejet — nincs „helyes használat”, nincs lefekvés előtti küzdelem.' ),
   array( 'questioon' => 'Működik, ha a gyermekem már szájon át lélegzik?', 'answer' => 'Igen — pontosan az ilyen gyerekeknek tervezték. A 3 zónás szerkezet segít megakadályozni a fej hátrabillenését, amitől a száj alvás közben kinyílik. A legtöbb gyermeknél 7–14 éjszakán belül az ajkak természetesen záródnak, és visszatér az orron át történő légzés.' ),
   array( 'questioon' => 'Mi van, ha a gyermekemnek nem segít?', 'answer' => 'Hagyja, hogy a gyermek 30 éjszakán át a KidsNesten aludjon. Ha nem lát különbséget — kevesebb szájon át légzés, csendesebb éjszakák, nyugodtabb alvás — írjon nekünk, és visszafizetjük a pénzt. Kérdések és apró betűs rész nélkül.' ),
@@ -1667,7 +1667,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Hogyan enyhíti a NORIKS ErgoSit az ülés közbeni fájdalmat?', 'answer' => 'Az ErgoSit farokcsont-kivágása megszünteti a farokcsontra és az ülőidegre nehezedő közvetlen nyomást, míg a nagy sűrűségű memóriahabból készült anatómiai forma egyenletesen osztja el a testsúlyt a csípőn és a combokon. Ezzel tehermentesíti az érzékeny pontokat, és támogatja az egészséges, egyenes testtartást.' ),
   array( 'questioon' => 'Hol használhatom a párnát?', 'answer' => 'Bárhol, ahol ül — az autóban, irodai széken, étkezőszéken, kerekesszékben vagy otthon. A stabil, csúszásgátló alap a helyén tartja, így a kényelem egész nap Önnel tart.' ),
   array( 'questioon' => 'Ellaposodik a hab idővel?', 'answer' => 'Nem. Az ErgoSit nagy sűrűségű memóriahabot használ, amely hosszan tartó, mindennapi használat mellett is megőrzi formáját és keménységét — ellentétben az olcsó párnákkal, amelyek gyorsan ellaposodnak.' ),
-  array( 'questioon' => 'Mosható a huzat?', 'answer' => 'Igen. A huzat levehető és mosógépben mosható, így a párna friss és tiszta marad. Az anyag lélegző, hipoallergén és OEKO-TEX® tanúsítvánnyal rendelkezik.' ),
+  array( 'questioon' => 'Mosható a huzat?', 'answer' => 'Igen. A huzat levehető és mosógépben mosható, így a párna friss és tiszta marad. Az anyag lélegző és hipoallergén.' ),
   array( 'questioon' => 'Illik a székemhez vagy az ülésemhez?', 'answer' => 'Az ErgoSit univerzális formájú, és a legtöbb autóüléshez, irodai és konyhai székhez, valamint kerekesszékhez illik. Nincsenek méretek — egy modell mindenkinek megfelel.' ),
   array( 'questioon' => 'Mennyi idő alatt érzem a különbséget?', 'answer' => 'A legtöbb felhasználó már az első naptól kevesebb nyomást érez a farokcsontján és kényelmesebben ül. A jobb testtartás és a kisebb hátfájás hatása a rendszeres használattal tovább erősödik.' ),
   array( 'questioon' => 'Van pénzvisszafizetési garancia?', 'answer' => 'Igen, minden NORIKS ErgoSit 30 napos kényelmi garanciával érkezik. Ha nem érez kevesebb fájdalmat és több kényelmet, vegye fel velünk a kapcsolatot, és rendezzük.' ),
@@ -1737,7 +1737,7 @@ $cloud_faq = array(
   ),
   array(
     'questioon' => 'Miből készül a párna?',
-    'answer'    => 'A magja orvosi minőségű memóriahab perforációkkal, amelyek biztosítják a levegő áramlását. A huzat szellőző anyagból készül, levehető és mosható. Az anyagok OEKO-TEX® STANDARD 100 és CertiPUR-EU tanúsítvánnyal rendelkeznek.',
+    'answer'    => 'A magja orvosi minőségű memóriahab perforációkkal, amelyek biztosítják a levegő áramlását. A huzat szellőző anyagból készül, levehető és mosható. A hab CertiPUR-EU tanúsítvánnyal rendelkezik.',
   ),
   array(
     'questioon' => 'Túl kemény vagy túl puha?',

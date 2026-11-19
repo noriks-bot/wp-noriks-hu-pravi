@@ -479,7 +479,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
       <div class="accordion-content">
         <ul style="margin:8px 0 12px; padding-left:18px;">
           <li style="margin:0 0 8px;"><strong>Külső huzat:</strong> Lélegző kötött anyag, levehető és mosógépben mosható, hipoallergén</li>
-          <li style="margin:0 0 8px;"><strong>Mag:</strong> OrthoFlex™ adaptív hab | Nem mérgező, OEKO-TEX® tanúsítvánnyal | Nyomáscsökkentésre + a testtartás igazítására tervezve</li>
+          <li style="margin:0 0 8px;"><strong>Mag:</strong> OrthoFlex™ adaptív hab | Nem mérgező | Nyomáscsökkentésre + a testtartás igazítására tervezve</li>
         </ul>
       </div>
     </div>
@@ -554,7 +554,7 @@ $is_mixed_bundle = has_term( array( 'szettek', 'orto-kezdocsomag', 'orto-starter
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $current_product_id) ): ?>
 
-                A NORIKS KidsNest hipoallergén, OEKO-TEX® tanúsítvánnyal rendelkező memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző kötött huzattal.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–14 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
+                A NORIKS KidsNest hipoallergén memóriahabból készült — formaldehid, nehézfémek és BPA nélkül — lélegző kötött huzattal.<br><br>A 3 zónás ergonomikus szerkezet gyengéden befogadja a fejet, alátámasztja a nyakat, és segít a gerincet természetes vonalban tartani — még akkor is, ha a gyermek éjszaka sokat forgolódik. Így elősegíti az orron át történő légzést és a nyugodtabb, mélyebb alvást.<br><br>Három méretben kapható (1–3, 3–9 és 9–14 éves korig), együtt nő a gyermekével, és a fejlődés minden szakaszában megfelelő magasságú alátámasztást nyújt.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('controlpro', $current_product_id) ): ?>
 

@@ -213,17 +213,15 @@ $cd_cases = array(
 
 <!-- ============ 8) Standardi ============ -->
 <section class="ncd-sec ncd-dark">
-  <div class="ncd-wrap ncd-row2">
+  <div class="ncd-wrap">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Szigorú szabványok szerint készült</h2>
       <p>Az anyagokat káros anyagokra tesztelték, a hab pedig tanúsított. A dizájn svájci minőségi szabványok szerint készült.</p>
       <ul class="ncd-check">
-        <li><strong>OEKO-TEX® STANDARD 100</strong> — káros anyagoktól mentes</li>
         <li><strong>CertiPUR-EU</strong> — tanúsított memóriahab</li>
         <li><strong>Svájcban tervezve</strong>, európai szabványok szerint gyártva</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-certifikati.webp','OEKO-TEX i CertiPUR-EU certifikati'); ?></div>
   </div>
 </section>
 
