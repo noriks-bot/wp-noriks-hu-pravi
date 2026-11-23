@@ -94,10 +94,10 @@ function noriks_manuals_list() {
             'sub'   => 'Második fogantyú a felálláshoz, négy láb, lámpa és riasztó. Összecsukható és magasságban állítható.',
         ),
         array(
-            'file'  => 'noriks-polar-cloth.pdf',
+            'file'  => 'noriks-duodry.pdf',
             'sku'   => 'NORIKS-CLOATH',
-            'title' => 'Polar NORIKS Cloth XXL — tisztítókendő csak vízzel',
-            'sub'   => '60 × 40 cm-es méret, kétoldalas kivitel, akár 600 ml vizet is felszív. Spray és vegyszer nélkül.',
+            'title' => 'NORIKS DuoDry — kétoldalú mikroszálas kendő',
+            'sub'   => '60 × 40 cm-es méret fürdőbe és konyhába. Az egyik oldala felszedi a vizet és a szennyeződést, a másik fényesít.',
         ),
         array(
             'file'  => 'noriks-slabproof.pdf',

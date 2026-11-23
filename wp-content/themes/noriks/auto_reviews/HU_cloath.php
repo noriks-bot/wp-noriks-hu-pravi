@@ -1,5 +1,5 @@
 <?php
-// Bazen mnenj za Polar NORIKS Cloth XXL (orto-cloath).
+// Bazen mnenj za NORIKS DuoDry (orto-cloath).
 $auto_reviews_en = array(
     array("name" => "Katalin H.", "text" => "A zuhanykabint minden másnap letörlöm, és végre nincsenek vízfoltok. Egyetlen spré nélkül, csak víz és a kendő."),
     array("name" => "Péter M.", "text" => "Hatdarabos csomagot vettem. Egy a fürdőben, egy a konyhában, egy az autóban. Üveghez a legjobb."),
@@ -15,6 +15,6 @@ $auto_reviews_en = array(
     array("name" => "István D.", "text" => "A fekete csaptelepen sem hagy foltot, pedig eddig az volt a legnagyobb gond."),
     array("name" => "Krisztina L.", "text" => "Az ablakokat csak vízzel és ezzel a kendővel mosom. Először tisztítószer és csíkok nélkül."),
     array("name" => "Attila G.", "text" => "Vastag és nehéz, érezni, hogy nem olcsó mikroszálas. Tíz mosás után is ugyanolyan."),
-    array("name" => "Zsuzsanna M.", "text" => "A 3+3 csomagot vettem, és tényleg megéri. Egy mindig mosásban van, a másik használatban."),
+    array("name" => "Zsuzsanna M.", "text" => "A 6 db-os csomagot vettem, és tényleg megéri. Egy mindig mosásban van, a másik használatban."),
     array("name" => "Ferenc Sz.", "text" => "A konyhapultot pár mozdulattal letörlöm és nincs vízcsík. Egyszerűen működik."),
 );

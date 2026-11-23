@@ -972,7 +972,7 @@ Nincs papírmunka, nincs stressz – néhány kattintással megoldjuk.
         'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — alakformáló magas derekú alsó' ),
         'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — vörösfény-terápia csuklóra' ),
         'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — sétabot második fogantyúval' ),
-        'cloath' => array( 'noriks-polar-cloth.pdf', 'Polar NORIKS Cloth XXL — tisztítókendő csak vízzel' ),
+        'cloath' => array( 'noriks-duodry.pdf', 'NORIKS DuoDry — kétoldalú mikroszálas kendő' ),
         'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — párnázott munkazokni' ),
         'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — medencefenék-izom edző' ),
         'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — párnázott munkazokni bolttartó pánttal' ),

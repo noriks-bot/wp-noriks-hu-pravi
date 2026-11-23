@@ -491,7 +491,7 @@ $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix térdrögzítő'
   if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro medencefenék tréner'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
-  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'NORIKS DuoDry'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug egésztest párna'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formázó póló'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal sétabot'; }
@@ -1717,7 +1717,7 @@ $cloath_faq = array(
   ),
   array(
     'questioon' => 'Jó ajándéknak?',
-    'answer'    => 'Igen — a 3+3 és a 8+4 csomag a leggyakoribb beköltözési és ünnepi ajándékok közé tartozik. A kendő szépen összehajtva, ajándékozásra készen érkezik.',
+    'answer'    => 'Igen — a 4 és 6 db-os csomag gyakori beköltözési és ünnepi ajándék. A kendők szépen összehajtva, ajándékozásra készen érkeznek.',
   ),
 );
 
